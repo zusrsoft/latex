@@ -149,9 +149,17 @@ class IncrementalLatexParser {
         // 第 2 层：决策 — 增量解析 vs 全量解析
         val oldDoc = cachedDocument
 
+        // 定义类节点（\def / \newcommand / \newenvironment 等）会改变后续文本的
+        // 解析语义。增量 AST 复用只重解析编辑区附近，若文档含定义而宏使用位于
+        // 复用区（前缀/后缀），展开结果将基于过时定义甚至退化为未展开命令。
+        // 保守策略：含定义节点的文档跳过 AST 子树复用，走 token 缓存全量解析
+        //（仍省去全文分词，只是放弃子树级复用）。
+        val oldDocHasDefinitions = oldDoc != null && containsDefinitionNodes(oldDoc)
+
         // 追加场景快速路径：上次解析成功 + 纯追加 → 尾部增量 AST 构建
         val canAppendIncremental = !isFirstParse
                 && oldDoc != null
+                && !oldDocHasDefinitions
                 && oldDoc.children.isNotEmpty()
                 && lastSuccessfulPosition == oldTextLength  // 上次完整解析成功
                 && edit.isInsertion                          // 纯追加/插入
@@ -160,6 +168,7 @@ class IncrementalLatexParser {
         // 中间替换/删除场景：使用 TreeReuser 三段划分
         val canIncrementalParse = !isFirstParse
                 && oldDoc != null
+                && !oldDocHasDefinitions
                 && oldDoc.children.isNotEmpty()
                 && lastSuccessfulPosition == oldTextLength  // 上次完整解析成功
                 && edit.startOffset > 0                       // 编辑不在最开头
@@ -198,6 +207,31 @@ class IncrementalLatexParser {
                 cachedDocument = truncatedParse(newText)
             }
         }
+    }
+
+    /**
+     * 检查文档是否含语义定义节点（\def/\newcommand/\newenvironment 等）。
+     *
+     * 这类节点会注册宏/环境，影响其后方所有文本的解析语义；而增量 AST 复用
+     * 依赖"节点语义与源文本位置无关"的假设，遇定义节点即失效，故需全量解析。
+     * 递归检查所有层级（定义可位于分组/环境内部）。
+     */
+    private fun containsDefinitionNodes(doc: LatexNode.Document): Boolean =
+        containsDefinitionNode(doc.children)
+
+    private fun containsDefinitionNode(nodes: List<LatexNode>): Boolean {
+        for (node in nodes) {
+            when (node) {
+                is LatexNode.NewCommand, is LatexNode.NewEnvironment -> return true
+                else -> {
+                    val children = node.children()
+                    if (children.isNotEmpty() && containsDefinitionNode(children)) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
     }
 
     /**

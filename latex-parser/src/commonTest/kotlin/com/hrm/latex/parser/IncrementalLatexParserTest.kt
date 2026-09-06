@@ -511,4 +511,72 @@ class IncrementalLatexParserTest {
             "Final document should contain Fraction"
         )
     }
+
+    // ========== 宏/环境定义与增量解析的语义一致性 ==========
+
+    /**
+     * 追加场景回归：\def 位于已解析前缀，宏使用在追加文本中。
+     * 修复前增量复用会跳过前缀中的定义，使 \RR 退化为未展开命令。
+     */
+    @Test
+    fun append_afterDef_expandsMacroLikeFullParse() {
+        val parser = IncrementalLatexParser()
+        parser.append("\\def\\RR{R}")
+        parser.append("\\RR")
+        parser.append("+1")
+        val doc = parser.getCurrentDocument()
+
+        // 前缀定义保留
+        assertTrue(
+            doc.children.any { it is LatexNode.NewCommand && it.commandName == "RR" },
+            "\\def 定义应保留在文档中"
+        )
+
+        // 定义之后不应残留未展开的 Command("RR")
+        val leftover = doc.children.drop(1).any {
+            it is LatexNode.Command && it.name == "RR"
+        }
+        assertFalse(leftover, "\\RR 不应残留为未展开命令")
+
+        // 宏使用处应展开为包含 R 的 Group
+        val expanded = doc.children.drop(1).any { node ->
+            node is LatexNode.Group && node.children.any { c ->
+                c is LatexNode.Text && c.content.contains("R")
+            }
+        }
+        assertTrue(expanded, "\\RR 应展开为包含 R 的节点")
+    }
+
+    /**
+     * 中间编辑回归：修改 \def 定义体后，已解析的宏使用位置也应更新。
+     * 修复前 TreeReuser 复用后缀节点，使用处仍显示旧定义 R。
+     */
+    @Test
+    fun setInput_editDefBody_reparsesAllUsesWithNewValue() {
+        val parser = IncrementalLatexParser()
+        parser.append("\\def\\RR{R}\\RR")
+        parser.setInput("\\def\\RR{S}\\RR")
+        val doc = parser.getCurrentDocument()
+
+        // 定义体应更新为 S
+        val def = doc.children.filterIsInstance<LatexNode.NewCommand>()
+            .first { it.commandName == "RR" }
+        val defHasS = def.definition.any { it is LatexNode.Text && it.content.contains("S") }
+        assertTrue(defHasS, "定义体应更新为 S")
+
+        // 使用处应展开为 S 而不是陈旧的 R
+        val usesContainS = doc.children.drop(1).any { node ->
+            node is LatexNode.Group && node.children.any { c ->
+                c is LatexNode.Text && c.content.contains("S")
+            }
+        }
+        assertTrue(usesContainS, "\\RR 使用处应展开为新定义 S")
+
+        val leftoverOldR = doc.children.drop(1).any { node ->
+            node is LatexNode.Group && node.children.any { c ->
+                c is LatexNode.Text && c.content.contains("R")
+            }
+        }
+        assertFalse(leftoverOldR, "\\RR 使用处不应残留旧定义 R")
+    }
 }
