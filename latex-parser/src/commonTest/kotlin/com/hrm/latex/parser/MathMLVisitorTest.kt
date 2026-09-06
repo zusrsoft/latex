@@ -90,6 +90,37 @@ class MathMLVisitorTest {
     }
 
     @Test
+    fun testScriptStyleMathMLHasScriptLevel() {
+        val doc = parser.parse("\\scriptstyle x")
+        val result = MathMLVisitor.convert(doc)
+        assertTrue(
+            result.contains("scriptlevel=\"1\""),
+            "\\scriptstyle 的 MathML 输出应携带 scriptlevel=\"1\": $result"
+        )
+    }
+
+    @Test
+    fun testScriptScriptStyleMathMLHasScriptLevel() {
+        val doc = parser.parse("\\scriptscriptstyle x")
+        val result = MathMLVisitor.convert(doc)
+        assertTrue(
+            result.contains("scriptlevel=\"2\""),
+            "\\scriptscriptstyle 的 MathML 输出应携带 scriptlevel=\"2\": $result"
+        )
+    }
+
+    @Test
+    fun testFcolorBoxMathMLKeepsBorderColor() {
+        val doc = parser.parse("\\fcolorbox{red}{blue}{x}")
+        val result = MathMLVisitor.convert(doc)
+        assertTrue(
+            result.contains("border"),
+            "\\fcolorbox 的边框颜色信息不应在 MathML 输出中丢失: $result"
+        )
+        assertTrue(result.contains("mathbackground=\"blue\"") || result.contains("mathbackground=\"Blue\""))
+    }
+
+    @Test
     fun testNthRoot() {
         val doc = parser.parse("\\sqrt[3]{x}")
         val result = MathMLVisitor.convert(doc)

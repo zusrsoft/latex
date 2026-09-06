@@ -318,18 +318,13 @@ class MathMLVisitor : BaseLatexVisitor<String>() {
 
     override fun visitMathStyle(node: LatexNode.MathStyle): String {
         val content = node.content.joinToString("") { visit(it) }
-        val size = when (node.mathStyleType) {
-            LatexNode.MathStyle.MathStyleType.DISPLAY -> "normal"
-            LatexNode.MathStyle.MathStyleType.TEXT -> "normal"
-            LatexNode.MathStyle.MathStyleType.SCRIPT -> "scriptlevel=\"1\""
-            LatexNode.MathStyle.MathStyleType.SCRIPT_SCRIPT -> "scriptlevel=\"2\""
-        }
-        val display = when (node.mathStyleType) {
+        val attrs = when (node.mathStyleType) {
             LatexNode.MathStyle.MathStyleType.DISPLAY -> " displaystyle=\"true\""
             LatexNode.MathStyle.MathStyleType.TEXT -> " displaystyle=\"false\""
-            else -> ""
+            LatexNode.MathStyle.MathStyleType.SCRIPT -> " scriptlevel=\"1\""
+            LatexNode.MathStyle.MathStyleType.SCRIPT_SCRIPT -> " scriptlevel=\"2\""
         }
-        return "<mstyle$display>$content</mstyle>"
+        return "<mstyle$attrs>$content</mstyle>"
     }
 
     override fun visitFontSize(node: LatexNode.FontSize): String {
@@ -547,9 +542,16 @@ class MathMLVisitor : BaseLatexVisitor<String>() {
 
     override fun visitColorBox(node: LatexNode.ColorBox): String {
         val content = node.content.joinToString("") { visit(it) }
-        val bgStyle = "background-color:${escapeXml(node.backgroundColor)}"
-        val borderStyle = node.borderColor?.let { ";border:1px solid ${escapeXml(it)}" } ?: ""
-        return "<mstyle mathbackground=\"${escapeXml(node.backgroundColor)}\">$content</mstyle>"
+        // MathML 没有原生的边框属性，通过 CSS style 保留边框颜色信息
+        val cssStyle = buildString {
+            append("background-color:")
+            append(escapeXml(node.backgroundColor))
+            node.borderColor?.let {
+                append(";border:1px solid ")
+                append(escapeXml(it))
+            }
+        }
+        return "<mstyle mathbackground=\"${escapeXml(node.backgroundColor)}\" style=\"$cssStyle\">$content</mstyle>"
     }
 
     override fun visitPrescript(node: LatexNode.Prescript): String {
