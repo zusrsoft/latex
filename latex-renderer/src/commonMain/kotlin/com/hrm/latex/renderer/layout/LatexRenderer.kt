@@ -84,7 +84,10 @@ internal object LatexRenderer {
         layoutMap: LayoutMap? = null,
         cache: LayoutCache? = null
     ): LatexRenderResult {
-        // 清除每次测量周期的缓存（字体/字号可能已变化）
+        // 清除每次测量周期的缓存（字体/字号可能已变化）。
+        // 缓存只在单次测量周期内有效：编号/tog 等烘焙在 draw lambda 中的信息
+        // 依赖本次周期的 EquationNumberingState，跨周期复用会显示陈旧编号并导致跳号。
+        cache?.clear()
         LayoutUtils.clearCache()
 
         // 预计算公式编号：遍历 AST 建立 label → 编号映射
@@ -105,7 +108,7 @@ internal object LatexRenderer {
             emptyList()
         } else {
             HighlightCalculator.computeHighlightRects(
-                children, highlightRanges, context, textMeasurer, density, layout, cache
+                children, highlightRanges, numberedContext, textMeasurer, density, layout, cache
             )
         }
 

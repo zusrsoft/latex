@@ -105,6 +105,9 @@ internal object EquationNumbering {
             for (node in nodes) {
                 when (node) {
                     is LatexNode.Environment -> {
+                        // 与测量顺序保持一致：内层嵌套环境先测量、先获得编号，
+                        // 因此后递归子内容、再为外层分配编号，保证 \ref 与显示编号一致。
+                        process(node.content)
                         if (shouldNumberEnvironment(node.name, node.content)) {
                             val number = nextNumber()
                             // 在该环境内容中查找 \label，绑定编号
@@ -112,20 +115,18 @@ internal object EquationNumbering {
                                 labelToNumber[labelKey] = number
                             }
                         }
-                        // 递归进入环境内容（处理嵌套环境）
-                        process(node.content)
                     }
 
                     is LatexNode.Aligned -> {
+                        // 同上：先递归行内容（处理嵌套环境），再为外层分配编号
+                        for (row in node.rows) {
+                            process(row)
+                        }
                         if (shouldNumberAligned(node)) {
                             val number = nextNumber()
                             findLabelsInAllRows(node.rows).forEach { labelKey ->
                                 labelToNumber[labelKey] = number
                             }
-                        }
-                        // 递归进入行内容
-                        for (row in node.rows) {
-                            process(row)
                         }
                     }
 
@@ -139,14 +140,15 @@ internal object EquationNumbering {
                     }
 
                     is LatexNode.Eqnarray -> {
+                        // 同上：先递归行内容，再为外层分配编号
+                        for (row in node.rows) {
+                            process(row)
+                        }
                         if (shouldNumberEqnarray(node)) {
                             val number = nextNumber()
                             findLabelsInAllRows(node.rows).forEach { labelKey ->
                                 labelToNumber[labelKey] = number
                             }
-                        }
-                        for (row in node.rows) {
-                            process(row)
                         }
                     }
 

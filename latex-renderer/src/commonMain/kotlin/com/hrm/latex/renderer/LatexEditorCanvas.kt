@@ -106,8 +106,8 @@ fun LatexEditorCanvas(
         if (config.enableLayoutCache) LayoutCache() else null
     }
 
-    // 测量，同时填充 layoutMap
-    val renderResult = remember(children, context, density) {
+    // 测量，同时填充 layoutMap（layoutMap 参与 key：实例更换时必须重新测量填充）
+    val renderResult = remember(children, context, density, layoutMap) {
         layoutMap?.clear()
         LatexRenderer.measure(children, context, measurer, density, layoutMap = layoutMap, cache = layoutCache)
     }

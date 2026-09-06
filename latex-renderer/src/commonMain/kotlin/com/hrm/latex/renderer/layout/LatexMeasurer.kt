@@ -113,8 +113,12 @@ internal fun measureNode(
     node: LatexNode, context: RenderContext, measurer: TextMeasurer, density: Density,
     cache: LayoutCache? = null
 ): NodeLayout {
-    // 查询缓存
-    cache?.getNode(node, context)?.let { return it }
+    // 被自动编号的环境不参与缓存：编号文本烘焙在返回的 draw lambda 中，
+    // 结构相同的环境实例可能持有不同编号，且命中缓存会跳过 nextNumber 导致后续编号错位。
+    val skipCache = cache != null && isAutoNumberedNode(node, context)
+    if (!skipCache) {
+        cache?.getNode(node, context)?.let { return it }
+    }
 
     // 递归函数引用
     val measureNodeRef = { n: LatexNode, s: RenderContext ->
@@ -132,7 +136,9 @@ internal fun measureNode(
         )
         // 自动编号：为需要编号的环境追加编号标签
         val result = maybeAttachEquationNumber(node, layout, context, measurer, density)
-        cache?.putNode(node, context, result)
+        if (!skipCache) {
+            cache?.putNode(node, context, result)
+        }
         return result
     }
 
@@ -257,7 +263,9 @@ internal fun measureNode(
 
         else -> NodeLayout(0f, 0f, 0f) { _, _ -> }
     }
-    cache?.putNode(node, context, result)
+    if (!skipCache) {
+        cache?.putNode(node, context, result)
+    }
     return result
 }
 
@@ -381,14 +389,25 @@ internal fun measureGroup(
     val height = maxAscent + maxDescent
     val baseline = maxAscent
 
-    // 采集子节点布局信息到 LayoutMap（仅当 layoutMap 非 null 时）
+    // 采集子节点布局信息到 LayoutMap（仅当 layoutMap 非 null 时）。
+    // 坐标方向与 draw lambda 保持一致：RTL 时从右往左累加，否则 LTR。
     if (layoutMap != null) {
-        var relX = 0f
-        finalMeasuredNodes.forEachIndexed { index, child ->
-            val relY = baseline - child.baseline
-            layoutMap.add(nodes[index], relX, relY, child.width, child.height, child.baseline)
-            relX += child.width
-            if (index < spacings.size) relX += spacings[index]
+        if (context.textDirection == TextDirection.RTL) {
+            var relX = totalWidth
+            finalMeasuredNodes.forEachIndexed { index, child ->
+                relX -= child.width
+                val relY = baseline - child.baseline
+                layoutMap.add(nodes[index], relX, relY, child.width, child.height, child.baseline)
+                if (index < spacings.size) relX -= spacings[index]
+            }
+        } else {
+            var relX = 0f
+            finalMeasuredNodes.forEachIndexed { index, child ->
+                val relY = baseline - child.baseline
+                layoutMap.add(nodes[index], relX, relY, child.width, child.height, child.baseline)
+                relX += child.width
+                if (index < spacings.size) relX += spacings[index]
+            }
         }
     }
 
@@ -441,6 +460,20 @@ private fun measureVerticalLines(
             line.draw(this, x, y + positions[i])
         }
     }
+}
+
+/**
+ * 判断节点在当前上下文中是否会被附加自动编号。
+ *
+ * 与 [maybeAttachEquationNumber] 的判断条件保持一致；
+ * 此类节点不能写入/读取布局缓存。
+ */
+private fun isAutoNumberedNode(node: LatexNode, context: RenderContext): Boolean {
+    if (context.equationNumbering == null) return false
+    val envName = getNumberableEnvName(node) ?: return false
+    if (!EquationNumbering.isNumberedEnvName(envName)) return false
+    if (hasManualTag(node)) return false
+    return true
 }
 
 /**

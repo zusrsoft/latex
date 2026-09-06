@@ -33,6 +33,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -233,9 +234,12 @@ private fun LatexDocument(
     val measurer = rememberTextMeasurer()
     val density = LocalDensity.current
 
-    // 当启用点击交互时，使用 LayoutMap 记录节点位置
-    val layoutMap = remember(onNodeClick, onHyperlinkClick) {
-        if (onNodeClick != null || onHyperlinkClick != null) LayoutMap() else null
+    // 当启用点击交互时，使用 LayoutMap 记录节点位置。
+    // key 使用布尔值而不是 lambda 身份：调用方每次重组传入新 lambda 时
+    // 不应重建映射表（否则 renderResult 命中旧缓存，空表永远不被填充，点击失效）。
+    val hasClickHandlers = onNodeClick != null || onHyperlinkClick != null
+    val layoutMap = remember(hasClickHandlers) {
+        if (hasClickHandlers) LayoutMap() else null
     }
 
     // NodeLayout 缓存：仅在 config 启用时创建，跨渲染周期复用相同 AST 子树+上下文的测量结果
@@ -243,11 +247,17 @@ private fun LatexDocument(
         if (enableLayoutCache) LayoutCache() else null
     }
 
-    // 使用 LatexRenderer 共享逻辑进行测量（与导出路径共用同一份代码）
-    val renderResult = remember(children, context, density, highlightRanges) {
+    // 使用 LatexRenderer 共享逻辑进行测量（与导出路径共用同一份代码）。
+    // layoutMap 参与 key：映射表重建时必须重新测量填充。
+    val renderResult = remember(children, context, density, highlightRanges, layoutMap) {
         layoutMap?.clear()
         LatexRenderer.measure(children, context, measurer, density, highlightRanges, layoutMap, layoutCache)
     }
+
+    // 手势闭包只随 layoutMap/latex 重启，回调与测量结果通过最新状态读取，避免捕获陈旧值
+    val currentRenderResult by rememberUpdatedState(renderResult)
+    val currentOnNodeClick by rememberUpdatedState(onNodeClick)
+    val currentOnHyperlinkClick by rememberUpdatedState(onHyperlinkClick)
 
     val widthDp = with(density) { renderResult.canvasWidth.toDp() }
     val heightDp = with(density) { renderResult.canvasHeight.toDp() }
@@ -259,23 +269,26 @@ private fun LatexDocument(
     } else {
         modifier.size(widthDp, heightDp)
     }.let { mod ->
-        if ((onNodeClick != null || onHyperlinkClick != null) && layoutMap != null) {
-            mod.pointerInput(layoutMap, latex, onHyperlinkClick) {
+        if (hasClickHandlers && layoutMap != null) {
+            mod.pointerInput(layoutMap, latex) {
                 detectTapGestures { offset ->
+                    val nodeClick = currentOnNodeClick
+                    val linkClick = currentOnHyperlinkClick
+                    if (nodeClick == null && linkClick == null) return@detectTapGestures
                     // 将点击坐标转换为内容区相对坐标
-                    val contentX = offset.x - renderResult.horizontalPadding
-                    val contentY = offset.y - renderResult.verticalPadding
+                    val contentX = offset.x - currentRenderResult.horizontalPadding
+                    val contentY = offset.y - currentRenderResult.verticalPadding
                     val hit = layoutMap.hitTest(contentX, contentY)
                     if (hit != null) {
                         // 超链接专用回调：命中 Hyperlink 节点时直接返回 URL
-                        if (onHyperlinkClick != null && hit.node is LatexNode.Hyperlink) {
-                            onHyperlinkClick(hit.node.url)
+                        if (linkClick != null && hit.node is LatexNode.Hyperlink) {
+                            linkClick(hit.node.url)
                         }
                         // 通用节点点击回调
-                        if (onNodeClick != null) {
+                        if (nodeClick != null) {
                             val range = hit.node.sourceRange
                             if (range != null) {
-                                onNodeClick(range.start, range.end, latex)
+                                nodeClick(range.start, range.end, latex)
                             }
                         }
                     }
