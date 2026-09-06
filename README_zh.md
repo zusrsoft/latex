@@ -4,7 +4,7 @@
 [![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-1.10.3-brightgreen.svg)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![Android API](https://img.shields.io/badge/Android%20API-23%2B-brightgreen.svg)](https://android-arsenal.com/api?level=24)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.huarangmeng/latex-base?filter=!*-kt*)](https://central.sonatype.com/search?q=io.github.huarangmeng.latex)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.zusrsoft/latex-base?filter=!*-kt*)](https://central.sonatype.com/search?q=io.github.zusrsoft.latex)
 
 这是一个基于 Kotlin Multiplatform (KMP) 开发的高性能 LaTeX 数学公式解析与渲染库。支持在 Android, iOS, Desktop (JVM) 和 Web (Wasm/JS) 平台上实现一致的渲染效果。
 
@@ -440,8 +440,8 @@ fun MyEditor() {
 
 | 变体 | Kotlin | Compose Multiplatform | 制品版本号 |
 |------|--------|-----------------------|-----------|
-| **标准版** | 2.3.10 | 1.10.3 | `1.5.0` |
-| **Kotlin 2.1.0 兼容版** | 2.1.0 | 1.9.3 | `1.5.0-kt2.1.0` |
+| **标准版** | 2.3.10 | 1.10.3 | `1.5.4` |
+| **Kotlin 2.1.0 兼容版** | 2.1.0 | 1.9.3 | `1.5.4-kt2.1.0` |
 
 > 请选择与你项目 Kotlin 版本匹配的变体。如果你的项目使用 **Kotlin 2.1.0**，请使用带 `-kt2.1.0` 后缀的版本。
 
@@ -451,12 +451,12 @@ fun MyEditor() {
 
 ```toml
 [versions]
-latex = "1.5.0"
+latex = "1.5.4"
 
 [libraries]
-latex-base = { module = "io.github.huarangmeng:latex-base", version.ref = "latex" }
-latex-parser = { module = "io.github.huarangmeng:latex-parser", version.ref = "latex" }
-latex-renderer = { module = "io.github.huarangmeng:latex-renderer", version.ref = "latex" }
+latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
+latex-parser = { module = "io.github.zusrsoft:latex-parser", version.ref = "latex" }
+latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "latex" }
 ```
 
 ### Kotlin 2.1.0 兼容版
@@ -465,12 +465,12 @@ latex-renderer = { module = "io.github.huarangmeng:latex-renderer", version.ref 
 
 ```toml
 [versions]
-latex = "1.5.0-kt2.1.0"
+latex = "1.5.4-kt2.1.0"
 
 [libraries]
-latex-base = { module = "io.github.huarangmeng:latex-base", version.ref = "latex" }
-latex-parser = { module = "io.github.huarangmeng:latex-parser", version.ref = "latex" }
-latex-renderer = { module = "io.github.huarangmeng:latex-renderer", version.ref = "latex" }
+latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
+latex-parser = { module = "io.github.zusrsoft:latex-parser", version.ref = "latex" }
+latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "latex" }
 ```
 
 ### 添加到模块
@@ -519,7 +519,7 @@ dependencies {
 
 ## 💡 推荐项目
 
-- [Markdown](https://github.com/huarangmeng/Markdown) — 同作者开发的 Kotlin Multiplatform Markdown 解析与渲染库。如果你的项目同时需要 LaTeX 和 Markdown 渲染能力，推荐一起使用！
+- [Markdown](https://github.com/zusrsoft/Markdown) — 同作者开发的 Kotlin Multiplatform Markdown 解析与渲染库。如果你的项目同时需要 LaTeX 和 Markdown 渲染能力，推荐一起使用！
 
 ## 📄 开源协议
 

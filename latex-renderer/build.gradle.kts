@@ -87,7 +87,7 @@ mavenPublishing {
     signAllPublications()
 
     coordinates(
-        "io.github.huarangmeng",
+        "io.github.zusrsoft",
         "latex-renderer",
         rootProject.property("VERSION").toString()
     )
@@ -105,7 +105,7 @@ mavenPublishing {
         """.trimIndent()
         )
         inceptionYear.set("2026")
-        url.set("https://github.com/huarangmeng/latex")
+        url.set("https://github.com/zusrsoft/latex")
         licenses {
             license {
                 name.set("MIT License")
@@ -121,9 +121,9 @@ mavenPublishing {
             }
         }
         scm {
-            url.set("https://github.com/huarangmeng/latex")
-            connection.set("scm:git:git://github.com/huarangmeng/latex.git")
-            developerConnection.set("scm:git:ssh://git@github.com/huarangmeng/latex.git")
+            url.set("https://github.com/zusrsoft/latex")
+            connection.set("scm:git:git://github.com/zusrsoft/latex.git")
+            developerConnection.set("scm:git:ssh://git@github.com/zusrsoft/latex.git")
         }
     }
 }

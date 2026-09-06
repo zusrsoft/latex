@@ -4,7 +4,7 @@
 [![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-1.10.3-brightgreen.svg)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![Android API](https://img.shields.io/badge/Android%20API-23%2B-brightgreen.svg)](https://android-arsenal.com/api?level=24)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.huarangmeng/latex-base?filter=!*-kt*)](https://central.sonatype.com/search?q=io.github.huarangmeng.latex)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.zusrsoft/latex-base?filter=!*-kt*)](https://central.sonatype.com/search?q=io.github.zusrsoft.latex)
 
 A high-performance LaTeX mathematical formula parsing and rendering library developed based on Kotlin Multiplatform (KMP). It supports consistent rendering effects on Android, iOS, Desktop (JVM), and Web (Wasm/JS) platforms.
 
@@ -442,8 +442,8 @@ This library publishes two variants for each release to support different Kotlin
 
 | Variant | Kotlin | Compose Multiplatform | Artifact Version |
 |---------|--------|-----------------------|------------------|
-| **Standard** | 2.3.10 | 1.10.3 | `1.5.0`          |
-| **Kotlin 2.1.0** | 2.1.0 | 1.9.3 | `1.5.0-kt2.1.0`  |
+| **Standard** | 2.3.10 | 1.10.3 | `1.5.4`          |
+| **Kotlin 2.1.0** | 2.1.0 | 1.9.3 | `1.5.4-kt2.1.0`  |
 
 > Choose the variant that matches your project's Kotlin version. If your project uses **Kotlin 2.1.0**, use the `-kt2.1.0` suffixed version.
 
@@ -453,12 +453,12 @@ Add dependencies in `gradle/libs.versions.toml`:
 
 ```toml
 [versions]
-latex = "1.5.0"
+latex = "1.5.4"
 
 [libraries]
-latex-base = { module = "io.github.huarangmeng:latex-base", version.ref = "latex" }
-latex-parser = { module = "io.github.huarangmeng:latex-parser", version.ref = "latex" }
-latex-renderer = { module = "io.github.huarangmeng:latex-renderer", version.ref = "latex" }
+latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
+latex-parser = { module = "io.github.zusrsoft:latex-parser", version.ref = "latex" }
+latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "latex" }
 ```
 
 ### Kotlin 2.1.0 Compatible Version
@@ -467,12 +467,12 @@ If your project uses Kotlin 2.1.0, use the `-kt2.1.0` suffixed artifacts:
 
 ```toml
 [versions]
-latex = "1.5.0-kt2.1.0"
+latex = "1.5.4-kt2.1.0"
 
 [libraries]
-latex-base = { module = "io.github.huarangmeng:latex-base", version.ref = "latex" }
-latex-parser = { module = "io.github.huarangmeng:latex-parser", version.ref = "latex" }
-latex-renderer = { module = "io.github.huarangmeng:latex-renderer", version.ref = "latex" }
+latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
+latex-parser = { module = "io.github.zusrsoft:latex-parser", version.ref = "latex" }
+latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "latex" }
 ```
 
 ### Add to Your Module
@@ -521,7 +521,7 @@ For supported features and chapter-specific follow-up items, see [PARSER_COVERAG
 
 ## 💡 Recommended
 
-- [Markdown](https://github.com/huarangmeng/Markdown) — A Kotlin Multiplatform Markdown parsing and rendering library by the same author. If you need both LaTeX and Markdown rendering in your project, check it out!
+- [Markdown](https://github.com/zusrsoft/Markdown) — A Kotlin Multiplatform Markdown parsing and rendering library by the same author. If you need both LaTeX and Markdown rendering in your project, check it out!
 
 ## 📄 License
 
