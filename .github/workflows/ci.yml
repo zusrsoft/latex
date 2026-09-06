@@ -1,0 +1,36 @@
+# .github/workflows/ci.yml
+#
+# 测试工作流 — push / PR 时运行 JVM 测试，保障解析器与渲染器的核心逻辑不回归。
+# publish.yml 的发布也依赖此处的测试通过（发布前先跑 test）。
+
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: "🧪 JVM tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 21
+          cache: 'gradle'
+
+      - name: Run latex-parser tests
+        run: ./gradlew :latex-parser:cleanJvmTest :latex-parser:jvmTest
+
+      - name: Run latex-renderer tests
+        run: ./gradlew :latex-renderer:jvmTest

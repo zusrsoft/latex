@@ -42,9 +42,31 @@ env:
   ALIAS_COMPOSE_MULTIPLATFORM_VERSION: "1.9.3" # 当前正式版: 1.10.1
 
 jobs:
+  # ==================== Job 0: 发布前测试 ====================
+  test:
+    name: "🧪 Pre-publish tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 21
+          cache: 'gradle'
+
+      - name: Run latex-parser tests
+        run: ./gradlew :latex-parser:cleanJvmTest :latex-parser:jvmTest
+
+      - name: Run latex-renderer tests
+        run: ./gradlew :latex-renderer:jvmTest
+
   # ==================== Job 1: 正常发布 ====================
   publish:
     name: "📦 Publish normal version"
+    needs: test
     runs-on: macOS-latest
     steps:
       - name: Check out code
@@ -84,6 +106,7 @@ jobs:
   # ==================== Job 2: 别名发布 (kt2.1.0) ====================
   publish-alias:
     name: "📦 Publish alias version (kt2.1.0)"
+    needs: test
     runs-on: macOS-latest
     steps:
       - name: Check out code

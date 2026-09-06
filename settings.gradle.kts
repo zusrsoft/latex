@@ -25,16 +25,6 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
-        exclusiveContent {
-            forRepository {
-                maven {
-                    url = uri("https://maven.universablockchain.com/")
-                }
-            }
-            filter {
-                includeGroup("net.sergeych")
-            }
-        }
     }
 }
 
