@@ -41,6 +41,17 @@ internal class CommandParser(
         private const val TAG = "CommandParser"
 
         /**
+         * 宏嵌套展开深度上限。
+         *
+         * 防御互相引用（或自引用）的自定义命令导致无限递归：
+         * 超过上限后停止展开嵌套命令，并记录 MACRO_ERROR 诊断。
+         */
+        internal const val MAX_MACRO_EXPANSION_DEPTH = 100
+
+        /** 递归宏最多记录的诊断条数，避免诊断列表被刷屏 */
+        private const val MAX_MACRO_DIAGNOSTICS = 3
+
+        /**
          * 命令注册表：所有已知 LaTeX 命令的分发中心。
          * 
          * 注册表是无状态的（只存储命令名→handler 的映射），
@@ -185,7 +196,7 @@ internal class CommandParser(
         }
 
         // 替换定义中的参数占位符
-        val expanded = replaceParameters(customCmd.definition, args)
+        val expanded = replaceParameters(customCmd.definition, args, 0)
 
         // 返回 Group 包装展开的内容
         return LatexNode.Group(expanded)
@@ -194,8 +205,11 @@ internal class CommandParser(
     /**
      * 递归替换参数占位符 #1, #2, ...
      * 利用 LatexNode 的自描述方法 children()/withChildren() 实现通用递归
+     *
+     * [depth] 为当前宏嵌套展开深度，超过 [MAX_MACRO_EXPANSION_DEPTH] 时
+     * 停止展开嵌套的自定义命令（防止互相引用的宏无限递归）。
      */
-    private fun replaceParameters(nodes: List<LatexNode>, args: List<LatexNode>): List<LatexNode> {
+    private fun replaceParameters(nodes: List<LatexNode>, args: List<LatexNode>, depth: Int): List<LatexNode> {
         return nodes.flatMap { node ->
             when (node) {
                 is LatexNode.Text -> {
@@ -234,10 +248,15 @@ internal class CommandParser(
                     // 检查是否是另一个自定义命令需要展开
                     val nestedCmd = context.customCommands[node.name]
                     if (nestedCmd != null) {
-                        val nestedArgs = node.arguments.map { replaceParametersInNode(it, args) }
-                        replaceParameters(nestedCmd.definition, nestedArgs)
+                        if (depth >= MAX_MACRO_EXPANSION_DEPTH) {
+                            reportMacroDepthExceeded(node)
+                            listOf(node)
+                        } else {
+                            val nestedArgs = node.arguments.map { replaceParametersInNode(it, args, depth) }
+                            replaceParameters(nestedCmd.definition, nestedArgs, depth + 1)
+                        }
                     } else {
-                        val expandedArgs = node.arguments.map { replaceParametersInNode(it, args) }
+                        val expandedArgs = node.arguments.map { replaceParametersInNode(it, args, depth) }
                         listOf(LatexNode.Command(node.name, expandedArgs))
                     }
                 }
@@ -247,7 +266,7 @@ internal class CommandParser(
                     if (children.isEmpty()) {
                         listOf(node)
                     } else {
-                        val newChildren = children.map { replaceParametersInNode(it, args) }
+                        val newChildren = children.map { replaceParametersInNode(it, args, depth) }
                         listOf(node.withChildren(newChildren))
                     }
                 }
@@ -258,13 +277,32 @@ internal class CommandParser(
     /**
      * 替换单个节点中的参数
      */
-    private fun replaceParametersInNode(node: LatexNode, args: List<LatexNode>): LatexNode {
+    private fun replaceParametersInNode(node: LatexNode, args: List<LatexNode>, depth: Int): LatexNode {
         return when (node) {
-            is LatexNode.Group -> LatexNode.Group(replaceParameters(node.children, args))
+            is LatexNode.Group -> LatexNode.Group(replaceParameters(node.children, args, depth))
             else -> {
-                val replaced = replaceParameters(listOf(node), args)
+                val replaced = replaceParameters(listOf(node), args, depth)
                 if (replaced.size == 1) replaced[0] else LatexNode.Group(replaced)
             }
         }
+    }
+
+    /**
+     * 记录宏展开深度超限的诊断（限流，避免同类错误刷屏）
+     */
+    private fun reportMacroDepthExceeded(node: LatexNode.Command) {
+        if (context.diagnostics.count { it.category == ParseDiagnostic.Category.MACRO_ERROR } >= MAX_MACRO_DIAGNOSTICS) {
+            return
+        }
+        HLog.w(TAG) { "宏展开深度超过 $MAX_MACRO_EXPANSION_DEPTH，疑似递归定义: \\${node.name}" }
+        context.diagnostics.add(
+            ParseDiagnostic(
+                range = node.sourceRange ?: SourceRange(0, 0),
+                message = "Macro expansion of '\\${node.name}' exceeded depth limit " +
+                    "$MAX_MACRO_EXPANSION_DEPTH (possible recursive definition)",
+                severity = ParseDiagnostic.Severity.ERROR,
+                category = ParseDiagnostic.Category.MACRO_ERROR
+            )
+        )
     }
 }

@@ -31,6 +31,12 @@ import com.hrm.latex.parser.tokenizer.LatexToken
 private const val TAG = "MacroHandlers"
 
 /**
+ * \def 参数声明提取：tokenizer 不在 '#' 处断词，
+ * `\def\x#1#2` 的参数串会被合并为单个 Text("#1#2")，需逐个匹配。
+ */
+private val DEF_PARAM_PATTERN = Regex("#[0-9]")
+
+/**
  * 宏定义命令：\newcommand, \renewcommand, \def, \DeclareMathOperator
  */
 internal fun CommandRegistry.installMacroHandlers() {
@@ -89,8 +95,11 @@ internal fun CommandRegistry.installMacroHandlers() {
             val token = stream.peek()
             if (token is LatexToken.Text && token.content.startsWith("#")) {
                 stream.advance()
-                val argNum = token.content.removePrefix("#").toIntOrNull()
-                if (argNum != null && argNum > numArgs) numArgs = argNum
+                // "#1" 与 "#1#2"（合并 token）都逐个提取，取最大参数号
+                for (match in DEF_PARAM_PATTERN.findAll(token.content)) {
+                    val argNum = match.value.substring(1).toInt()
+                    if (argNum > numArgs) numArgs = argNum
+                }
             } else {
                 break
             }

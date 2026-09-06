@@ -438,6 +438,10 @@ class IncrementalLatexParser {
             baseParser.parse(text)
         } catch (e: Exception) {
             null
+        } catch (e: StackOverflowError) {
+            // 纵深防御：宏展开深度上限应已阻断递归宏，但避免任何残余深递归导致进程崩溃
+            HLog.e(TAG, e) { "解析时发生栈溢出，输入可能包含过深的递归结构" }
+            null
         }
     }
 
@@ -454,6 +458,9 @@ class IncrementalLatexParser {
                 null
             }
         } catch (e: Exception) {
+            null
+        } catch (e: StackOverflowError) {
+            HLog.e(TAG, e) { "解析时发生栈溢出，输入可能包含过深的递归结构" }
             null
         }
     }

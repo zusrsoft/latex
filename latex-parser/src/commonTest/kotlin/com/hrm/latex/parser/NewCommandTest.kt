@@ -28,7 +28,6 @@ import kotlin.test.Test
 import kotlin.test.assertIs
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
-
 class NewCommandTest {
 
     @Test
@@ -357,6 +356,58 @@ class NewCommandTest {
         val parser = LatexParser()
         val result = parser.parse("\\def\\myvar{\\alpha} \\myvar")
         assertTrue(result.children.isNotEmpty())
+    }
+
+    @Test
+    fun should_count_def_multiple_parameters_from_merged_text_token() {
+        // tokenizer 不在 # 处断词，"#1#2" 会合并为单个 Text token
+        val parser = LatexParser()
+        val result = parser.parse("\\def\\swap#1#2{#1+#2}")
+
+        val newCmd = result.children.filterIsInstance<LatexNode.NewCommand>()
+            .first { it.commandName == "swap" }
+        assertEquals(2, newCmd.numArgs, "\\def\\swap#1#2 应识别出 2 个参数")
+    }
+
+    @Test
+    fun should_expand_def_command_with_multiple_parameters() {
+        val parser = LatexParser()
+        val result = parser.parse("\\def\\swap#1#2{#1+#2} \\swap{a}{b}")
+
+        val expanded = result.children.last()
+        assertTrue(expanded is LatexNode.Group, "自定义命令应展开为 Group")
+
+        fun extractText(node: LatexNode): String = when (node) {
+            is LatexNode.Text -> node.content
+            is LatexNode.Group -> node.children.joinToString("") { extractText(it) }
+            is LatexNode.Command -> node.name
+            else -> node.children().joinToString("") { extractText(it) }
+        }
+        val text = extractText(expanded)
+        assertEquals("a+b", text, "参数应被替换为实际值而不是 #1/#2")
+    }
+
+    @Test
+    fun should_not_crash_on_mutually_recursive_macros() {
+        // \a 展开 \b，\b 又展开 \a —— 必须有展开深度上限而不是 StackOverflowError
+        val parser = LatexParser()
+        val input = "\\def\\a{\\b} \\def\\b{\\a} \\a"
+        val result = parser.parseWithDiagnostics(input)
+
+        assertTrue(result.document.children.isNotEmpty(), "解析应容错完成而不是崩溃")
+        val macroErrors = result.diagnosticsByCategory(ParseDiagnostic.Category.MACRO_ERROR)
+        assertTrue(macroErrors.isNotEmpty(), "应产生 MACRO_ERROR 诊断")
+    }
+
+    @Test
+    fun should_not_crash_on_self_recursive_macro() {
+        val parser = LatexParser()
+        val input = "\\def\\loop{\\loop} \\loop"
+        val result = parser.parseWithDiagnostics(input)
+
+        assertTrue(result.document.children.isNotEmpty(), "自引用宏应被深度上限截断")
+        val macroErrors = result.diagnosticsByCategory(ParseDiagnostic.Category.MACRO_ERROR)
+        assertTrue(macroErrors.isNotEmpty(), "应产生 MACRO_ERROR 诊断")
     }
 
     // ===================== \newcommand 可选参数默认值 =====================
