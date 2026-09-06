@@ -48,6 +48,16 @@ internal class CommandParser(
          */
         internal const val MAX_MACRO_EXPANSION_DEPTH = 100
 
+        /**
+         * 单次解析会话的宏展开规模预算（处理节点计数）。
+         *
+         * 深度上限只防"线性递归"，不防"指数膨胀"：如 `\a#1{\a{#1#1}}`
+         * 每层把参数复制一份，展开节点数按 2^n 增长，深度截断触发前
+         * （约 30 层）内存就已耗尽。该预算以"展开器每处理一个节点计 1"
+         * 近似工作量，超限即中止本次展开，保证任意输入的内存占用有界。
+         */
+        internal const val MAX_MACRO_EXPANSION_WORK = 1_000_000
+
         /** 递归宏最多记录的诊断条数，避免诊断列表被刷屏 */
         private const val MAX_MACRO_DIAGNOSTICS = 3
 
@@ -196,11 +206,21 @@ internal class CommandParser(
         }
 
         // 替换定义中的参数占位符
-        val expanded = replaceParameters(customCmd.definition, args, 0)
+        val expanded = try {
+            replaceParameters(customCmd.definition, args, 0)
+        } catch (e: MacroExpansionAborted) {
+            // 展开规模超预算：中止整条展开链，避免指数级膨胀耗尽内存。
+            // 参数此时已全部消费（替换阶段不读 tokenStream），中止是安全的。
+            reportMacroBudgetExceeded()
+            return LatexNode.Group(emptyList())
+        }
 
         // 返回 Group 包装展开的内容
         return LatexNode.Group(expanded)
     }
+
+    /** 内部信号：宏展开超出规模预算，中止本次展开 */
+    private class MacroExpansionAborted : RuntimeException()
 
     /**
      * 递归替换参数占位符 #1, #2, ...
@@ -208,9 +228,16 @@ internal class CommandParser(
      *
      * [depth] 为当前宏嵌套展开深度，超过 [MAX_MACRO_EXPANSION_DEPTH] 时
      * 停止展开嵌套的自定义命令（防止互相引用的宏无限递归）。
+     * 每处理一个节点自增 [LatexParserContext.macroExpansionWork]，超过
+     * [MAX_MACRO_EXPANSION_WORK] 时抛 [MacroExpansionAborted] 中止展开
+     * （防止 `\a#1{\a{#1#1}}` 一类指数放大耗尽内存）。
      */
     private fun replaceParameters(nodes: List<LatexNode>, args: List<LatexNode>, depth: Int): List<LatexNode> {
         return nodes.flatMap { node ->
+            context.macroExpansionWork++
+            if (context.macroExpansionWork >= MAX_MACRO_EXPANSION_WORK) {
+                throw MacroExpansionAborted()
+            }
             when (node) {
                 is LatexNode.Text -> {
                     // 替换 #1, #2, ... 为实际参数
@@ -300,6 +327,26 @@ internal class CommandParser(
                 range = node.sourceRange ?: SourceRange(0, 0),
                 message = "Macro expansion of '\\${node.name}' exceeded depth limit " +
                     "$MAX_MACRO_EXPANSION_DEPTH (possible recursive definition)",
+                severity = ParseDiagnostic.Severity.ERROR,
+                category = ParseDiagnostic.Category.MACRO_ERROR
+            )
+        )
+    }
+
+    /**
+     * 记录宏展开规模超限的诊断（限流，避免同类错误刷屏）
+     */
+    private fun reportMacroBudgetExceeded() {
+        if (context.diagnostics.count { it.category == ParseDiagnostic.Category.MACRO_ERROR } >= MAX_MACRO_DIAGNOSTICS) {
+            return
+        }
+        val range = tokenStream.peek(-1)?.range ?: SourceRange(0, 0)
+        HLog.w(TAG) { "宏展开规模超过 $MAX_MACRO_EXPANSION_WORK 个节点，疑似指数膨胀递归: ${range}" }
+        context.diagnostics.add(
+            ParseDiagnostic(
+                range = range,
+                message = "Macro expansion exceeded node budget " +
+                    "$MAX_MACRO_EXPANSION_WORK (possible exponential recursive definition)",
                 severity = ParseDiagnostic.Severity.ERROR,
                 category = ParseDiagnostic.Category.MACRO_ERROR
             )

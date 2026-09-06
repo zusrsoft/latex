@@ -104,6 +104,7 @@ internal class ParseSession(
     override val customCommands: MutableMap<String, CustomCommand> = mutableMapOf()
     override val customEnvironments: MutableMap<String, CustomEnvironment> = mutableMapOf()
     override val diagnostics: MutableList<ParseDiagnostic> = mutableListOf()
+    override var macroExpansionWork: Int = 0
 
     private val environmentParser = EnvironmentParser(this)
     private val chemicalParser = ChemicalParser(this)

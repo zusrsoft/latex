@@ -460,8 +460,20 @@ class NewCommandTest {
     @Test
     fun should_parse_two_arg_command_with_explicit_optional() {
         val parser = LatexParser()
-        // 明确传入可选参数
+        // 明确传入可选参�?
         val result = parser.parse("\\newcommand{\\cmd}[2][x]{#1 + #2} \\cmd[y]{z}")
         assertTrue(result.children.isNotEmpty())
+    }
+
+    @Test
+    fun should_abort_exponentially_expanding_macro_with_budget_diagnostic() {
+        // 指数膨胀递归：每层把参数复制一份，节点数按 2^n 增长。
+        // 修复前在深度截断（100 层）触发前内存就已耗尽（OOM/挂 Tab）。
+        val result = LatexParser().parseWithDiagnostics("\\def\\a#1{\\a{#1#1}}\\a{x}")
+        assertTrue(result.document.children.isNotEmpty(), "解析应返回文档而非崩溃")
+        assertTrue(
+            result.diagnostics.any { it.category == ParseDiagnostic.Category.MACRO_ERROR },
+            "指数膨胀递归宏应产生 MACRO_ERROR 诊断"
+        )
     }
 }

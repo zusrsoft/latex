@@ -74,6 +74,16 @@ internal interface LatexParserContext {
     val customEnvironments: MutableMap<String, CustomEnvironment>
     val diagnostics: MutableList<ParseDiagnostic>
 
+    /**
+     * 宏展开规模计数器（单次解析会话内累计）。
+     *
+     * 递归宏不仅有"深度"维度（由 CommandParser.MAX_MACRO_EXPANSION_DEPTH 防御），
+     * 还有"规模"维度：如 `\a#1{\a{#1#1}}` 每层把参数复制一份，展开节点数指数增长，
+     * 深度截断触发前就可能耗尽内存。CommandParser 每处理一个展开节点自增该计数，
+     * 超出预算后中止展开并记录 MACRO_ERROR 诊断。
+     */
+    var macroExpansionWork: Int
+
     fun parseExpression(): LatexNode?
     fun parseFactor(): LatexNode?
     fun parseArgument(): LatexNode?
