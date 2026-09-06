@@ -11,9 +11,11 @@
 # │ 1. gradle.properties:                                            │
 # │    VERSION=1.2.4  →  VERSION=1.2.4-kt2.1.0                      │
 # │                                                                  │
-  # │ 2. gradle/libs.versions.toml (降级依赖版本):                     │
-  # │    kotlin = "2.3.10"  →  kotlin = "2.1.0"                        │
-  # │    composeMultiplatform = "1.10.1"  →  composeMultiplatform = "1.9.3" │
+# │ 2. gradle/libs.versions.toml (降级依赖版本):                     │
+# │    kotlin = "2.3.10"  →  kotlin = "2.1.0"                        │
+# │    composeMultiplatform = "1.10.3"  →  composeMultiplatform = "1.9.3" │
+# │    composePreview = "1.10.3"  →  composePreview = "1.9.3"        │
+# │    (composeMaterial3 保持 1.9.0：独立版本线，不随 CMP 主版本)     │
 # │                                                                  │
 # │ 模块间依赖保持本地项目引用 api(projects.latexXxx) 不变，         │
 # │ Gradle 会自动将 POM 中的依赖版本解析为当前 VERSION（别名版本），  │
@@ -39,7 +41,9 @@ env:
   # │ 这些版本会在别名发布时替换 libs.versions.toml 中的值 │
   # └─────────────────────────────────────────────────────┘
   ALIAS_KOTLIN_VERSION: "2.1.0"               # 当前正式版: 2.3.10
-  ALIAS_COMPOSE_MULTIPLATFORM_VERSION: "1.9.3" # 当前正式版: 1.10.1
+  ALIAS_COMPOSE_MULTIPLATFORM_VERSION: "1.9.3" # 当前正式版: 1.10.3
+  # composePreview/ui-tooling 随 Compose Multiplatform 主版本发布，别名时用同号版本
+  ALIAS_COMPOSE_PREVIEW_VERSION: "1.9.3"
 
 jobs:
   # ==================== Job 0: 发布前测试 ====================
@@ -159,24 +163,27 @@ jobs:
           echo "│ 修改 ${FILE}                                             │"
           echo "├──────────────────────────────────────────────────────────┤"
           echo "│ [修改前]"
-          grep -E '^(kotlin |composeMultiplatform )' "$FILE" || \
-          grep -E '^(kotlin=|composeMultiplatform=)' "$FILE" || \
-          grep -E '^kotlin |^composeMultiplatform ' "$FILE"
+          grep -E '^(kotlin |composeMultiplatform |composePreview )' "$FILE" || \
+          grep -E '^(kotlin=|composeMultiplatform=|composePreview=)' "$FILE" || \
+          grep -E '^kotlin |^composeMultiplatform |^composePreview ' "$FILE"
           echo "│"
 
           # Kotlin 版本
           sed -i '' "s/^kotlin = \".*\"/kotlin = \"${ALIAS_KOTLIN_VERSION}\"/" "$FILE"
           # Compose Multiplatform 版本
           sed -i '' "s/^composeMultiplatform = \".*\"/composeMultiplatform = \"${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}\"/" "$FILE"
+          # Compose Preview / ui-tooling 版本（同号发布，必须一并降级，否则依赖树会把 ui/foundation 顶回 1.10.x）
+          sed -i '' "s/^composePreview = \".*\"/composePreview = \"${ALIAS_COMPOSE_PREVIEW_VERSION}\"/" "$FILE"
 
           echo "│ [修改后]"
-          grep -E '^(kotlin |composeMultiplatform )' "$FILE" || \
-          grep -E '^(kotlin=|composeMultiplatform=)' "$FILE" || \
-          grep -E '^kotlin |^composeMultiplatform ' "$FILE"
+          grep -E '^(kotlin |composeMultiplatform |composePreview )' "$FILE" || \
+          grep -E '^(kotlin=|composeMultiplatform=|composePreview=)' "$FILE" || \
+          grep -E '^kotlin |^composeMultiplatform |^composePreview ' "$FILE"
           echo "│"
           echo "│ ✅ 依赖版本已降级:"
           echo "│    kotlin:              → ${ALIAS_KOTLIN_VERSION}"
           echo "│    composeMultiplatform: → ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
+          echo "│    composePreview:       → ${ALIAS_COMPOSE_PREVIEW_VERSION}"
           echo "└──────────────────────────────────────────────────────────┘"
 
       # ---------- 汇总验证 ----------
@@ -197,6 +204,7 @@ jobs:
           echo "║  ② gradle/libs.versions.toml (降级后):"
           echo "║     kotlin              = ${ALIAS_KOTLIN_VERSION}"
           echo "║     composeMultiplatform = ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
+          echo "║     composePreview       = ${ALIAS_COMPOSE_PREVIEW_VERSION}"
           echo "║"
           echo "║  ③ 模块间依赖: 保持本地项目引用 (Gradle 自动解析为别名版本)"
           echo "║"
@@ -233,6 +241,7 @@ jobs:
           echo "  依赖版本:"
           echo "    kotlin:              ${ALIAS_KOTLIN_VERSION}"
           echo "    composeMultiplatform: ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
+          echo "    composePreview:       ${ALIAS_COMPOSE_PREVIEW_VERSION}"
           echo ""
           echo "  发布结果:"
           echo "    io.github.huarangmeng:latex-base:${ALIAS_VERSION}"
