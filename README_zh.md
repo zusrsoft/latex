@@ -529,8 +529,8 @@ dependencies {
 ```
 MIT License
 
-Copyright (c) 2026 huarangmeng
-Copyright (c) 2026 zusrsoft
+Copyright (c) 2026 huarangmeng (original author)
+Copyright (c) 2026 zusrsoft (maintainer)
 
 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人不受限制地处理
 软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或
