@@ -72,42 +72,19 @@ tasks.withType<Test>().configureEach {
 }
 
 mavenPublishing {
-    publishToMavenCentral(true)
-
-    signAllPublications()
-
     coordinates("io.github.zusrsoft", "latex-parser", rootProject.property("VERSION").toString())
 
     pom {
         name.set("Kotlin Multiplatform LaTeX Parser")
-        description.set("""
+        description.set(""""
             Cross-platform LaTeX math parsing solution with:
             - Full LaTeX syntax support (math mode)
             - Custom command definitions
             - Chemical formula rendering
             - Compose Multiplatform UI integration
             - Multi-module architecture (base/parser/renderer)
+
+            Maintained fork of huarangmeng/latex.
         """.trimIndent())
-        inceptionYear.set("2026")
-        url.set("https://github.com/zusrsoft/latex")
-        licenses {
-            license {
-                name.set("MIT License")
-                url.set("https://opensource.org/licenses/MIT")
-                distribution.set("repo")
-            }
-        }
-        developers {
-            developer {
-                id.set("huarangmeng")
-                name.set("Kotlin Multiplatform Specialist")
-                url.set("https://github.com/huarangmeng/")
-            }
-        }
-        scm {
-            url.set("https://github.com/zusrsoft/latex")
-            connection.set("scm:git:git://github.com/zusrsoft/latex.git")
-            developerConnection.set("scm:git:ssh://git@github.com/zusrsoft/latex.git")
-        }
     }
 }
