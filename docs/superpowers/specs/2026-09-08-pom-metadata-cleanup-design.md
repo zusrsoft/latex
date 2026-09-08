@@ -95,7 +95,8 @@ Maintained fork of huarangmeng/latex.""")
 
 1. `README.md` Acknowledgements 章节（约 518-520 行）新增：
    `Original project: [huarangmeng/latex](https://github.com/huarangmeng/latex) — this repository is a maintained fork by [zusrsoft](https://github.com/zusrsoft).`
-2. `README_zh.md` 致谢章节（约 516 行起）新增对应中文表述
+2. `README_zh.md` 致谢章节（约 516 行起）新增：
+   `原始项目：[huarangmeng/latex](https://github.com/huarangmeng/latex) —— 本仓库是由 [zusrsoft](https://github.com/zusrsoft) 维护的 fork。`
 3. `LICENSE`：版权行双行（见第 4 节决策）
 4. 两份 README 的 License 区块（README.md 约 533 行 / README_zh.md 约 531 行）同步双版权行
 5. 三个模块 POM `description` 尾部统一追加 `Maintained fork of huarangmeng/latex.`（见 5.1）
@@ -116,7 +117,7 @@ AGENTS.md 无 POM 相关内容（已检索确认），不动。
    - `<developers>` 仅含 zusrsoft
    - `<url>` / `<scm>` 指向 zusrsoft/latex
    - `<description>` 含 `Maintained fork of huarangmeng/latex.`
-2. 全仓 grep `huarangmeng`：仅允许出现于 LICENSE 版权行、两份 README（致谢 + License 区块 + POM fork 声明）、`docs/maven-central/`、`p0-repo-out/` 历史记录
+2. 全仓 grep `huarangmeng`：仅允许出现于 LICENSE 版权行、两份 README（致谢 + License 区块）、三个模块 `build.gradle.kts`（POM description 尾注）、`docs/maven-central/`、`p0-repo-out/` 历史记录
 3. Gradle 配置期全量通过（根脚本 subprojects 块影响所有子项目配置，需完整配置验证）
 
 ## 7. 风险与注意事项
