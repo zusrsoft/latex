@@ -460,7 +460,7 @@ class NewCommandTest {
     @Test
     fun should_parse_two_arg_command_with_explicit_optional() {
         val parser = LatexParser()
-        // 明确传入可选参�?
+        // 明确传入可选参数
         val result = parser.parse("\\newcommand{\\cmd}[2][x]{#1 + #2} \\cmd[y]{z}")
         assertTrue(result.children.isNotEmpty())
     }
