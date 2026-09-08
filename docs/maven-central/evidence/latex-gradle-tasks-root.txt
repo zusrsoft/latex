@@ -1,0 +1,2679 @@
+﻿Calculating task graph as no cached configuration is available for tasks: tasks --all
+Type-safe project accessors is an incubating feature.
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project 'latex'
+------------------------------------------------------------
+
+Android tasks
+-------------
+androidapp:signingReport - Displays the signing info for the base and test modules
+
+Benchmark tasks
+---------------
+latex-benchmark:assembleBenchmarks - Generate and build all benchmarks in a project
+latex-benchmark:benchmark - Execute all benchmarks in a project
+latex-benchmark:mainBenchmark - Execute benchmark for 'main'
+latex-benchmark:mainBenchmarkCompile - Compile JMH source files for 'main'
+latex-benchmark:mainBenchmarkGenerate - Generate JMH source files for 'main'
+latex-benchmark:mainBenchmarkJar - Build JAR for JMH compiled files for 'main'
+
+Binaryen tasks
+--------------
+composeApp:kotlinWasmBinaryenSetup - Download and install a binaryen
+latex-base:kotlinWasmBinaryenSetup - Download and install a binaryen
+latex-parser:kotlinWasmBinaryenSetup - Download and install a binaryen
+latex-preview:kotlinWasmBinaryenSetup - Download and install a binaryen
+latex-renderer:kotlinWasmBinaryenSetup - Download and install a binaryen
+composeApp:wasmBinaryenKotlinClean - Clean unused local binaryen version
+latex-base:wasmBinaryenKotlinClean - Clean unused local binaryen version
+latex-parser:wasmBinaryenKotlinClean - Clean unused local binaryen version
+latex-preview:wasmBinaryenKotlinClean - Clean unused local binaryen version
+latex-renderer:wasmBinaryenKotlinClean - Clean unused local binaryen version
+
+Build tasks
+-----------
+composeApp:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+latex-base:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+latex-parser:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+latex-preview:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+latex-renderer:allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+composeApp:androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+latex-base:androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+latex-parser:androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+latex-preview:androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+latex-renderer:androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+assemble - Assembles the outputs of this project.
+androidapp:assemble - Assemble main outputs for all the variants.
+composeApp:assemble - Assembles the outputs of this project.
+latex-base:assemble - Assembles the outputs of this project.
+latex-benchmark:assemble - Assembles the outputs of this project.
+latex-parser:assemble - Assembles the outputs of this project.
+latex-preview:assemble - Assembles the outputs of this project.
+latex-renderer:assemble - Assembles the outputs of this project.
+androidapp:assembleAndroidTest - Assembles all the Test applications.
+composeApp:assembleAndroidTest - Assembles all the Test applications.
+latex-base:assembleAndroidTest - Assembles all the Test applications.
+latex-parser:assembleAndroidTest - Assembles all the Test applications.
+latex-preview:assembleAndroidTest - Assembles all the Test applications.
+latex-renderer:assembleAndroidTest - Assembles all the Test applications.
+androidapp:assembleUnitTest - Assembles all the unit test applications.
+composeApp:assembleUnitTest - Assembles all the unit test applications.
+latex-base:assembleUnitTest - Assembles all the unit test applications.
+latex-parser:assembleUnitTest - Assembles all the unit test applications.
+latex-preview:assembleUnitTest - Assembles all the unit test applications.
+latex-renderer:assembleUnitTest - Assembles all the unit test applications.
+build - Assembles and tests this project.
+androidapp:build - Assembles and tests this project.
+composeApp:build - Assembles and tests this project.
+latex-base:build - Assembles and tests this project.
+latex-benchmark:build - Assembles and tests this project.
+latex-parser:build - Assembles and tests this project.
+latex-preview:build - Assembles and tests this project.
+latex-renderer:build - Assembles and tests this project.
+androidapp:buildDependents - Assembles and tests this project and all projects that depend on it.
+composeApp:buildDependents - Assembles and tests this project and all projects that depend on it.
+latex-base:buildDependents - Assembles and tests this project and all projects that depend on it.
+latex-benchmark:buildDependents - Assembles and tests this project and all projects that depend on it.
+latex-parser:buildDependents - Assembles and tests this project and all projects that depend on it.
+latex-preview:buildDependents - Assembles and tests this project and all projects that depend on it.
+latex-renderer:buildDependents - Assembles and tests this project and all projects that depend on it.
+composeApp:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+latex-base:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+latex-benchmark:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+latex-parser:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+latex-preview:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+latex-renderer:buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+androidapp:buildNeeded - Assembles and tests this project and all projects it depends on.
+composeApp:buildNeeded - Assembles and tests this project and all projects it depends on.
+latex-base:buildNeeded - Assembles and tests this project and all projects it depends on.
+latex-benchmark:buildNeeded - Assembles and tests this project and all projects it depends on.
+latex-parser:buildNeeded - Assembles and tests this project and all projects it depends on.
+latex-preview:buildNeeded - Assembles and tests this project and all projects it depends on.
+latex-renderer:buildNeeded - Assembles and tests this project and all projects it depends on.
+androidapp:bundle - Assemble bundles for all the variants.
+latex-benchmark:classes - Assembles main classes.
+clean - Deletes the build directory.
+androidapp:clean - Deletes the build directory.
+composeApp:clean - Deletes the build directory.
+latex-base:clean - Deletes the build directory.
+latex-benchmark:clean - Deletes the build directory.
+latex-parser:clean - Deletes the build directory.
+latex-preview:clean - Deletes the build directory.
+latex-renderer:clean - Deletes the build directory.
+composeApp:cleanAllTests - Deletes all the test results.
+latex-base:cleanAllTests - Deletes all the test results.
+latex-parser:cleanAllTests - Deletes all the test results.
+latex-preview:cleanAllTests - Deletes all the test results.
+latex-renderer:cleanAllTests - Deletes all the test results.
+composeApp:compileAndroidDeviceTestSources
+latex-base:compileAndroidDeviceTestSources
+latex-parser:compileAndroidDeviceTestSources
+latex-preview:compileAndroidDeviceTestSources
+latex-renderer:compileAndroidDeviceTestSources
+composeApp:compileAndroidHostTestSources
+latex-base:compileAndroidHostTestSources
+latex-parser:compileAndroidHostTestSources
+latex-preview:compileAndroidHostTestSources
+latex-renderer:compileAndroidHostTestSources
+composeApp:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+latex-base:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+latex-parser:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+latex-preview:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+latex-renderer:compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+androidapp:compileDebugAndroidTestSources
+androidapp:compileDebugSources
+androidapp:compileDebugUnitTestSources
+composeApp:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+latex-base:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+latex-parser:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+latex-preview:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+latex-renderer:compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+composeApp:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+latex-base:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+latex-parser:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+latex-preview:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+latex-renderer:compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+composeApp:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+latex-base:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+latex-parser:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+latex-preview:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+latex-renderer:compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+composeApp:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+latex-base:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+latex-parser:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+latex-preview:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+latex-renderer:compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+androidapp:compileReleaseSources
+composeApp:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+latex-base:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+latex-parser:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+latex-preview:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+latex-renderer:compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+composeApp:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+latex-base:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+latex-parser:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+latex-preview:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+latex-renderer:compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+latex-benchmark:devClasses - Assembles dev classes.
+composeApp:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+latex-base:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+latex-parser:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+latex-preview:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+latex-renderer:embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+composeApp:embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+latex-base:embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+latex-parser:embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+latex-preview:embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+latex-renderer:embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+composeApp:extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+latex-base:extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+latex-parser:extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+latex-preview:extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+latex-renderer:extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+composeApp:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+latex-base:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+latex-parser:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+latex-preview:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+latex-renderer:iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+composeApp:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+latex-base:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+latex-parser:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+latex-preview:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+latex-renderer:iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+composeApp:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+latex-base:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+latex-parser:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+latex-preview:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+latex-renderer:iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+composeApp:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+latex-base:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+latex-parser:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+latex-preview:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+latex-renderer:iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+composeApp:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+latex-base:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+latex-parser:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+latex-preview:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+latex-renderer:iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+composeApp:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+latex-base:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+latex-parser:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+latex-preview:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+latex-renderer:iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+composeApp:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+latex-base:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+latex-parser:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+latex-preview:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+latex-renderer:iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+composeApp:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+latex-base:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+latex-parser:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+latex-preview:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+latex-renderer:iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+latex-base:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+latex-parser:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+latex-preview:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+latex-renderer:iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+latex-base:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+latex-parser:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+latex-preview:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+latex-renderer:iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+composeApp:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+latex-base:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+latex-parser:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+latex-preview:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+latex-renderer:iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+latex-base:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+latex-parser:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+latex-preview:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+latex-renderer:iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+latex-base:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+latex-parser:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+latex-preview:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+latex-renderer:iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+composeApp:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+latex-base:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+latex-parser:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+latex-preview:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+latex-renderer:iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+latex-benchmark:jar - Assembles a jar archive containing the classes of the 'main' feature.
+composeApp:jsJar - Assembles an archive containing the main classes.
+latex-base:jsJar - Assembles an archive containing the main classes.
+latex-parser:jsJar - Assembles an archive containing the main classes.
+latex-preview:jsJar - Assembles an archive containing the main classes.
+latex-renderer:jsJar - Assembles an archive containing the main classes.
+composeApp:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+latex-base:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+latex-parser:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+latex-preview:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+latex-renderer:jsMainClasses - Assembles outputs for compilation 'main' of target 'js'
+composeApp:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+latex-base:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+latex-parser:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+latex-preview:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+latex-renderer:jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+composeApp:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+latex-base:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+latex-parser:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+latex-preview:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+latex-renderer:jsTestClasses - Assembles outputs for compilation 'test' of target 'js'
+composeApp:jvmDevClasses - Assembles outputs for compilation 'dev' of target 'jvm'
+latex-preview:jvmDevClasses - Assembles outputs for compilation 'dev' of target 'jvm'
+latex-renderer:jvmDevClasses - Assembles outputs for compilation 'dev' of target 'jvm'
+composeApp:jvmJar - Assembles an archive containing the main classes.
+latex-base:jvmJar - Assembles an archive containing the main classes.
+latex-parser:jvmJar - Assembles an archive containing the main classes.
+latex-preview:jvmJar - Assembles an archive containing the main classes.
+latex-renderer:jvmJar - Assembles an archive containing the main classes.
+composeApp:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+latex-base:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+latex-parser:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+latex-preview:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+latex-renderer:jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+composeApp:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+latex-base:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+latex-parser:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+latex-preview:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+latex-renderer:jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+composeApp:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+latex-base:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+latex-parser:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+latex-preview:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+latex-renderer:jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+latex-benchmark:kotlinSourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+composeApp:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+latex-base:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+latex-parser:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+latex-preview:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+latex-renderer:linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+composeApp:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+latex-base:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+latex-parser:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+latex-preview:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+latex-renderer:linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+composeApp:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+latex-base:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+latex-parser:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+latex-preview:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+latex-renderer:linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+composeApp:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+latex-base:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+latex-parser:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+latex-preview:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+latex-renderer:linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+composeApp:linkIosArm64 - Links all binaries for target 'iosArm64'.
+latex-base:linkIosArm64 - Links all binaries for target 'iosArm64'.
+latex-parser:linkIosArm64 - Links all binaries for target 'iosArm64'.
+latex-preview:linkIosArm64 - Links all binaries for target 'iosArm64'.
+latex-renderer:linkIosArm64 - Links all binaries for target 'iosArm64'.
+composeApp:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+latex-base:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+latex-parser:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+latex-preview:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+latex-renderer:linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+composeApp:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+latex-base:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+latex-parser:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+latex-preview:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+latex-renderer:linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+composeApp:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+latex-base:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+latex-parser:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+latex-preview:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+latex-renderer:linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+composeApp:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+latex-base:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+latex-parser:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+latex-preview:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+latex-renderer:metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+composeApp:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+latex-base:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+latex-parser:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+latex-preview:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+latex-renderer:metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+composeApp:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+latex-base:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+latex-parser:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+latex-preview:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+latex-renderer:metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+composeApp:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+latex-base:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+latex-parser:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+latex-preview:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+latex-renderer:metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+composeApp:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+latex-base:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+latex-parser:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+latex-preview:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+latex-renderer:metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+composeApp:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+latex-base:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+latex-parser:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+latex-preview:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+latex-renderer:metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+composeApp:metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+latex-base:metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+latex-parser:metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+latex-preview:metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+latex-renderer:metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+composeApp:sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+latex-base:sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+latex-parser:sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+latex-preview:sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+latex-renderer:sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+latex-benchmark:testClasses - Assembles test classes.
+composeApp:wasmJsJar - Assembles an archive containing the main classes.
+latex-base:wasmJsJar - Assembles an archive containing the main classes.
+latex-parser:wasmJsJar - Assembles an archive containing the main classes.
+latex-preview:wasmJsJar - Assembles an archive containing the main classes.
+latex-renderer:wasmJsJar - Assembles an archive containing the main classes.
+composeApp:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+latex-base:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+latex-parser:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+latex-preview:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+latex-renderer:wasmJsMainClasses - Assembles outputs for compilation 'main' of target 'wasmJs'
+composeApp:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+latex-base:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+latex-parser:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+latex-preview:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+latex-renderer:wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+composeApp:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+latex-base:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+latex-parser:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+latex-preview:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+latex-renderer:wasmJsTestClasses - Assembles outputs for compilation 'test' of target 'wasmJs'
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+updateDaemonJvm - Generates or updates the Gradle Daemon JVM criteria.
+wrapper - Generates Gradle wrapper files.
+
+Compose tasks
+-------------
+composeApp:composeCompatibilityBrowserDistribution - This task combines both js and wasm distributions into one so that wasm application fallback to js target if modern wasm feature are not supported
+latex-preview:composeCompatibilityBrowserDistribution - This task combines both js and wasm distributions into one so that wasm application fallback to js target if modern wasm feature are not supported
+latex-renderer:composeCompatibilityBrowserDistribution - This task combines both js and wasm distributions into one so that wasm application fallback to js target if modern wasm feature are not supported
+
+Compose desktop tasks
+---------------------
+composeApp:checkRuntime
+composeApp:createDistributable
+composeApp:createReleaseDistributable
+composeApp:createRuntimeImage
+composeApp:flattenJars
+composeApp:flattenReleaseJars
+composeApp:notarizeDmg
+composeApp:notarizeReleaseDmg
+composeApp:package
+composeApp:packageDeb
+composeApp:packageDistributionForCurrentOS
+composeApp:packageDmg
+composeApp:packageMsi
+composeApp:packageReleaseDeb
+composeApp:packageReleaseDistributionForCurrentOS
+composeApp:packageReleaseDmg
+composeApp:packageReleaseMsi
+composeApp:packageReleaseUberJarForCurrentOS
+composeApp:packageUberJarForCurrentOS
+composeApp:prepareAppResources
+composeApp:proguardReleaseJars
+composeApp:run
+composeApp:runDistributable
+composeApp:runRelease
+composeApp:runReleaseDistributable
+composeApp:suggestRuntimeModules
+composeApp:unpackDefaultComposeDesktopJvmApplicationResources
+
+Compose Hot Reload: Other tasks
+-------------------------------
+latex-benchmark:hotDevArgfile - Creates an argument file for the 'hotDev' task
+composeApp:hotDevJvmArgfile - Creates an argument file for the 'hotDevJvm' task
+latex-preview:hotDevJvmArgfile - Creates an argument file for the 'hotDevJvm' task
+latex-renderer:hotDevJvmArgfile - Creates an argument file for the 'hotDevJvm' task
+latex-benchmark:hotReloadDev - Hot Reloads code associated with the 'compilation 'dev' (target  (jvm))'
+composeApp:hotReloadJvmDev - Hot Reloads code associated with the 'compilation 'dev' (target jvm (jvm))'
+latex-preview:hotReloadJvmDev - Hot Reloads code associated with the 'compilation 'dev' (target jvm (jvm))'
+latex-renderer:hotReloadJvmDev - Hot Reloads code associated with the 'compilation 'dev' (target jvm (jvm))'
+composeApp:hotReloadJvmMain - Hot Reloads code associated with the 'compilation 'main' (target jvm (jvm))'
+latex-preview:hotReloadJvmMain - Hot Reloads code associated with the 'compilation 'main' (target jvm (jvm))'
+latex-renderer:hotReloadJvmMain - Hot Reloads code associated with the 'compilation 'main' (target jvm (jvm))'
+composeApp:hotReloadJvmTest - Hot Reloads code associated with the 'compilation 'test' (target jvm (jvm))'
+latex-preview:hotReloadJvmTest - Hot Reloads code associated with the 'compilation 'test' (target jvm (jvm))'
+latex-renderer:hotReloadJvmTest - Hot Reloads code associated with the 'compilation 'test' (target jvm (jvm))'
+latex-benchmark:hotReloadMain - Hot Reloads code associated with the 'compilation 'main' (target  (jvm))'
+latex-benchmark:hotReloadTest - Hot Reloads code associated with the 'compilation 'test' (target  (jvm))'
+latex-benchmark:hotRunArgfile - Creates an argument file for the 'hotRun' task
+composeApp:hotRunJvmArgfile - Creates an argument file for the 'hotRunJvm' task
+latex-preview:hotRunJvmArgfile - Creates an argument file for the 'hotRunJvm' task
+latex-renderer:hotRunJvmArgfile - Creates an argument file for the 'hotRunJvm' task
+latex-benchmark:hotSnapshotDev - Takes a snapshot of the classpath of the 'dev' compilation
+composeApp:hotSnapshotJvmDev - Takes a snapshot of the classpath of the 'dev' compilation
+latex-preview:hotSnapshotJvmDev - Takes a snapshot of the classpath of the 'dev' compilation
+latex-renderer:hotSnapshotJvmDev - Takes a snapshot of the classpath of the 'dev' compilation
+composeApp:hotSnapshotJvmMain - Takes a snapshot of the classpath of the 'main' compilation
+latex-preview:hotSnapshotJvmMain - Takes a snapshot of the classpath of the 'main' compilation
+latex-renderer:hotSnapshotJvmMain - Takes a snapshot of the classpath of the 'main' compilation
+composeApp:hotSnapshotJvmTest - Takes a snapshot of the classpath of the 'test' compilation
+latex-preview:hotSnapshotJvmTest - Takes a snapshot of the classpath of the 'test' compilation
+latex-renderer:hotSnapshotJvmTest - Takes a snapshot of the classpath of the 'test' compilation
+latex-benchmark:hotSnapshotMain - Takes a snapshot of the classpath of the 'main' compilation
+latex-benchmark:hotSnapshotTest - Takes a snapshot of the classpath of the 'test' compilation
+composeApp:reload - Hot Reloads code for all running applications
+latex-benchmark:reload - Hot Reloads code for all running applications
+latex-preview:reload - Hot Reloads code for all running applications
+latex-renderer:reload - Hot Reloads code for all running applications
+
+Compose Hot Reload: Run tasks
+-----------------------------
+latex-benchmark:hotDev - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=...
+latex-benchmark:hotDevAsync - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=... [Async]
+composeApp:hotDevJvm - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=...
+latex-preview:hotDevJvm - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=...
+latex-renderer:hotDevJvm - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=...
+composeApp:hotDevJvmAsync - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=... [Async]
+latex-preview:hotDevJvmAsync - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=... [Async]
+latex-renderer:hotDevJvmAsync - Compose Application Dev Run (Hot Reload enabled) | --className=... --funName=... [Async]
+latex-benchmark:hotRun - Compose Application Run (Hot Reload enabled) | --mainClass=...
+latex-benchmark:hotRunAsync - Compose Application Run (Hot Reload enabled) | --mainClass=... [Async]
+composeApp:hotRunJvm - Compose Application Run (Hot Reload enabled) | --mainClass=...
+latex-preview:hotRunJvm - Compose Application Run (Hot Reload enabled) | --mainClass=...
+latex-renderer:hotRunJvm - Compose Application Run (Hot Reload enabled) | --mainClass=...
+composeApp:hotRunJvmAsync - Compose Application Run (Hot Reload enabled) | --mainClass=... [Async]
+latex-preview:hotRunJvmAsync - Compose Application Run (Hot Reload enabled) | --mainClass=... [Async]
+latex-renderer:hotRunJvmAsync - Compose Application Run (Hot Reload enabled) | --mainClass=... [Async]
+composeApp:jvmRunHot - Deprecated: Use 'hotRunJvm' instead
+latex-preview:jvmRunHot - Deprecated: Use 'hotRunJvm' instead
+latex-renderer:jvmRunHot - Deprecated: Use 'hotRunJvm' instead
+latex-benchmark:runHot - Deprecated: Use 'hotRun' instead
+
+Documentation tasks
+-------------------
+latex-benchmark:javadoc - Generates Javadoc API documentation for the 'main' feature.
+
+Help tasks
+----------
+artifactTransforms - Displays the Artifact Transforms that can be executed in root project 'latex'.
+androidapp:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':androidapp'.
+composeApp:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':composeApp'.
+latex-base:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':latex-base'.
+latex-benchmark:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':latex-benchmark'.
+latex-parser:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':latex-parser'.
+latex-preview:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':latex-preview'.
+latex-renderer:artifactTransforms - Displays the Artifact Transforms that can be executed in project ':latex-renderer'.
+buildEnvironment - Displays all buildscript dependencies declared in root project 'latex'.
+androidapp:buildEnvironment - Displays all buildscript dependencies declared in project ':androidapp'.
+composeApp:buildEnvironment - Displays all buildscript dependencies declared in project ':composeApp'.
+latex-base:buildEnvironment - Displays all buildscript dependencies declared in project ':latex-base'.
+latex-benchmark:buildEnvironment - Displays all buildscript dependencies declared in project ':latex-benchmark'.
+latex-parser:buildEnvironment - Displays all buildscript dependencies declared in project ':latex-parser'.
+latex-preview:buildEnvironment - Displays all buildscript dependencies declared in project ':latex-preview'.
+latex-renderer:buildEnvironment - Displays all buildscript dependencies declared in project ':latex-renderer'.
+dependencies - Displays all dependencies declared in root project 'latex'.
+androidapp:dependencies - Displays all dependencies declared in project ':androidapp'.
+composeApp:dependencies - Displays all dependencies declared in project ':composeApp'.
+latex-base:dependencies - Displays all dependencies declared in project ':latex-base'.
+latex-benchmark:dependencies - Displays all dependencies declared in project ':latex-benchmark'.
+latex-parser:dependencies - Displays all dependencies declared in project ':latex-parser'.
+latex-preview:dependencies - Displays all dependencies declared in project ':latex-preview'.
+latex-renderer:dependencies - Displays all dependencies declared in project ':latex-renderer'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'latex'.
+androidapp:dependencyInsight - Displays the insight into a specific dependency in project ':androidapp'.
+composeApp:dependencyInsight - Displays the insight into a specific dependency in project ':composeApp'.
+latex-base:dependencyInsight - Displays the insight into a specific dependency in project ':latex-base'.
+latex-benchmark:dependencyInsight - Displays the insight into a specific dependency in project ':latex-benchmark'.
+latex-parser:dependencyInsight - Displays the insight into a specific dependency in project ':latex-parser'.
+latex-preview:dependencyInsight - Displays the insight into a specific dependency in project ':latex-preview'.
+latex-renderer:dependencyInsight - Displays the insight into a specific dependency in project ':latex-renderer'.
+help - Displays a help message.
+androidapp:help - Displays a help message.
+composeApp:help - Displays a help message.
+latex-base:help - Displays a help message.
+latex-benchmark:help - Displays a help message.
+latex-parser:help - Displays a help message.
+latex-preview:help - Displays a help message.
+latex-renderer:help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+androidapp:javaToolchains - Displays the detected java toolchains.
+composeApp:javaToolchains - Displays the detected java toolchains.
+latex-base:javaToolchains - Displays the detected java toolchains.
+latex-benchmark:javaToolchains - Displays the detected java toolchains.
+latex-parser:javaToolchains - Displays the detected java toolchains.
+latex-preview:javaToolchains - Displays the detected java toolchains.
+latex-renderer:javaToolchains - Displays the detected java toolchains.
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+androidapp:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+composeApp:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+latex-base:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+latex-benchmark:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+latex-parser:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+latex-preview:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+latex-renderer:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+outgoingVariants - Displays the outgoing variants of root project 'latex'.
+androidapp:outgoingVariants - Displays the outgoing variants of project ':androidapp'.
+composeApp:outgoingVariants - Displays the outgoing variants of project ':composeApp'.
+latex-base:outgoingVariants - Displays the outgoing variants of project ':latex-base'.
+latex-benchmark:outgoingVariants - Displays the outgoing variants of project ':latex-benchmark'.
+latex-parser:outgoingVariants - Displays the outgoing variants of project ':latex-parser'.
+latex-preview:outgoingVariants - Displays the outgoing variants of project ':latex-preview'.
+latex-renderer:outgoingVariants - Displays the outgoing variants of project ':latex-renderer'.
+projects - Displays the sub-projects of root project 'latex'.
+androidapp:projects - Displays the sub-projects of project ':androidapp'.
+composeApp:projects - Displays the sub-projects of project ':composeApp'.
+latex-base:projects - Displays the sub-projects of project ':latex-base'.
+latex-benchmark:projects - Displays the sub-projects of project ':latex-benchmark'.
+latex-parser:projects - Displays the sub-projects of project ':latex-parser'.
+latex-preview:projects - Displays the sub-projects of project ':latex-preview'.
+latex-renderer:projects - Displays the sub-projects of project ':latex-renderer'.
+properties - Displays the properties of root project 'latex'.
+androidapp:properties - Displays the properties of project ':androidapp'.
+composeApp:properties - Displays the properties of project ':composeApp'.
+latex-base:properties - Displays the properties of project ':latex-base'.
+latex-benchmark:properties - Displays the properties of project ':latex-benchmark'.
+latex-parser:properties - Displays the properties of project ':latex-parser'.
+latex-preview:properties - Displays the properties of project ':latex-preview'.
+latex-renderer:properties - Displays the properties of project ':latex-renderer'.
+resolvableConfigurations - Displays the configurations that can be resolved in root project 'latex'.
+androidapp:resolvableConfigurations - Displays the configurations that can be resolved in project ':androidapp'.
+composeApp:resolvableConfigurations - Displays the configurations that can be resolved in project ':composeApp'.
+latex-base:resolvableConfigurations - Displays the configurations that can be resolved in project ':latex-base'.
+latex-benchmark:resolvableConfigurations - Displays the configurations that can be resolved in project ':latex-benchmark'.
+latex-parser:resolvableConfigurations - Displays the configurations that can be resolved in project ':latex-parser'.
+latex-preview:resolvableConfigurations - Displays the configurations that can be resolved in project ':latex-preview'.
+latex-renderer:resolvableConfigurations - Displays the configurations that can be resolved in project ':latex-renderer'.
+tasks - Displays the tasks runnable from root project 'latex' (some of the displayed tasks may belong to subprojects).
+androidapp:tasks - Displays the tasks runnable from project ':androidapp'.
+composeApp:tasks - Displays the tasks runnable from project ':composeApp'.
+latex-base:tasks - Displays the tasks runnable from project ':latex-base'.
+latex-benchmark:tasks - Displays the tasks runnable from project ':latex-benchmark'.
+latex-parser:tasks - Displays the tasks runnable from project ':latex-parser'.
+latex-preview:tasks - Displays the tasks runnable from project ':latex-preview'.
+latex-renderer:tasks - Displays the tasks runnable from project ':latex-renderer'.
+
+Ide tasks
+---------
+composeApp:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+latex-base:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+latex-parser:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+latex-preview:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+latex-renderer:resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+
+Install tasks
+-------------
+composeApp:androidUninstallAll - Uninstall all applications.
+latex-base:androidUninstallAll - Uninstall all applications.
+latex-parser:androidUninstallAll - Uninstall all applications.
+latex-preview:androidUninstallAll - Uninstall all applications.
+latex-renderer:androidUninstallAll - Uninstall all applications.
+composeApp:installAndroidDeviceTest - Installs the Kotlin multiplatform android plugin.
+latex-base:installAndroidDeviceTest - Installs the Kotlin multiplatform android plugin.
+latex-parser:installAndroidDeviceTest - Installs the Kotlin multiplatform android plugin.
+latex-preview:installAndroidDeviceTest - Installs the Kotlin multiplatform android plugin.
+latex-renderer:installAndroidDeviceTest - Installs the Kotlin multiplatform android plugin.
+androidapp:installDebug - Installs the Debug build.
+androidapp:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+androidapp:uninstallAll - Uninstall all applications.
+composeApp:uninstallAndroidDeviceTest - Uninstalls the Kotlin multiplatform android plugin.
+latex-base:uninstallAndroidDeviceTest - Uninstalls the Kotlin multiplatform android plugin.
+latex-parser:uninstallAndroidDeviceTest - Uninstalls the Kotlin multiplatform android plugin.
+latex-preview:uninstallAndroidDeviceTest - Uninstalls the Kotlin multiplatform android plugin.
+latex-renderer:uninstallAndroidDeviceTest - Uninstalls the Kotlin multiplatform android plugin.
+androidapp:uninstallDebug - Uninstalls the Debug build.
+androidapp:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+androidapp:uninstallRelease - Uninstalls the Release build.
+
+Interop tasks
+-------------
+composeApp:cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+latex-base:cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+latex-parser:cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+latex-preview:cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+latex-renderer:cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+composeApp:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+latex-base:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+latex-parser:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+latex-preview:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+latex-renderer:commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+composeApp:commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+latex-base:commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+latex-parser:commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+latex-preview:commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+latex-renderer:commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+composeApp:runCommonizer - [Deprecated: Use 'commonize' instead]
+latex-base:runCommonizer - [Deprecated: Use 'commonize' instead]
+latex-parser:runCommonizer - [Deprecated: Use 'commonize' instead]
+latex-preview:runCommonizer - [Deprecated: Use 'commonize' instead]
+latex-renderer:runCommonizer - [Deprecated: Use 'commonize' instead]
+
+Kotlin browser tasks
+--------------------
+composeApp:jsBrowserDevelopmentExecutableDistribution
+latex-base:jsBrowserDevelopmentExecutableDistribution
+latex-parser:jsBrowserDevelopmentExecutableDistribution
+latex-preview:jsBrowserDevelopmentExecutableDistribution
+latex-renderer:jsBrowserDevelopmentExecutableDistribution
+composeApp:jsBrowserDevelopmentRun - start development webpack dev server
+latex-base:jsBrowserDevelopmentRun - start development webpack dev server
+latex-parser:jsBrowserDevelopmentRun - start development webpack dev server
+latex-preview:jsBrowserDevelopmentRun - start development webpack dev server
+latex-renderer:jsBrowserDevelopmentRun - start development webpack dev server
+composeApp:jsBrowserDevelopmentWebpack - build webpack development bundle
+latex-base:jsBrowserDevelopmentWebpack - build webpack development bundle
+latex-parser:jsBrowserDevelopmentWebpack - build webpack development bundle
+latex-preview:jsBrowserDevelopmentWebpack - build webpack development bundle
+latex-renderer:jsBrowserDevelopmentWebpack - build webpack development bundle
+composeApp:jsBrowserDistribution
+latex-base:jsBrowserDistribution
+latex-parser:jsBrowserDistribution
+latex-preview:jsBrowserDistribution
+latex-renderer:jsBrowserDistribution
+composeApp:jsBrowserProductionRun - start production webpack dev server
+latex-base:jsBrowserProductionRun - start production webpack dev server
+latex-parser:jsBrowserProductionRun - start production webpack dev server
+latex-preview:jsBrowserProductionRun - start production webpack dev server
+latex-renderer:jsBrowserProductionRun - start production webpack dev server
+composeApp:jsBrowserProductionWebpack - build webpack production bundle
+latex-base:jsBrowserProductionWebpack - build webpack production bundle
+latex-parser:jsBrowserProductionWebpack - build webpack production bundle
+latex-preview:jsBrowserProductionWebpack - build webpack production bundle
+latex-renderer:jsBrowserProductionWebpack - build webpack production bundle
+composeApp:wasmJsBrowserDevelopmentExecutableDistribution
+latex-base:wasmJsBrowserDevelopmentExecutableDistribution
+latex-parser:wasmJsBrowserDevelopmentExecutableDistribution
+latex-preview:wasmJsBrowserDevelopmentExecutableDistribution
+latex-renderer:wasmJsBrowserDevelopmentExecutableDistribution
+composeApp:wasmJsBrowserDevelopmentRun - start development webpack dev server
+latex-base:wasmJsBrowserDevelopmentRun - start development webpack dev server
+latex-parser:wasmJsBrowserDevelopmentRun - start development webpack dev server
+latex-preview:wasmJsBrowserDevelopmentRun - start development webpack dev server
+latex-renderer:wasmJsBrowserDevelopmentRun - start development webpack dev server
+composeApp:wasmJsBrowserDevelopmentWebpack - build webpack development bundle
+latex-base:wasmJsBrowserDevelopmentWebpack - build webpack development bundle
+latex-parser:wasmJsBrowserDevelopmentWebpack - build webpack development bundle
+latex-preview:wasmJsBrowserDevelopmentWebpack - build webpack development bundle
+latex-renderer:wasmJsBrowserDevelopmentWebpack - build webpack development bundle
+composeApp:wasmJsBrowserDistribution
+latex-base:wasmJsBrowserDistribution
+latex-parser:wasmJsBrowserDistribution
+latex-preview:wasmJsBrowserDistribution
+latex-renderer:wasmJsBrowserDistribution
+composeApp:wasmJsBrowserProductionRun - start production webpack dev server
+latex-base:wasmJsBrowserProductionRun - start production webpack dev server
+latex-parser:wasmJsBrowserProductionRun - start production webpack dev server
+latex-preview:wasmJsBrowserProductionRun - start production webpack dev server
+latex-renderer:wasmJsBrowserProductionRun - start production webpack dev server
+composeApp:wasmJsBrowserProductionWebpack - build webpack production bundle
+latex-base:wasmJsBrowserProductionWebpack - build webpack production bundle
+latex-parser:wasmJsBrowserProductionWebpack - build webpack production bundle
+latex-preview:wasmJsBrowserProductionWebpack - build webpack production bundle
+latex-renderer:wasmJsBrowserProductionWebpack - build webpack production bundle
+
+NodeJs tasks
+------------
+composeApp:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+latex-base:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+latex-parser:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+latex-preview:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+latex-renderer:jsPackageJson - Create package.json file for compilation 'main' (target js (js))
+composeApp:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+latex-base:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+latex-parser:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+latex-preview:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+latex-renderer:jsTestPackageJson - Create package.json file for compilation 'test' (target js (js))
+kotlinNodeJsSetup - Download and install a local node/npm version
+composeApp:kotlinNodeJsSetup - Download and install a local node/npm version
+latex-base:kotlinNodeJsSetup - Download and install a local node/npm version
+latex-parser:kotlinNodeJsSetup - Download and install a local node/npm version
+latex-preview:kotlinNodeJsSetup - Download and install a local node/npm version
+latex-renderer:kotlinNodeJsSetup - Download and install a local node/npm version
+kotlinNpmInstall - Find, download and link NPM dependencies and projects
+kotlinWasmNodeJsSetup - Download and install a local node/npm version
+composeApp:kotlinWasmNodeJsSetup - Download and install a local node/npm version
+latex-base:kotlinWasmNodeJsSetup - Download and install a local node/npm version
+latex-parser:kotlinWasmNodeJsSetup - Download and install a local node/npm version
+latex-preview:kotlinWasmNodeJsSetup - Download and install a local node/npm version
+latex-renderer:kotlinWasmNodeJsSetup - Download and install a local node/npm version
+kotlinWasmNpmInstall - Find, download and link NPM dependencies and projects
+kotlinWasmToolingSetup - Find, download and link NPM dependencies and projects
+kotlinWasmYarnSetup - Download and install a local yarn version
+kotlinYarnSetup - Download and install a local yarn version
+nodeKotlinClean - Clean unused local node version
+rootPackageJson - Create root package.json
+composeApp:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+latex-base:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+latex-parser:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+latex-preview:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+latex-renderer:wasmJsPackageJson - Create package.json file for compilation 'main' (target wasmJs (wasm))
+composeApp:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+latex-base:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+latex-parser:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+latex-preview:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+latex-renderer:wasmJsTestPackageJson - Create package.json file for compilation 'test' (target wasmJs (wasm))
+wasmNodeKotlinClean - Clean unused local node version
+wasmRootPackageJson - Create root package.json
+
+Publishing tasks
+----------------
+latex-base:dropMavenCentralDeployment - Drops the deployment with the supplied id
+latex-parser:dropMavenCentralDeployment - Drops the deployment with the supplied id
+latex-renderer:dropMavenCentralDeployment - Drops the deployment with the supplied id
+latex-base:generateMetadataFileForAndroidPublication - Generates the Gradle metadata file for publication 'android'.
+latex-parser:generateMetadataFileForAndroidPublication - Generates the Gradle metadata file for publication 'android'.
+latex-renderer:generateMetadataFileForAndroidPublication - Generates the Gradle metadata file for publication 'android'.
+latex-base:generateMetadataFileForIosArm64Publication - Generates the Gradle metadata file for publication 'iosArm64'.
+latex-parser:generateMetadataFileForIosArm64Publication - Generates the Gradle metadata file for publication 'iosArm64'.
+latex-renderer:generateMetadataFileForIosArm64Publication - Generates the Gradle metadata file for publication 'iosArm64'.
+latex-base:generateMetadataFileForIosSimulatorArm64Publication - Generates the Gradle metadata file for publication 'iosSimulatorArm64'.
+latex-parser:generateMetadataFileForIosSimulatorArm64Publication - Generates the Gradle metadata file for publication 'iosSimulatorArm64'.
+latex-renderer:generateMetadataFileForIosSimulatorArm64Publication - Generates the Gradle metadata file for publication 'iosSimulatorArm64'.
+latex-base:generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
+latex-parser:generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
+latex-renderer:generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
+latex-base:generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
+latex-parser:generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
+latex-renderer:generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
+latex-base:generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
+latex-parser:generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
+latex-renderer:generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
+latex-base:generateMetadataFileForWasmJsPublication - Generates the Gradle metadata file for publication 'wasmJs'.
+latex-parser:generateMetadataFileForWasmJsPublication - Generates the Gradle metadata file for publication 'wasmJs'.
+latex-renderer:generateMetadataFileForWasmJsPublication - Generates the Gradle metadata file for publication 'wasmJs'.
+latex-base:generatePomFileForAndroidPublication - Generates the Maven POM file for publication 'android'.
+latex-parser:generatePomFileForAndroidPublication - Generates the Maven POM file for publication 'android'.
+latex-renderer:generatePomFileForAndroidPublication - Generates the Maven POM file for publication 'android'.
+latex-base:generatePomFileForIosArm64Publication - Generates the Maven POM file for publication 'iosArm64'.
+latex-parser:generatePomFileForIosArm64Publication - Generates the Maven POM file for publication 'iosArm64'.
+latex-renderer:generatePomFileForIosArm64Publication - Generates the Maven POM file for publication 'iosArm64'.
+latex-base:generatePomFileForIosSimulatorArm64Publication - Generates the Maven POM file for publication 'iosSimulatorArm64'.
+latex-parser:generatePomFileForIosSimulatorArm64Publication - Generates the Maven POM file for publication 'iosSimulatorArm64'.
+latex-renderer:generatePomFileForIosSimulatorArm64Publication - Generates the Maven POM file for publication 'iosSimulatorArm64'.
+latex-base:generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
+latex-parser:generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
+latex-renderer:generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
+latex-base:generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
+latex-parser:generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
+latex-renderer:generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
+latex-base:generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
+latex-parser:generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
+latex-renderer:generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
+latex-base:generatePomFileForWasmJsPublication - Generates the Maven POM file for publication 'wasmJs'.
+latex-parser:generatePomFileForWasmJsPublication - Generates the Maven POM file for publication 'wasmJs'.
+latex-renderer:generatePomFileForWasmJsPublication - Generates the Maven POM file for publication 'wasmJs'.
+latex-base:publish - Publishes all publications produced by this project.
+latex-parser:publish - Publishes all publications produced by this project.
+latex-renderer:publish - Publishes all publications produced by this project.
+latex-base:publishAllPublicationsToMavenCentralRepository - Publishes all Maven publications produced by this project to the mavenCentral repository.
+latex-parser:publishAllPublicationsToMavenCentralRepository - Publishes all Maven publications produced by this project to the mavenCentral repository.
+latex-renderer:publishAllPublicationsToMavenCentralRepository - Publishes all Maven publications produced by this project to the mavenCentral repository.
+latex-base:publishAndReleaseToMavenCentral - Publishes to Maven Central and automatically triggers release
+latex-parser:publishAndReleaseToMavenCentral - Publishes to Maven Central and automatically triggers release
+latex-renderer:publishAndReleaseToMavenCentral - Publishes to Maven Central and automatically triggers release
+latex-base:publishAndroidPublicationToMavenCentralRepository - Publishes Maven publication 'android' to Maven repository 'mavenCentral'.
+latex-parser:publishAndroidPublicationToMavenCentralRepository - Publishes Maven publication 'android' to Maven repository 'mavenCentral'.
+latex-renderer:publishAndroidPublicationToMavenCentralRepository - Publishes Maven publication 'android' to Maven repository 'mavenCentral'.
+latex-base:publishAndroidPublicationToMavenLocal - Publishes Maven publication 'android' to the local Maven repository.
+latex-parser:publishAndroidPublicationToMavenLocal - Publishes Maven publication 'android' to the local Maven repository.
+latex-renderer:publishAndroidPublicationToMavenLocal - Publishes Maven publication 'android' to the local Maven repository.
+latex-base:publishIosArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosArm64' to Maven repository 'mavenCentral'.
+latex-parser:publishIosArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosArm64' to Maven repository 'mavenCentral'.
+latex-renderer:publishIosArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosArm64' to Maven repository 'mavenCentral'.
+latex-base:publishIosArm64PublicationToMavenLocal - Publishes Maven publication 'iosArm64' to the local Maven repository.
+latex-parser:publishIosArm64PublicationToMavenLocal - Publishes Maven publication 'iosArm64' to the local Maven repository.
+latex-renderer:publishIosArm64PublicationToMavenLocal - Publishes Maven publication 'iosArm64' to the local Maven repository.
+latex-base:publishIosSimulatorArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosSimulatorArm64' to Maven repository 'mavenCentral'.
+latex-parser:publishIosSimulatorArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosSimulatorArm64' to Maven repository 'mavenCentral'.
+latex-renderer:publishIosSimulatorArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosSimulatorArm64' to Maven repository 'mavenCentral'.
+latex-base:publishIosSimulatorArm64PublicationToMavenLocal - Publishes Maven publication 'iosSimulatorArm64' to the local Maven repository.
+latex-parser:publishIosSimulatorArm64PublicationToMavenLocal - Publishes Maven publication 'iosSimulatorArm64' to the local Maven repository.
+latex-renderer:publishIosSimulatorArm64PublicationToMavenLocal - Publishes Maven publication 'iosSimulatorArm64' to the local Maven repository.
+latex-base:publishJsPublicationToMavenCentralRepository - Publishes Maven publication 'js' to Maven repository 'mavenCentral'.
+latex-parser:publishJsPublicationToMavenCentralRepository - Publishes Maven publication 'js' to Maven repository 'mavenCentral'.
+latex-renderer:publishJsPublicationToMavenCentralRepository - Publishes Maven publication 'js' to Maven repository 'mavenCentral'.
+latex-base:publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
+latex-parser:publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
+latex-renderer:publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
+latex-base:publishJvmPublicationToMavenCentralRepository - Publishes Maven publication 'jvm' to Maven repository 'mavenCentral'.
+latex-parser:publishJvmPublicationToMavenCentralRepository - Publishes Maven publication 'jvm' to Maven repository 'mavenCentral'.
+latex-renderer:publishJvmPublicationToMavenCentralRepository - Publishes Maven publication 'jvm' to Maven repository 'mavenCentral'.
+latex-base:publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
+latex-parser:publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
+latex-renderer:publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
+latex-base:publishKotlinMultiplatformPublicationToMavenCentralRepository - Publishes Maven publication 'kotlinMultiplatform' to Maven repository 'mavenCentral'.
+latex-parser:publishKotlinMultiplatformPublicationToMavenCentralRepository - Publishes Maven publication 'kotlinMultiplatform' to Maven repository 'mavenCentral'.
+latex-renderer:publishKotlinMultiplatformPublicationToMavenCentralRepository - Publishes Maven publication 'kotlinMultiplatform' to Maven repository 'mavenCentral'.
+latex-base:publishKotlinMultiplatformPublicationToMavenLocal - Publishes Maven publication 'kotlinMultiplatform' to the local Maven repository.
+latex-parser:publishKotlinMultiplatformPublicationToMavenLocal - Publishes Maven publication 'kotlinMultiplatform' to the local Maven repository.
+latex-renderer:publishKotlinMultiplatformPublicationToMavenLocal - Publishes Maven publication 'kotlinMultiplatform' to the local Maven repository.
+latex-base:publishToMavenCentral - Publishes to Maven Central
+latex-parser:publishToMavenCentral - Publishes to Maven Central
+latex-renderer:publishToMavenCentral - Publishes to Maven Central
+latex-base:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+latex-parser:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+latex-renderer:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+latex-base:publishWasmJsPublicationToMavenCentralRepository - Publishes Maven publication 'wasmJs' to Maven repository 'mavenCentral'.
+latex-parser:publishWasmJsPublicationToMavenCentralRepository - Publishes Maven publication 'wasmJs' to Maven repository 'mavenCentral'.
+latex-renderer:publishWasmJsPublicationToMavenCentralRepository - Publishes Maven publication 'wasmJs' to Maven repository 'mavenCentral'.
+latex-base:publishWasmJsPublicationToMavenLocal - Publishes Maven publication 'wasmJs' to the local Maven repository.
+latex-parser:publishWasmJsPublicationToMavenLocal - Publishes Maven publication 'wasmJs' to the local Maven repository.
+latex-renderer:publishWasmJsPublicationToMavenLocal - Publishes Maven publication 'wasmJs' to the local Maven repository.
+
+Run tasks
+---------
+composeApp:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+latex-base:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+latex-parser:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+latex-preview:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+latex-renderer:jvmRun - Jvm Run task for target 'jvm' and compilation 'main'. This task can act as carrier for the IDE to execute jvm based code
+
+Signing tasks
+-------------
+latex-base:generatePgpKeys - Generates a new PGP keypair.
+
+Usage: 
+gradlew generatePgpKeys --name "Jane Doe <janedoe@example.com>" --password YOUR_PASSWORD
+latex-parser:generatePgpKeys - Generates a new PGP keypair.
+
+Usage: 
+gradlew generatePgpKeys --name "Jane Doe <janedoe@example.com>" --password YOUR_PASSWORD
+latex-renderer:generatePgpKeys - Generates a new PGP keypair.
+
+Usage: 
+gradlew generatePgpKeys --name "Jane Doe <janedoe@example.com>" --password YOUR_PASSWORD
+latex-base:uploadPublicPgpKey - Uploads the public PGP key to a keyserver
+latex-parser:uploadPublicPgpKey - Uploads the public PGP key to a keyserver
+latex-renderer:uploadPublicPgpKey - Uploads the public PGP key to a keyserver
+
+Validation tasks
+----------------
+latex-base:checkPomFileForAndroidPublication
+latex-parser:checkPomFileForAndroidPublication
+latex-renderer:checkPomFileForAndroidPublication
+latex-base:checkPomFileForIosArm64Publication
+latex-parser:checkPomFileForIosArm64Publication
+latex-renderer:checkPomFileForIosArm64Publication
+latex-base:checkPomFileForIosSimulatorArm64Publication
+latex-parser:checkPomFileForIosSimulatorArm64Publication
+latex-renderer:checkPomFileForIosSimulatorArm64Publication
+latex-base:checkPomFileForJsPublication
+latex-parser:checkPomFileForJsPublication
+latex-renderer:checkPomFileForJsPublication
+latex-base:checkPomFileForJvmPublication
+latex-parser:checkPomFileForJvmPublication
+latex-renderer:checkPomFileForJvmPublication
+latex-base:checkPomFileForKotlinMultiplatformPublication
+latex-parser:checkPomFileForKotlinMultiplatformPublication
+latex-renderer:checkPomFileForKotlinMultiplatformPublication
+latex-base:checkPomFileForWasmJsPublication
+latex-parser:checkPomFileForWasmJsPublication
+latex-renderer:checkPomFileForWasmJsPublication
+latex-base:checkSigningConfiguration - Checks that a signing configuration is set up correctly.
+latex-parser:checkSigningConfiguration - Checks that a signing configuration is set up correctly.
+latex-renderer:checkSigningConfiguration - Checks that a signing configuration is set up correctly.
+
+Verification tasks
+------------------
+composeApp:allTests - Runs the tests for all targets and create aggregated report
+latex-base:allTests - Runs the tests for all targets and create aggregated report
+latex-parser:allTests - Runs the tests for all targets and create aggregated report
+latex-preview:allTests - Runs the tests for all targets and create aggregated report
+latex-renderer:allTests - Runs the tests for all targets and create aggregated report
+composeApp:androidConnectedCheck - Runs all device checks on currently connected devices.
+latex-base:androidConnectedCheck - Runs all device checks on currently connected devices.
+latex-parser:androidConnectedCheck - Runs all device checks on currently connected devices.
+latex-preview:androidConnectedCheck - Runs all device checks on currently connected devices.
+latex-renderer:androidConnectedCheck - Runs all device checks on currently connected devices.
+composeApp:androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+latex-base:androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+latex-parser:androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+latex-preview:androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+latex-renderer:androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+check - Runs all checks.
+androidapp:check - Runs all checks.
+composeApp:check - Runs all checks.
+latex-base:check - Runs all checks.
+latex-benchmark:check - Runs all checks.
+latex-parser:check - Runs all checks.
+latex-preview:check - Runs all checks.
+latex-renderer:check - Runs all checks.
+androidapp:checkJetifier - Checks whether Jetifier is needed for the current project
+composeApp:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+latex-base:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+latex-benchmark:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+latex-parser:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+latex-preview:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+latex-renderer:checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+composeApp:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+latex-base:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+latex-benchmark:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+latex-parser:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+latex-preview:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+latex-renderer:checkLegacyAbi - Checks that the public Application Binary Interface (ABI) of the current project code matchesthe reference dump file for the 'main' variant.
+composeApp:connectedAndroidDeviceTest - Installs and runs the tests for androidMain on connected devices.
+latex-base:connectedAndroidDeviceTest - Installs and runs the tests for androidMain on connected devices.
+latex-parser:connectedAndroidDeviceTest - Installs and runs the tests for androidMain on connected devices.
+latex-preview:connectedAndroidDeviceTest - Installs and runs the tests for androidMain on connected devices.
+latex-renderer:connectedAndroidDeviceTest - Installs and runs the tests for androidMain on connected devices.
+androidapp:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+composeApp:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+latex-base:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+latex-parser:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+latex-preview:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+latex-renderer:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+androidapp:connectedCheck - Runs all device checks on currently connected devices.
+androidapp:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+androidapp:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+composeApp:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+latex-base:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+latex-parser:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+latex-preview:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+latex-renderer:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+androidapp:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+composeApp:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+latex-base:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+latex-parser:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+latex-preview:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+latex-renderer:iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+composeApp:jsBrowserTest - Run all js tests inside browser using karma and webpack
+latex-base:jsBrowserTest - Run all js tests inside browser using karma and webpack
+latex-parser:jsBrowserTest - Run all js tests inside browser using karma and webpack
+latex-preview:jsBrowserTest - Run all js tests inside browser using karma and webpack
+latex-renderer:jsBrowserTest - Run all js tests inside browser using karma and webpack
+composeApp:jsTest - Run JS tests for all platforms
+latex-base:jsTest - Run JS tests for all platforms
+latex-parser:jsTest - Run JS tests for all platforms
+latex-preview:jsTest - Run JS tests for all platforms
+latex-renderer:jsTest - Run JS tests for all platforms
+composeApp:jvmTest - Runs the tests of the test test run.
+latex-base:jvmTest - Runs the tests of the test test run.
+latex-parser:jvmTest - Runs the tests of the test test run.
+latex-preview:jvmTest - Runs the tests of the test test run.
+latex-renderer:jvmTest - Runs the tests of the test test run.
+androidapp:lint - Runs lint on the default variant.
+androidapp:lintDebug - Print text output from the corresponding lint report task
+androidapp:lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+androidapp:lintRelease - Print text output from the corresponding lint report task
+androidapp:lintVitalRelease - Print text output from the corresponding lint report task
+androidapp:test - Run unit tests for all variants.
+latex-benchmark:test - Runs the test suite.
+composeApp:testAndroid - Run unit tests for all variants.
+latex-base:testAndroid - Run unit tests for all variants.
+latex-parser:testAndroid - Run unit tests for all variants.
+latex-preview:testAndroid - Run unit tests for all variants.
+latex-renderer:testAndroid - Run unit tests for all variants.
+composeApp:testAndroidHostTest - Run unit tests for the androidMain build.
+latex-base:testAndroidHostTest - Run unit tests for the androidMain build.
+latex-parser:testAndroidHostTest - Run unit tests for the androidMain build.
+latex-preview:testAndroidHostTest - Run unit tests for the androidMain build.
+latex-renderer:testAndroidHostTest - Run unit tests for the androidMain build.
+androidapp:testDebugUnitTest - Run unit tests for the debug build.
+composeApp:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+latex-base:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+latex-benchmark:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+latex-parser:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+latex-preview:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+latex-renderer:updateLegacyAbi - Writes the public Application Binary Interface (ABI) of the current code to the reference dump file for the 'main' variant.
+androidapp:updateLintBaseline - Updates the lint baseline using the default variant.
+composeApp:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+latex-base:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+latex-parser:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+latex-preview:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+latex-renderer:wasmJsBrowserTest - Run all wasmJs tests inside browser using karma and webpack
+composeApp:wasmJsTest - Run JS tests for all platforms
+latex-base:wasmJsTest - Run JS tests for all platforms
+latex-parser:wasmJsTest - Run JS tests for all platforms
+latex-preview:wasmJsTest - Run JS tests for all platforms
+latex-renderer:wasmJsTest - Run JS tests for all platforms
+
+Xcode tasks
+-----------
+composeApp:checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+latex-base:checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+latex-parser:checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+latex-preview:checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+latex-renderer:checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+composeApp:convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+latex-base:convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+latex-parser:convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+latex-preview:convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+latex-renderer:convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+
+Other tasks
+-----------
+androidapp:aggregatedTestResultsCollectionDebug
+androidapp:aggregatedTestResultsCollectionRelease
+androidapp:analyzeDebugAndroidTestDependencies
+androidapp:analyzeDebugDependencies
+androidapp:analyzeDebugUnitTestDependencies
+androidapp:analyzeReleaseDependencies
+composeApp:androidCompileLintChecks
+latex-base:androidCompileLintChecks
+latex-parser:androidCompileLintChecks
+latex-preview:androidCompileLintChecks
+latex-renderer:androidCompileLintChecks
+composeApp:androidCreateMockableJar
+latex-base:androidCreateMockableJar
+latex-parser:androidCreateMockableJar
+latex-preview:androidCreateMockableJar
+latex-renderer:androidCreateMockableJar
+latex-base:androidEmptyJavadocJar
+latex-parser:androidEmptyJavadocJar
+latex-renderer:androidEmptyJavadocJar
+composeApp:androidJar
+latex-base:androidJar
+latex-parser:androidJar
+latex-preview:androidJar
+latex-renderer:androidJar
+composeApp:androidPreBuild
+latex-base:androidPreBuild
+latex-parser:androidPreBuild
+latex-preview:androidPreBuild
+latex-renderer:androidPreBuild
+composeApp:assembleAndroidDeviceTest - Assembles main Android output for variant <androidDeviceTest>
+latex-base:assembleAndroidDeviceTest - Assembles main Android output for variant <androidDeviceTest>
+latex-parser:assembleAndroidDeviceTest - Assembles main Android output for variant <androidDeviceTest>
+latex-preview:assembleAndroidDeviceTest - Assembles main Android output for variant <androidDeviceTest>
+latex-renderer:assembleAndroidDeviceTest - Assembles main Android output for variant <androidDeviceTest>
+composeApp:assembleAndroidHostTest - Assembles main Android output for variant <androidHostTest>
+latex-base:assembleAndroidHostTest - Assembles main Android output for variant <androidHostTest>
+latex-parser:assembleAndroidHostTest - Assembles main Android output for variant <androidHostTest>
+latex-preview:assembleAndroidHostTest - Assembles main Android output for variant <androidHostTest>
+latex-renderer:assembleAndroidHostTest - Assembles main Android output for variant <androidHostTest>
+composeApp:assembleAndroidMain - Assembles main Android output for variant <androidMain>
+latex-base:assembleAndroidMain - Assembles main Android output for variant <androidMain>
+latex-parser:assembleAndroidMain - Assembles main Android output for variant <androidMain>
+latex-preview:assembleAndroidMain - Assembles main Android output for variant <androidMain>
+latex-renderer:assembleAndroidMain - Assembles main Android output for variant <androidMain>
+androidapp:assembleDebug - Assembles main output for variant debug
+androidapp:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+androidapp:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+latex-benchmark:assembleDevResources
+composeApp:assembleIosArm64MainResources
+latex-preview:assembleIosArm64MainResources
+latex-renderer:assembleIosArm64MainResources
+composeApp:assembleIosArm64TestResources
+latex-preview:assembleIosArm64TestResources
+latex-renderer:assembleIosArm64TestResources
+composeApp:assembleIosSimulatorArm64MainResources
+latex-preview:assembleIosSimulatorArm64MainResources
+latex-renderer:assembleIosSimulatorArm64MainResources
+composeApp:assembleIosSimulatorArm64TestResources
+latex-preview:assembleIosSimulatorArm64TestResources
+latex-renderer:assembleIosSimulatorArm64TestResources
+composeApp:assembleJsMainResources
+latex-preview:assembleJsMainResources
+latex-renderer:assembleJsMainResources
+composeApp:assembleJsTestResources
+latex-preview:assembleJsTestResources
+latex-renderer:assembleJsTestResources
+composeApp:assembleJvmDevResources
+latex-preview:assembleJvmDevResources
+latex-renderer:assembleJvmDevResources
+composeApp:assembleJvmMainResources
+latex-preview:assembleJvmMainResources
+latex-renderer:assembleJvmMainResources
+composeApp:assembleJvmTestResources
+latex-preview:assembleJvmTestResources
+latex-renderer:assembleJvmTestResources
+latex-benchmark:assembleMainResources
+androidapp:assembleRelease - Assembles main output for variant release
+latex-benchmark:assembleTestResources
+composeApp:assembleWasmJsMainResources
+latex-preview:assembleWasmJsMainResources
+latex-renderer:assembleWasmJsMainResources
+composeApp:assembleWasmJsTestResources
+latex-preview:assembleWasmJsTestResources
+latex-renderer:assembleWasmJsTestResources
+androidapp:buildDebugPreBundle
+androidapp:buildReleasePreBundle
+composeApp:bundleAndroidMainAar
+latex-base:bundleAndroidMainAar
+latex-parser:bundleAndroidMainAar
+latex-preview:bundleAndroidMainAar
+latex-renderer:bundleAndroidMainAar
+composeApp:bundleAndroidMainClassesToCompileJar
+latex-base:bundleAndroidMainClassesToCompileJar
+latex-parser:bundleAndroidMainClassesToCompileJar
+latex-preview:bundleAndroidMainClassesToCompileJar
+latex-renderer:bundleAndroidMainClassesToCompileJar
+composeApp:bundleAndroidMainClassesToRuntimeJar
+latex-base:bundleAndroidMainClassesToRuntimeJar
+latex-parser:bundleAndroidMainClassesToRuntimeJar
+latex-preview:bundleAndroidMainClassesToRuntimeJar
+latex-renderer:bundleAndroidMainClassesToRuntimeJar
+composeApp:bundleAndroidMainLocalLintAar
+latex-base:bundleAndroidMainLocalLintAar
+latex-parser:bundleAndroidMainLocalLintAar
+latex-preview:bundleAndroidMainLocalLintAar
+latex-renderer:bundleAndroidMainLocalLintAar
+androidapp:bundleDebug - Assembles bundle for variant debug
+androidapp:bundleDebugClassesToCompileJar
+androidapp:bundleDebugClassesToRuntimeJar
+androidapp:bundleDebugResources
+composeApp:bundleLibRuntimeToDirAndroidMain
+latex-base:bundleLibRuntimeToDirAndroidMain
+latex-parser:bundleLibRuntimeToDirAndroidMain
+latex-preview:bundleLibRuntimeToDirAndroidMain
+latex-renderer:bundleLibRuntimeToDirAndroidMain
+androidapp:bundleRelease - Assembles bundle for variant release
+androidapp:bundleReleaseClassesToCompileJar
+androidapp:bundleReleaseClassesToRuntimeJar
+androidapp:bundleReleaseResources
+composeApp:checkAndroidDeviceTestAarMetadata
+latex-base:checkAndroidDeviceTestAarMetadata
+latex-parser:checkAndroidDeviceTestAarMetadata
+latex-preview:checkAndroidDeviceTestAarMetadata
+latex-renderer:checkAndroidDeviceTestAarMetadata
+composeApp:checkAndroidDeviceTestDuplicateClasses
+latex-base:checkAndroidDeviceTestDuplicateClasses
+latex-parser:checkAndroidDeviceTestDuplicateClasses
+latex-preview:checkAndroidDeviceTestDuplicateClasses
+latex-renderer:checkAndroidDeviceTestDuplicateClasses
+composeApp:checkAndroidMainAarMetadata
+latex-base:checkAndroidMainAarMetadata
+latex-parser:checkAndroidMainAarMetadata
+latex-preview:checkAndroidMainAarMetadata
+latex-renderer:checkAndroidMainAarMetadata
+composeApp:checkCanSyncComposeResourcesForIos
+latex-preview:checkCanSyncComposeResourcesForIos
+latex-renderer:checkCanSyncComposeResourcesForIos
+androidapp:checkDebugAarMetadata
+androidapp:checkDebugAndroidTestAarMetadata
+androidapp:checkDebugAndroidTestDuplicateClasses
+androidapp:checkDebugDuplicateClasses
+androidapp:checkDebugManifest
+androidapp:checkReleaseAarMetadata
+androidapp:checkReleaseDuplicateClasses
+androidapp:checkReleaseManifest
+androidapp:collectDebugAggregatedCoverage
+androidapp:collectDebugCoverage
+androidapp:collectReleaseAggregatedCoverage
+androidapp:collectReleaseCoverage
+androidapp:collectReleaseDependencies
+composeApp:compileAndroidDeviceTest - Compiles the compilation 'deviceTest' in target 'android'.
+latex-base:compileAndroidDeviceTest - Compiles the compilation 'deviceTest' in target 'android'.
+latex-parser:compileAndroidDeviceTest - Compiles the compilation 'deviceTest' in target 'android'.
+latex-preview:compileAndroidDeviceTest - Compiles the compilation 'deviceTest' in target 'android'.
+latex-renderer:compileAndroidDeviceTest - Compiles the compilation 'deviceTest' in target 'android'.
+composeApp:compileAndroidDeviceTestJavaWithJavac
+latex-base:compileAndroidDeviceTestJavaWithJavac
+latex-parser:compileAndroidDeviceTestJavaWithJavac
+latex-preview:compileAndroidDeviceTestJavaWithJavac
+latex-renderer:compileAndroidDeviceTestJavaWithJavac
+composeApp:compileAndroidDeviceTestNavigationResources
+latex-base:compileAndroidDeviceTestNavigationResources
+latex-parser:compileAndroidDeviceTestNavigationResources
+latex-preview:compileAndroidDeviceTestNavigationResources
+latex-renderer:compileAndroidDeviceTestNavigationResources
+composeApp:compileAndroidHostTest - Compiles the compilation 'hostTest' in target 'android'.
+latex-base:compileAndroidHostTest - Compiles the compilation 'hostTest' in target 'android'.
+latex-parser:compileAndroidHostTest - Compiles the compilation 'hostTest' in target 'android'.
+latex-preview:compileAndroidHostTest - Compiles the compilation 'hostTest' in target 'android'.
+latex-renderer:compileAndroidHostTest - Compiles the compilation 'hostTest' in target 'android'.
+composeApp:compileAndroidHostTestJavaWithJavac
+latex-base:compileAndroidHostTestJavaWithJavac
+latex-parser:compileAndroidHostTestJavaWithJavac
+latex-preview:compileAndroidHostTestJavaWithJavac
+latex-renderer:compileAndroidHostTestJavaWithJavac
+composeApp:compileAndroidMain - Compiles the compilation 'main' in target 'android'.
+latex-base:compileAndroidMain - Compiles the compilation 'main' in target 'android'.
+latex-parser:compileAndroidMain - Compiles the compilation 'main' in target 'android'.
+latex-preview:compileAndroidMain - Compiles the compilation 'main' in target 'android'.
+latex-renderer:compileAndroidMain - Compiles the compilation 'main' in target 'android'.
+composeApp:compileAndroidMainJavaWithJavac
+latex-base:compileAndroidMainJavaWithJavac
+latex-parser:compileAndroidMainJavaWithJavac
+latex-preview:compileAndroidMainJavaWithJavac
+latex-renderer:compileAndroidMainJavaWithJavac
+composeApp:compileAndroidMainLibraryResources
+latex-preview:compileAndroidMainLibraryResources
+latex-renderer:compileAndroidMainLibraryResources
+composeApp:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+latex-base:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+latex-parser:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+latex-preview:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+latex-renderer:compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+androidapp:compileDebugAndroidTestJavaWithJavac
+androidapp:compileDebugAndroidTestKotlin
+androidapp:compileDebugAndroidTestNavigationResources
+androidapp:compileDebugArtProfile
+androidapp:compileDebugJavaWithJavac
+androidapp:compileDebugKotlin
+androidapp:compileDebugNavigationResources
+androidapp:compileDebugUnitTestJavaWithJavac
+androidapp:compileDebugUnitTestKotlin
+composeApp:compileDevelopmentExecutableKotlinJs
+latex-base:compileDevelopmentExecutableKotlinJs
+latex-parser:compileDevelopmentExecutableKotlinJs
+latex-preview:compileDevelopmentExecutableKotlinJs
+latex-renderer:compileDevelopmentExecutableKotlinJs
+composeApp:compileDevelopmentExecutableKotlinWasmJs
+latex-base:compileDevelopmentExecutableKotlinWasmJs
+latex-parser:compileDevelopmentExecutableKotlinWasmJs
+latex-preview:compileDevelopmentExecutableKotlinWasmJs
+latex-renderer:compileDevelopmentExecutableKotlinWasmJs
+composeApp:compileDevelopmentExecutableKotlinWasmJsOptimize
+latex-base:compileDevelopmentExecutableKotlinWasmJsOptimize
+latex-parser:compileDevelopmentExecutableKotlinWasmJsOptimize
+latex-preview:compileDevelopmentExecutableKotlinWasmJsOptimize
+latex-renderer:compileDevelopmentExecutableKotlinWasmJsOptimize
+latex-benchmark:compileDevJava - Compiles dev Java source.
+latex-benchmark:compileDevKotlin - Compiles the compilation 'dev' in target ''.
+composeApp:compileDevKotlinJvm - Compiles the compilation 'dev' in target 'jvm'.
+latex-preview:compileDevKotlinJvm - Compiles the compilation 'dev' in target 'jvm'.
+latex-renderer:compileDevKotlinJvm - Compiles the compilation 'dev' in target 'jvm'.
+latex-benchmark:compileJava - Compiles main Java source.
+composeApp:compileJvmDevJava - Compiles jvm dev Java source.
+latex-preview:compileJvmDevJava - Compiles jvm dev Java source.
+latex-renderer:compileJvmDevJava - Compiles jvm dev Java source.
+composeApp:compileJvmMainJava - Compiles jvm main Java source.
+latex-base:compileJvmMainJava - Compiles jvm main Java source.
+latex-parser:compileJvmMainJava - Compiles jvm main Java source.
+latex-preview:compileJvmMainJava - Compiles jvm main Java source.
+latex-renderer:compileJvmMainJava - Compiles jvm main Java source.
+composeApp:compileJvmTestJava - Compiles jvm test Java source.
+latex-base:compileJvmTestJava - Compiles jvm test Java source.
+latex-parser:compileJvmTestJava - Compiles jvm test Java source.
+latex-preview:compileJvmTestJava - Compiles jvm test Java source.
+latex-renderer:compileJvmTestJava - Compiles jvm test Java source.
+latex-benchmark:compileKotlin - Compiles the compilation 'main' in target ''.
+composeApp:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+latex-base:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+latex-parser:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+latex-preview:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+latex-renderer:compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+composeApp:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+latex-base:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+latex-parser:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+latex-preview:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+latex-renderer:compileKotlinJvm - Compiles the compilation 'main' in target 'jvm'.
+composeApp:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+latex-base:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+latex-parser:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+latex-preview:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+latex-renderer:compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+composeApp:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+latex-base:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+latex-parser:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+latex-preview:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+latex-renderer:compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+androidapp:compileLint
+composeApp:compileLint
+latex-base:compileLint
+latex-parser:compileLint
+latex-preview:compileLint
+latex-renderer:compileLint
+androidapp:compileLintChecks
+composeApp:compileProductionExecutableKotlinJs
+latex-base:compileProductionExecutableKotlinJs
+latex-parser:compileProductionExecutableKotlinJs
+latex-preview:compileProductionExecutableKotlinJs
+latex-renderer:compileProductionExecutableKotlinJs
+composeApp:compileProductionExecutableKotlinWasmJs
+latex-base:compileProductionExecutableKotlinWasmJs
+latex-parser:compileProductionExecutableKotlinWasmJs
+latex-preview:compileProductionExecutableKotlinWasmJs
+latex-renderer:compileProductionExecutableKotlinWasmJs
+composeApp:compileProductionExecutableKotlinWasmJsOptimize
+latex-base:compileProductionExecutableKotlinWasmJsOptimize
+latex-parser:compileProductionExecutableKotlinWasmJsOptimize
+latex-preview:compileProductionExecutableKotlinWasmJsOptimize
+latex-renderer:compileProductionExecutableKotlinWasmJsOptimize
+androidapp:compileReleaseArtProfile
+androidapp:compileReleaseJavaWithJavac
+androidapp:compileReleaseKotlin
+androidapp:compileReleaseNavigationResources
+composeApp:compileTestDevelopmentExecutableKotlinJs
+latex-base:compileTestDevelopmentExecutableKotlinJs
+latex-parser:compileTestDevelopmentExecutableKotlinJs
+latex-preview:compileTestDevelopmentExecutableKotlinJs
+latex-renderer:compileTestDevelopmentExecutableKotlinJs
+composeApp:compileTestDevelopmentExecutableKotlinWasmJs
+latex-base:compileTestDevelopmentExecutableKotlinWasmJs
+latex-parser:compileTestDevelopmentExecutableKotlinWasmJs
+latex-preview:compileTestDevelopmentExecutableKotlinWasmJs
+latex-renderer:compileTestDevelopmentExecutableKotlinWasmJs
+composeApp:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+latex-base:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+latex-parser:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+latex-preview:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+latex-renderer:compileTestDevelopmentExecutableKotlinWasmJsOptimize
+latex-benchmark:compileTestJava - Compiles test Java source.
+latex-benchmark:compileTestKotlin - Compiles the compilation 'test' in target ''.
+composeApp:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+latex-base:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+latex-parser:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+latex-preview:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+latex-renderer:compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+composeApp:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+latex-base:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+latex-parser:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+latex-preview:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+latex-renderer:compileTestKotlinJvm - Compiles the compilation 'test' in target 'jvm'.
+composeApp:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+latex-base:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+latex-parser:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+latex-preview:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+latex-renderer:compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+composeApp:compileTestProductionExecutableKotlinJs
+latex-base:compileTestProductionExecutableKotlinJs
+latex-parser:compileTestProductionExecutableKotlinJs
+latex-preview:compileTestProductionExecutableKotlinJs
+latex-renderer:compileTestProductionExecutableKotlinJs
+composeApp:compileTestProductionExecutableKotlinWasmJs
+latex-base:compileTestProductionExecutableKotlinWasmJs
+latex-parser:compileTestProductionExecutableKotlinWasmJs
+latex-preview:compileTestProductionExecutableKotlinWasmJs
+latex-renderer:compileTestProductionExecutableKotlinWasmJs
+composeApp:compileTestProductionExecutableKotlinWasmJsOptimize
+latex-base:compileTestProductionExecutableKotlinWasmJsOptimize
+latex-parser:compileTestProductionExecutableKotlinWasmJsOptimize
+latex-preview:compileTestProductionExecutableKotlinWasmJsOptimize
+latex-renderer:compileTestProductionExecutableKotlinWasmJsOptimize
+composeApp:compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+latex-base:compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+latex-parser:compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+latex-preview:compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+latex-renderer:compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+composeApp:compressAndroidDeviceTestAssets
+latex-base:compressAndroidDeviceTestAssets
+latex-parser:compressAndroidDeviceTestAssets
+latex-preview:compressAndroidDeviceTestAssets
+latex-renderer:compressAndroidDeviceTestAssets
+androidapp:compressDebugAndroidTestAssets
+androidapp:compressDebugAssets
+androidapp:compressReleaseAssets
+latex-benchmark:configureDesktopPreview
+composeApp:configureDesktopPreviewJvm
+latex-preview:configureDesktopPreviewJvm
+latex-renderer:configureDesktopPreviewJvm
+androidapp:configureReleaseDependencies
+androidapp:consumeConfigAttr
+composeApp:consumeConfigAttr
+latex-base:consumeConfigAttr
+latex-parser:consumeConfigAttr
+latex-preview:consumeConfigAttr
+latex-renderer:consumeConfigAttr
+androidapp:convertLinkedResourcesToBinaryRelease
+androidapp:convertShrunkResourcesToBinaryRelease
+composeApp:convertXmlValueResourcesForAndroidDeviceTest
+latex-preview:convertXmlValueResourcesForAndroidDeviceTest
+latex-renderer:convertXmlValueResourcesForAndroidDeviceTest
+composeApp:convertXmlValueResourcesForAndroidHostTest
+latex-preview:convertXmlValueResourcesForAndroidHostTest
+latex-renderer:convertXmlValueResourcesForAndroidHostTest
+composeApp:convertXmlValueResourcesForAndroidMain
+latex-preview:convertXmlValueResourcesForAndroidMain
+latex-renderer:convertXmlValueResourcesForAndroidMain
+composeApp:convertXmlValueResourcesForAppleMain
+latex-preview:convertXmlValueResourcesForAppleMain
+latex-renderer:convertXmlValueResourcesForAppleMain
+composeApp:convertXmlValueResourcesForAppleTest
+latex-preview:convertXmlValueResourcesForAppleTest
+latex-renderer:convertXmlValueResourcesForAppleTest
+composeApp:convertXmlValueResourcesForCommonMain
+latex-preview:convertXmlValueResourcesForCommonMain
+latex-renderer:convertXmlValueResourcesForCommonMain
+composeApp:convertXmlValueResourcesForCommonTest
+latex-preview:convertXmlValueResourcesForCommonTest
+latex-renderer:convertXmlValueResourcesForCommonTest
+latex-benchmark:convertXmlValueResourcesForDev
+composeApp:convertXmlValueResourcesForIosArm64Main
+latex-preview:convertXmlValueResourcesForIosArm64Main
+latex-renderer:convertXmlValueResourcesForIosArm64Main
+composeApp:convertXmlValueResourcesForIosArm64Test
+latex-preview:convertXmlValueResourcesForIosArm64Test
+latex-renderer:convertXmlValueResourcesForIosArm64Test
+composeApp:convertXmlValueResourcesForIosMain
+latex-preview:convertXmlValueResourcesForIosMain
+latex-renderer:convertXmlValueResourcesForIosMain
+composeApp:convertXmlValueResourcesForIosSimulatorArm64Main
+latex-preview:convertXmlValueResourcesForIosSimulatorArm64Main
+latex-renderer:convertXmlValueResourcesForIosSimulatorArm64Main
+composeApp:convertXmlValueResourcesForIosSimulatorArm64Test
+latex-preview:convertXmlValueResourcesForIosSimulatorArm64Test
+latex-renderer:convertXmlValueResourcesForIosSimulatorArm64Test
+composeApp:convertXmlValueResourcesForIosTest
+latex-preview:convertXmlValueResourcesForIosTest
+latex-renderer:convertXmlValueResourcesForIosTest
+composeApp:convertXmlValueResourcesForJsMain
+latex-preview:convertXmlValueResourcesForJsMain
+latex-renderer:convertXmlValueResourcesForJsMain
+composeApp:convertXmlValueResourcesForJsTest
+latex-preview:convertXmlValueResourcesForJsTest
+latex-renderer:convertXmlValueResourcesForJsTest
+composeApp:convertXmlValueResourcesForJvmDev
+latex-preview:convertXmlValueResourcesForJvmDev
+latex-renderer:convertXmlValueResourcesForJvmDev
+composeApp:convertXmlValueResourcesForJvmMain
+latex-preview:convertXmlValueResourcesForJvmMain
+latex-renderer:convertXmlValueResourcesForJvmMain
+composeApp:convertXmlValueResourcesForJvmTest
+latex-preview:convertXmlValueResourcesForJvmTest
+latex-renderer:convertXmlValueResourcesForJvmTest
+latex-benchmark:convertXmlValueResourcesForMain
+composeApp:convertXmlValueResourcesForNativeMain
+latex-preview:convertXmlValueResourcesForNativeMain
+latex-renderer:convertXmlValueResourcesForNativeMain
+composeApp:convertXmlValueResourcesForNativeTest
+latex-preview:convertXmlValueResourcesForNativeTest
+latex-renderer:convertXmlValueResourcesForNativeTest
+latex-benchmark:convertXmlValueResourcesForTest
+composeApp:convertXmlValueResourcesForWasmJsMain
+latex-preview:convertXmlValueResourcesForWasmJsMain
+latex-renderer:convertXmlValueResourcesForWasmJsMain
+composeApp:convertXmlValueResourcesForWasmJsTest
+latex-preview:convertXmlValueResourcesForWasmJsTest
+latex-renderer:convertXmlValueResourcesForWasmJsTest
+composeApp:convertXmlValueResourcesForWebMain
+latex-preview:convertXmlValueResourcesForWebMain
+latex-renderer:convertXmlValueResourcesForWebMain
+composeApp:convertXmlValueResourcesForWebTest
+latex-preview:convertXmlValueResourcesForWebTest
+latex-renderer:convertXmlValueResourcesForWebTest
+composeApp:copyAndroidDeviceTestComposeResourcesToAndroidAssets
+latex-preview:copyAndroidDeviceTestComposeResourcesToAndroidAssets
+latex-renderer:copyAndroidDeviceTestComposeResourcesToAndroidAssets
+composeApp:copyAndroidMainComposeResourcesToAndroidAssets
+latex-preview:copyAndroidMainComposeResourcesToAndroidAssets
+latex-renderer:copyAndroidMainComposeResourcesToAndroidAssets
+composeApp:copyAndroidMainJniLibsProjectOnly
+latex-base:copyAndroidMainJniLibsProjectOnly
+latex-parser:copyAndroidMainJniLibsProjectOnly
+latex-preview:copyAndroidMainJniLibsProjectOnly
+latex-renderer:copyAndroidMainJniLibsProjectOnly
+composeApp:copyNonXmlValueResourcesForAndroidDeviceTest
+latex-preview:copyNonXmlValueResourcesForAndroidDeviceTest
+latex-renderer:copyNonXmlValueResourcesForAndroidDeviceTest
+composeApp:copyNonXmlValueResourcesForAndroidHostTest
+latex-preview:copyNonXmlValueResourcesForAndroidHostTest
+latex-renderer:copyNonXmlValueResourcesForAndroidHostTest
+composeApp:copyNonXmlValueResourcesForAndroidMain
+latex-preview:copyNonXmlValueResourcesForAndroidMain
+latex-renderer:copyNonXmlValueResourcesForAndroidMain
+composeApp:copyNonXmlValueResourcesForAppleMain
+latex-preview:copyNonXmlValueResourcesForAppleMain
+latex-renderer:copyNonXmlValueResourcesForAppleMain
+composeApp:copyNonXmlValueResourcesForAppleTest
+latex-preview:copyNonXmlValueResourcesForAppleTest
+latex-renderer:copyNonXmlValueResourcesForAppleTest
+composeApp:copyNonXmlValueResourcesForCommonMain
+latex-preview:copyNonXmlValueResourcesForCommonMain
+latex-renderer:copyNonXmlValueResourcesForCommonMain
+composeApp:copyNonXmlValueResourcesForCommonTest
+latex-preview:copyNonXmlValueResourcesForCommonTest
+latex-renderer:copyNonXmlValueResourcesForCommonTest
+latex-benchmark:copyNonXmlValueResourcesForDev
+composeApp:copyNonXmlValueResourcesForIosArm64Main
+latex-preview:copyNonXmlValueResourcesForIosArm64Main
+latex-renderer:copyNonXmlValueResourcesForIosArm64Main
+composeApp:copyNonXmlValueResourcesForIosArm64Test
+latex-preview:copyNonXmlValueResourcesForIosArm64Test
+latex-renderer:copyNonXmlValueResourcesForIosArm64Test
+composeApp:copyNonXmlValueResourcesForIosMain
+latex-preview:copyNonXmlValueResourcesForIosMain
+latex-renderer:copyNonXmlValueResourcesForIosMain
+composeApp:copyNonXmlValueResourcesForIosSimulatorArm64Main
+latex-preview:copyNonXmlValueResourcesForIosSimulatorArm64Main
+latex-renderer:copyNonXmlValueResourcesForIosSimulatorArm64Main
+composeApp:copyNonXmlValueResourcesForIosSimulatorArm64Test
+latex-preview:copyNonXmlValueResourcesForIosSimulatorArm64Test
+latex-renderer:copyNonXmlValueResourcesForIosSimulatorArm64Test
+composeApp:copyNonXmlValueResourcesForIosTest
+latex-preview:copyNonXmlValueResourcesForIosTest
+latex-renderer:copyNonXmlValueResourcesForIosTest
+composeApp:copyNonXmlValueResourcesForJsMain
+latex-preview:copyNonXmlValueResourcesForJsMain
+latex-renderer:copyNonXmlValueResourcesForJsMain
+composeApp:copyNonXmlValueResourcesForJsTest
+latex-preview:copyNonXmlValueResourcesForJsTest
+latex-renderer:copyNonXmlValueResourcesForJsTest
+composeApp:copyNonXmlValueResourcesForJvmDev
+latex-preview:copyNonXmlValueResourcesForJvmDev
+latex-renderer:copyNonXmlValueResourcesForJvmDev
+composeApp:copyNonXmlValueResourcesForJvmMain
+latex-preview:copyNonXmlValueResourcesForJvmMain
+latex-renderer:copyNonXmlValueResourcesForJvmMain
+composeApp:copyNonXmlValueResourcesForJvmTest
+latex-preview:copyNonXmlValueResourcesForJvmTest
+latex-renderer:copyNonXmlValueResourcesForJvmTest
+latex-benchmark:copyNonXmlValueResourcesForMain
+composeApp:copyNonXmlValueResourcesForNativeMain
+latex-preview:copyNonXmlValueResourcesForNativeMain
+latex-renderer:copyNonXmlValueResourcesForNativeMain
+composeApp:copyNonXmlValueResourcesForNativeTest
+latex-preview:copyNonXmlValueResourcesForNativeTest
+latex-renderer:copyNonXmlValueResourcesForNativeTest
+latex-benchmark:copyNonXmlValueResourcesForTest
+composeApp:copyNonXmlValueResourcesForWasmJsMain
+latex-preview:copyNonXmlValueResourcesForWasmJsMain
+latex-renderer:copyNonXmlValueResourcesForWasmJsMain
+composeApp:copyNonXmlValueResourcesForWasmJsTest
+latex-preview:copyNonXmlValueResourcesForWasmJsTest
+latex-renderer:copyNonXmlValueResourcesForWasmJsTest
+composeApp:copyNonXmlValueResourcesForWebMain
+latex-preview:copyNonXmlValueResourcesForWebMain
+latex-renderer:copyNonXmlValueResourcesForWebMain
+composeApp:copyNonXmlValueResourcesForWebTest
+latex-preview:copyNonXmlValueResourcesForWebTest
+latex-renderer:copyNonXmlValueResourcesForWebTest
+composeApp:copyTestComposeResourcesForIosArm64
+latex-preview:copyTestComposeResourcesForIosArm64
+latex-renderer:copyTestComposeResourcesForIosArm64
+composeApp:copyTestComposeResourcesForIosSimulatorArm64
+latex-preview:copyTestComposeResourcesForIosSimulatorArm64
+latex-renderer:copyTestComposeResourcesForIosSimulatorArm64
+androidapp:createAggregatedCoverageReport
+androidapp:createAggregatedTestReport
+composeApp:createAndroidDeviceTestApkListingFileRedirect
+latex-base:createAndroidDeviceTestApkListingFileRedirect
+latex-parser:createAndroidDeviceTestApkListingFileRedirect
+latex-preview:createAndroidDeviceTestApkListingFileRedirect
+latex-renderer:createAndroidDeviceTestApkListingFileRedirect
+androidapp:createCoverageReport
+androidapp:createDebugAndroidTestApkListingFileRedirect
+androidapp:createDebugApkListingFileRedirect
+androidapp:createDebugApksFromBundleListingFileRedirect
+androidapp:createDebugBundleListingFileRedirect
+androidapp:createDebugCompatibleScreenManifests
+composeApp:createFullJarAndroidMain
+latex-base:createFullJarAndroidMain
+latex-parser:createFullJarAndroidMain
+latex-preview:createFullJarAndroidMain
+latex-renderer:createFullJarAndroidMain
+androidapp:createMockableJar
+androidapp:createReleaseApkListingFileRedirect
+androidapp:createReleaseApksFromBundleListingFileRedirect
+androidapp:createReleaseBundleListingFileRedirect
+androidapp:createReleaseCompatibleScreenManifests
+androidapp:createTestReport
+composeApp:desugarAndroidDeviceTestFileDependencies
+latex-base:desugarAndroidDeviceTestFileDependencies
+latex-parser:desugarAndroidDeviceTestFileDependencies
+latex-preview:desugarAndroidDeviceTestFileDependencies
+latex-renderer:desugarAndroidDeviceTestFileDependencies
+androidapp:desugarDebugAndroidTestFileDependencies
+androidapp:desugarDebugFileDependencies
+composeApp:dexBuilderAndroidDeviceTest
+latex-base:dexBuilderAndroidDeviceTest
+latex-parser:dexBuilderAndroidDeviceTest
+latex-preview:dexBuilderAndroidDeviceTest
+latex-renderer:dexBuilderAndroidDeviceTest
+androidapp:dexBuilderDebug
+androidapp:dexBuilderDebugAndroidTest
+composeApp:downloadKotlinNativeDistribution
+latex-base:downloadKotlinNativeDistribution
+latex-parser:downloadKotlinNativeDistribution
+latex-preview:downloadKotlinNativeDistribution
+latex-renderer:downloadKotlinNativeDistribution
+downloadWix
+composeApp:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-base:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-benchmark:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-parser:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-preview:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-renderer:dumpLegacyAbi - Dumps the public Application Binary Interface (ABI) into files in the build directory for the 'main' variant.
+latex-base:enableAutomaticMavenCentralPublishing - Enables automatic publishing for Maven Central
+latex-parser:enableAutomaticMavenCentralPublishing - Enables automatic publishing for Maven Central
+latex-renderer:enableAutomaticMavenCentralPublishing - Enables automatic publishing for Maven Central
+androidapp:expandReleaseArtProfileWildcards
+latex-base:exportAndroidMainConsumerProguardFiles
+latex-parser:exportAndroidMainConsumerProguardFiles
+latex-renderer:exportAndroidMainConsumerProguardFiles
+composeApp:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+latex-base:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+latex-parser:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+latex-preview:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+latex-renderer:exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+composeApp:exportRootPublicationCoordinatesForMetadataApiElements
+latex-base:exportRootPublicationCoordinatesForMetadataApiElements
+latex-parser:exportRootPublicationCoordinatesForMetadataApiElements
+latex-preview:exportRootPublicationCoordinatesForMetadataApiElements
+latex-renderer:exportRootPublicationCoordinatesForMetadataApiElements
+composeApp:exportTargetPublicationCoordinatesForAndroidApiElements
+latex-base:exportTargetPublicationCoordinatesForAndroidApiElements
+latex-parser:exportTargetPublicationCoordinatesForAndroidApiElements
+latex-preview:exportTargetPublicationCoordinatesForAndroidApiElements
+latex-renderer:exportTargetPublicationCoordinatesForAndroidApiElements
+composeApp:exportTargetPublicationCoordinatesForAndroidRuntimeElements
+latex-base:exportTargetPublicationCoordinatesForAndroidRuntimeElements
+latex-parser:exportTargetPublicationCoordinatesForAndroidRuntimeElements
+latex-preview:exportTargetPublicationCoordinatesForAndroidRuntimeElements
+latex-renderer:exportTargetPublicationCoordinatesForAndroidRuntimeElements
+composeApp:exportTargetPublicationCoordinatesForIosArm64ApiElements
+latex-base:exportTargetPublicationCoordinatesForIosArm64ApiElements
+latex-parser:exportTargetPublicationCoordinatesForIosArm64ApiElements
+latex-preview:exportTargetPublicationCoordinatesForIosArm64ApiElements
+latex-renderer:exportTargetPublicationCoordinatesForIosArm64ApiElements
+composeApp:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+latex-base:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+latex-parser:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+latex-preview:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+latex-renderer:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+composeApp:exportTargetPublicationCoordinatesForJsApiElements
+latex-base:exportTargetPublicationCoordinatesForJsApiElements
+latex-parser:exportTargetPublicationCoordinatesForJsApiElements
+latex-preview:exportTargetPublicationCoordinatesForJsApiElements
+latex-renderer:exportTargetPublicationCoordinatesForJsApiElements
+composeApp:exportTargetPublicationCoordinatesForJsRuntimeElements
+latex-base:exportTargetPublicationCoordinatesForJsRuntimeElements
+latex-parser:exportTargetPublicationCoordinatesForJsRuntimeElements
+latex-preview:exportTargetPublicationCoordinatesForJsRuntimeElements
+latex-renderer:exportTargetPublicationCoordinatesForJsRuntimeElements
+composeApp:exportTargetPublicationCoordinatesForJvmApiElements
+latex-base:exportTargetPublicationCoordinatesForJvmApiElements
+latex-parser:exportTargetPublicationCoordinatesForJvmApiElements
+latex-preview:exportTargetPublicationCoordinatesForJvmApiElements
+latex-renderer:exportTargetPublicationCoordinatesForJvmApiElements
+composeApp:exportTargetPublicationCoordinatesForJvmRuntimeElements
+latex-base:exportTargetPublicationCoordinatesForJvmRuntimeElements
+latex-parser:exportTargetPublicationCoordinatesForJvmRuntimeElements
+latex-preview:exportTargetPublicationCoordinatesForJvmRuntimeElements
+latex-renderer:exportTargetPublicationCoordinatesForJvmRuntimeElements
+composeApp:exportTargetPublicationCoordinatesForWasmJsApiElements
+latex-base:exportTargetPublicationCoordinatesForWasmJsApiElements
+latex-parser:exportTargetPublicationCoordinatesForWasmJsApiElements
+latex-preview:exportTargetPublicationCoordinatesForWasmJsApiElements
+latex-renderer:exportTargetPublicationCoordinatesForWasmJsApiElements
+composeApp:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+latex-base:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+latex-parser:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+latex-preview:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+latex-renderer:exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+androidapp:extractApksForDebug
+androidapp:extractApksForRelease
+androidapp:extractApksFromBundleForDebug
+androidapp:extractApksFromBundleForRelease
+androidapp:extractDebugNativeDebugMetadata
+androidapp:extractDebugNativeSymbolTables
+androidapp:extractDeepLinksDebug
+androidapp:extractDeepLinksRelease
+androidapp:extractProguardFiles
+composeApp:extractProguardFiles
+latex-base:extractProguardFiles
+latex-parser:extractProguardFiles
+latex-preview:extractProguardFiles
+latex-renderer:extractProguardFiles
+androidapp:extractReleaseNativeDebugMetadata
+androidapp:extractReleaseNativeSymbolTables
+androidapp:extractReleaseVersionControlInfo
+composeApp:generateActualResourceCollectorsForAndroidMain
+latex-preview:generateActualResourceCollectorsForAndroidMain
+latex-renderer:generateActualResourceCollectorsForAndroidMain
+composeApp:generateActualResourceCollectorsForIosArm64Main
+latex-preview:generateActualResourceCollectorsForIosArm64Main
+latex-renderer:generateActualResourceCollectorsForIosArm64Main
+composeApp:generateActualResourceCollectorsForIosSimulatorArm64Main
+latex-preview:generateActualResourceCollectorsForIosSimulatorArm64Main
+latex-renderer:generateActualResourceCollectorsForIosSimulatorArm64Main
+composeApp:generateActualResourceCollectorsForJsMain
+latex-preview:generateActualResourceCollectorsForJsMain
+latex-renderer:generateActualResourceCollectorsForJsMain
+composeApp:generateActualResourceCollectorsForJvmMain
+latex-preview:generateActualResourceCollectorsForJvmMain
+latex-renderer:generateActualResourceCollectorsForJvmMain
+latex-benchmark:generateActualResourceCollectorsForMain
+composeApp:generateActualResourceCollectorsForWasmJsMain
+latex-preview:generateActualResourceCollectorsForWasmJsMain
+latex-renderer:generateActualResourceCollectorsForWasmJsMain
+composeApp:generateAndroidDeviceTestAssets
+latex-base:generateAndroidDeviceTestAssets
+latex-parser:generateAndroidDeviceTestAssets
+latex-preview:generateAndroidDeviceTestAssets
+latex-renderer:generateAndroidDeviceTestAssets
+composeApp:generateAndroidDeviceTestResources
+latex-base:generateAndroidDeviceTestResources
+latex-parser:generateAndroidDeviceTestResources
+latex-preview:generateAndroidDeviceTestResources
+latex-renderer:generateAndroidDeviceTestResources
+composeApp:generateAndroidDeviceTestRFile
+latex-base:generateAndroidDeviceTestRFile
+latex-parser:generateAndroidDeviceTestRFile
+latex-preview:generateAndroidDeviceTestRFile
+latex-renderer:generateAndroidDeviceTestRFile
+composeApp:generateAndroidDeviceTestSources
+latex-base:generateAndroidDeviceTestSources
+latex-parser:generateAndroidDeviceTestSources
+latex-preview:generateAndroidDeviceTestSources
+latex-renderer:generateAndroidDeviceTestSources
+composeApp:generateAndroidHostTestAssets
+latex-base:generateAndroidHostTestAssets
+latex-parser:generateAndroidHostTestAssets
+latex-preview:generateAndroidHostTestAssets
+latex-renderer:generateAndroidHostTestAssets
+composeApp:generateAndroidHostTestLintModel
+latex-base:generateAndroidHostTestLintModel
+latex-parser:generateAndroidHostTestLintModel
+latex-preview:generateAndroidHostTestLintModel
+latex-renderer:generateAndroidHostTestLintModel
+composeApp:generateAndroidHostTestResources
+latex-base:generateAndroidHostTestResources
+latex-parser:generateAndroidHostTestResources
+latex-preview:generateAndroidHostTestResources
+latex-renderer:generateAndroidHostTestResources
+composeApp:generateAndroidHostTestSources
+latex-base:generateAndroidHostTestSources
+latex-parser:generateAndroidHostTestSources
+latex-preview:generateAndroidHostTestSources
+latex-renderer:generateAndroidHostTestSources
+composeApp:generateAndroidHostTestStubRFile
+latex-preview:generateAndroidHostTestStubRFile
+latex-renderer:generateAndroidHostTestStubRFile
+composeApp:generateAndroidMainAssets
+latex-preview:generateAndroidMainAssets
+latex-renderer:generateAndroidMainAssets
+composeApp:generateAndroidMainEmptyResourceFiles
+latex-base:generateAndroidMainEmptyResourceFiles
+latex-parser:generateAndroidMainEmptyResourceFiles
+latex-preview:generateAndroidMainEmptyResourceFiles
+latex-renderer:generateAndroidMainEmptyResourceFiles
+composeApp:generateAndroidMainExternalPublicTxt
+latex-preview:generateAndroidMainExternalPublicTxt
+latex-renderer:generateAndroidMainExternalPublicTxt
+composeApp:generateAndroidMainRFile
+latex-preview:generateAndroidMainRFile
+latex-renderer:generateAndroidMainRFile
+composeApp:generateComposeResClass
+latex-benchmark:generateComposeResClass
+latex-preview:generateComposeResClass
+latex-renderer:generateComposeResClass
+androidapp:generateDebugAndroidTestAssets
+androidapp:generateDebugAndroidTestLintModel
+androidapp:generateDebugAndroidTestResources
+androidapp:generateDebugAndroidTestRFile
+androidapp:generateDebugAndroidTestSources
+androidapp:generateDebugAssets
+androidapp:generateDebugFeatureMetadata
+androidapp:generateDebugFeatureTransitiveDeps
+androidapp:generateDebugLintModel
+androidapp:generateDebugLintReportModel
+androidapp:generateDebugManifestClass
+androidapp:generateDebugResources
+androidapp:generateDebugRFile
+androidapp:generateDebugSources
+androidapp:generateDebugUnitTestAssets
+androidapp:generateDebugUnitTestLintModel
+androidapp:generateDebugUnitTestResources
+androidapp:generateDebugUnitTestSources
+composeApp:generateExpectResourceCollectorsForCommonMain
+latex-preview:generateExpectResourceCollectorsForCommonMain
+latex-renderer:generateExpectResourceCollectorsForCommonMain
+composeApp:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+latex-base:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+latex-parser:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+latex-preview:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+latex-renderer:generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+androidapp:generateReleaseAssets
+androidapp:generateReleaseFeatureMetadata
+androidapp:generateReleaseFeatureTransitiveDeps
+androidapp:generateReleaseLintModel
+androidapp:generateReleaseLintReportModel
+androidapp:generateReleaseLintVitalReportModel
+androidapp:generateReleaseManifestClass
+androidapp:generateReleaseResources
+androidapp:generateReleaseRFile
+androidapp:generateReleaseSources
+composeApp:generateResourceAccessorsForAndroidDeviceTest
+latex-preview:generateResourceAccessorsForAndroidDeviceTest
+latex-renderer:generateResourceAccessorsForAndroidDeviceTest
+composeApp:generateResourceAccessorsForAndroidHostTest
+latex-preview:generateResourceAccessorsForAndroidHostTest
+latex-renderer:generateResourceAccessorsForAndroidHostTest
+composeApp:generateResourceAccessorsForAndroidMain
+latex-preview:generateResourceAccessorsForAndroidMain
+latex-renderer:generateResourceAccessorsForAndroidMain
+composeApp:generateResourceAccessorsForAppleMain
+latex-preview:generateResourceAccessorsForAppleMain
+latex-renderer:generateResourceAccessorsForAppleMain
+composeApp:generateResourceAccessorsForAppleTest
+latex-preview:generateResourceAccessorsForAppleTest
+latex-renderer:generateResourceAccessorsForAppleTest
+composeApp:generateResourceAccessorsForCommonMain
+latex-preview:generateResourceAccessorsForCommonMain
+latex-renderer:generateResourceAccessorsForCommonMain
+composeApp:generateResourceAccessorsForCommonTest
+latex-preview:generateResourceAccessorsForCommonTest
+latex-renderer:generateResourceAccessorsForCommonTest
+latex-benchmark:generateResourceAccessorsForDev
+composeApp:generateResourceAccessorsForIosArm64Main
+latex-preview:generateResourceAccessorsForIosArm64Main
+latex-renderer:generateResourceAccessorsForIosArm64Main
+composeApp:generateResourceAccessorsForIosArm64Test
+latex-preview:generateResourceAccessorsForIosArm64Test
+latex-renderer:generateResourceAccessorsForIosArm64Test
+composeApp:generateResourceAccessorsForIosMain
+latex-preview:generateResourceAccessorsForIosMain
+latex-renderer:generateResourceAccessorsForIosMain
+composeApp:generateResourceAccessorsForIosSimulatorArm64Main
+latex-preview:generateResourceAccessorsForIosSimulatorArm64Main
+latex-renderer:generateResourceAccessorsForIosSimulatorArm64Main
+composeApp:generateResourceAccessorsForIosSimulatorArm64Test
+latex-preview:generateResourceAccessorsForIosSimulatorArm64Test
+latex-renderer:generateResourceAccessorsForIosSimulatorArm64Test
+composeApp:generateResourceAccessorsForIosTest
+latex-preview:generateResourceAccessorsForIosTest
+latex-renderer:generateResourceAccessorsForIosTest
+composeApp:generateResourceAccessorsForJsMain
+latex-preview:generateResourceAccessorsForJsMain
+latex-renderer:generateResourceAccessorsForJsMain
+composeApp:generateResourceAccessorsForJsTest
+latex-preview:generateResourceAccessorsForJsTest
+latex-renderer:generateResourceAccessorsForJsTest
+composeApp:generateResourceAccessorsForJvmDev
+latex-preview:generateResourceAccessorsForJvmDev
+latex-renderer:generateResourceAccessorsForJvmDev
+composeApp:generateResourceAccessorsForJvmMain
+latex-preview:generateResourceAccessorsForJvmMain
+latex-renderer:generateResourceAccessorsForJvmMain
+composeApp:generateResourceAccessorsForJvmTest
+latex-preview:generateResourceAccessorsForJvmTest
+latex-renderer:generateResourceAccessorsForJvmTest
+latex-benchmark:generateResourceAccessorsForMain
+composeApp:generateResourceAccessorsForNativeMain
+latex-preview:generateResourceAccessorsForNativeMain
+latex-renderer:generateResourceAccessorsForNativeMain
+composeApp:generateResourceAccessorsForNativeTest
+latex-preview:generateResourceAccessorsForNativeTest
+latex-renderer:generateResourceAccessorsForNativeTest
+latex-benchmark:generateResourceAccessorsForTest
+composeApp:generateResourceAccessorsForWasmJsMain
+latex-preview:generateResourceAccessorsForWasmJsMain
+latex-renderer:generateResourceAccessorsForWasmJsMain
+composeApp:generateResourceAccessorsForWasmJsTest
+latex-preview:generateResourceAccessorsForWasmJsTest
+latex-renderer:generateResourceAccessorsForWasmJsTest
+composeApp:generateResourceAccessorsForWebMain
+latex-preview:generateResourceAccessorsForWebMain
+latex-renderer:generateResourceAccessorsForWebMain
+composeApp:generateResourceAccessorsForWebTest
+latex-preview:generateResourceAccessorsForWebTest
+latex-renderer:generateResourceAccessorsForWebTest
+composeApp:iosArm64AggregateResources
+latex-preview:iosArm64AggregateResources
+latex-renderer:iosArm64AggregateResources
+composeApp:iosArm64CopyHierarchicalMultiplatformResources
+latex-preview:iosArm64CopyHierarchicalMultiplatformResources
+latex-renderer:iosArm64CopyHierarchicalMultiplatformResources
+latex-base:iosArm64EmptyJavadocJar
+latex-parser:iosArm64EmptyJavadocJar
+latex-renderer:iosArm64EmptyJavadocJar
+composeApp:iosArm64Klib
+latex-base:iosArm64Klib
+latex-parser:iosArm64Klib
+latex-preview:iosArm64Klib
+latex-renderer:iosArm64Klib
+composeApp:iosArm64ProcessResources - Processes file collection.
+latex-base:iosArm64ProcessResources - Processes file collection.
+latex-parser:iosArm64ProcessResources - Processes file collection.
+latex-preview:iosArm64ProcessResources - Processes file collection.
+latex-renderer:iosArm64ProcessResources - Processes file collection.
+composeApp:iosArm64ResolveResourcesFromDependencies
+latex-preview:iosArm64ResolveResourcesFromDependencies
+latex-renderer:iosArm64ResolveResourcesFromDependencies
+composeApp:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-preview:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-renderer:iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:iosArm64TestProcessResources - Processes file collection.
+latex-base:iosArm64TestProcessResources - Processes file collection.
+latex-parser:iosArm64TestProcessResources - Processes file collection.
+latex-preview:iosArm64TestProcessResources - Processes file collection.
+latex-renderer:iosArm64TestProcessResources - Processes file collection.
+composeApp:iosArm64ZipMultiplatformResourcesForPublication
+latex-preview:iosArm64ZipMultiplatformResourcesForPublication
+latex-renderer:iosArm64ZipMultiplatformResourcesForPublication
+composeApp:iosSimulatorArm64AggregateResources
+latex-preview:iosSimulatorArm64AggregateResources
+latex-renderer:iosSimulatorArm64AggregateResources
+composeApp:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+latex-preview:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+latex-renderer:iosSimulatorArm64CopyHierarchicalMultiplatformResources
+latex-base:iosSimulatorArm64EmptyJavadocJar
+latex-parser:iosSimulatorArm64EmptyJavadocJar
+latex-renderer:iosSimulatorArm64EmptyJavadocJar
+composeApp:iosSimulatorArm64Klib
+latex-base:iosSimulatorArm64Klib
+latex-parser:iosSimulatorArm64Klib
+latex-preview:iosSimulatorArm64Klib
+latex-renderer:iosSimulatorArm64Klib
+composeApp:iosSimulatorArm64ProcessResources - Processes file collection.
+latex-base:iosSimulatorArm64ProcessResources - Processes file collection.
+latex-parser:iosSimulatorArm64ProcessResources - Processes file collection.
+latex-preview:iosSimulatorArm64ProcessResources - Processes file collection.
+latex-renderer:iosSimulatorArm64ProcessResources - Processes file collection.
+composeApp:iosSimulatorArm64ResolveResourcesFromDependencies
+latex-preview:iosSimulatorArm64ResolveResourcesFromDependencies
+latex-renderer:iosSimulatorArm64ResolveResourcesFromDependencies
+composeApp:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-preview:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-renderer:iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:iosSimulatorArm64TestProcessResources - Processes file collection.
+latex-base:iosSimulatorArm64TestProcessResources - Processes file collection.
+latex-parser:iosSimulatorArm64TestProcessResources - Processes file collection.
+latex-preview:iosSimulatorArm64TestProcessResources - Processes file collection.
+latex-renderer:iosSimulatorArm64TestProcessResources - Processes file collection.
+composeApp:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+latex-preview:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+latex-renderer:iosSimulatorArm64ZipMultiplatformResourcesForPublication
+composeApp:javaPreCompileAndroidDeviceTest
+latex-base:javaPreCompileAndroidDeviceTest
+latex-parser:javaPreCompileAndroidDeviceTest
+latex-preview:javaPreCompileAndroidDeviceTest
+latex-renderer:javaPreCompileAndroidDeviceTest
+composeApp:javaPreCompileAndroidHostTest
+latex-base:javaPreCompileAndroidHostTest
+latex-parser:javaPreCompileAndroidHostTest
+latex-preview:javaPreCompileAndroidHostTest
+latex-renderer:javaPreCompileAndroidHostTest
+composeApp:javaPreCompileAndroidMain
+latex-base:javaPreCompileAndroidMain
+latex-parser:javaPreCompileAndroidMain
+latex-preview:javaPreCompileAndroidMain
+latex-renderer:javaPreCompileAndroidMain
+androidapp:javaPreCompileDebug
+androidapp:javaPreCompileDebugAndroidTest
+androidapp:javaPreCompileDebugUnitTest
+androidapp:javaPreCompileRelease
+composeApp:jsAggregateResources
+latex-preview:jsAggregateResources
+latex-renderer:jsAggregateResources
+composeApp:jsCopyHierarchicalMultiplatformResources
+latex-preview:jsCopyHierarchicalMultiplatformResources
+latex-renderer:jsCopyHierarchicalMultiplatformResources
+composeApp:jsDevelopmentExecutableCompileSync
+latex-base:jsDevelopmentExecutableCompileSync
+latex-parser:jsDevelopmentExecutableCompileSync
+latex-preview:jsDevelopmentExecutableCompileSync
+latex-renderer:jsDevelopmentExecutableCompileSync
+latex-base:jsEmptyJavadocJar
+latex-parser:jsEmptyJavadocJar
+latex-renderer:jsEmptyJavadocJar
+composeApp:jsProcessResources - Processes file collection.
+latex-base:jsProcessResources - Processes file collection.
+latex-parser:jsProcessResources - Processes file collection.
+latex-preview:jsProcessResources - Processes file collection.
+latex-renderer:jsProcessResources - Processes file collection.
+composeApp:jsProductionExecutableCompileSync
+latex-base:jsProductionExecutableCompileSync
+latex-parser:jsProductionExecutableCompileSync
+latex-preview:jsProductionExecutableCompileSync
+latex-renderer:jsProductionExecutableCompileSync
+composeApp:jsPublicPackageJson
+latex-base:jsPublicPackageJson
+latex-parser:jsPublicPackageJson
+latex-preview:jsPublicPackageJson
+latex-renderer:jsPublicPackageJson
+composeApp:jsResolveResourcesFromDependencies
+latex-preview:jsResolveResourcesFromDependencies
+latex-renderer:jsResolveResourcesFromDependencies
+composeApp:jsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-preview:jsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-renderer:jsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:jsTestProcessResources - Processes file collection.
+latex-base:jsTestProcessResources - Processes file collection.
+latex-parser:jsTestProcessResources - Processes file collection.
+latex-preview:jsTestProcessResources - Processes file collection.
+latex-renderer:jsTestProcessResources - Processes file collection.
+composeApp:jsTestPublicPackageJson
+latex-base:jsTestPublicPackageJson
+latex-parser:jsTestPublicPackageJson
+latex-preview:jsTestPublicPackageJson
+latex-renderer:jsTestPublicPackageJson
+composeApp:jsTestTestDevelopmentExecutableCompileSync
+latex-base:jsTestTestDevelopmentExecutableCompileSync
+latex-parser:jsTestTestDevelopmentExecutableCompileSync
+latex-preview:jsTestTestDevelopmentExecutableCompileSync
+latex-renderer:jsTestTestDevelopmentExecutableCompileSync
+composeApp:jsTestTestProductionExecutableCompileSync
+latex-base:jsTestTestProductionExecutableCompileSync
+latex-parser:jsTestTestProductionExecutableCompileSync
+latex-preview:jsTestTestProductionExecutableCompileSync
+latex-renderer:jsTestTestProductionExecutableCompileSync
+composeApp:jsZipMultiplatformResourcesForPublication
+latex-preview:jsZipMultiplatformResourcesForPublication
+latex-renderer:jsZipMultiplatformResourcesForPublication
+composeApp:jvmDevProcessResources - Processes file collection.
+latex-preview:jvmDevProcessResources - Processes file collection.
+latex-renderer:jvmDevProcessResources - Processes file collection.
+latex-base:jvmEmptyJavadocJar
+latex-parser:jvmEmptyJavadocJar
+latex-renderer:jvmEmptyJavadocJar
+composeApp:jvmProcessResources - Processes file collection.
+latex-base:jvmProcessResources - Processes file collection.
+latex-parser:jvmProcessResources - Processes file collection.
+latex-preview:jvmProcessResources - Processes file collection.
+latex-renderer:jvmProcessResources - Processes file collection.
+composeApp:jvmTestProcessResources - Processes file collection.
+latex-base:jvmTestProcessResources - Processes file collection.
+latex-parser:jvmTestProcessResources - Processes file collection.
+latex-preview:jvmTestProcessResources - Processes file collection.
+latex-renderer:jvmTestProcessResources - Processes file collection.
+composeApp:kmpPartiallyResolvedDependenciesChecker
+latex-base:kmpPartiallyResolvedDependenciesChecker
+latex-parser:kmpPartiallyResolvedDependenciesChecker
+latex-preview:kmpPartiallyResolvedDependenciesChecker
+latex-renderer:kmpPartiallyResolvedDependenciesChecker
+kotlinKotlinNpmCachesSetup - Setup file hasher for caches
+latex-base:kotlinMultiplatformEmptyJavadocJar
+latex-parser:kotlinMultiplatformEmptyJavadocJar
+latex-renderer:kotlinMultiplatformEmptyJavadocJar
+kotlinPackageJsonUmbrella
+kotlinRestorePackageLock
+kotlinRestoreYarnLock
+kotlinStorePackageLock
+kotlinStoreYarnLock
+kotlinUpgradePackageLock
+kotlinUpgradeYarnLock
+kotlinWasmKotlinNpmCachesSetup - Setup file hasher for caches
+kotlinWasmPackageJsonUmbrella
+kotlinWasmRestorePackageLock
+kotlinWasmRestoreYarnLock
+kotlinWasmStorePackageLock
+kotlinWasmStoreYarnLock
+kotlinWasmUpgradePackageLock
+kotlinWasmUpgradeYarnLock
+composeApp:lintAnalyzeAndroidHostTest - Run lint analysis on the androidHostTest component
+latex-base:lintAnalyzeAndroidHostTest - Run lint analysis on the androidHostTest component
+latex-parser:lintAnalyzeAndroidHostTest - Run lint analysis on the androidHostTest component
+latex-preview:lintAnalyzeAndroidHostTest - Run lint analysis on the androidHostTest component
+latex-renderer:lintAnalyzeAndroidHostTest - Run lint analysis on the androidHostTest component
+androidapp:lintAnalyzeDebug - Run lint analysis on the debug component
+androidapp:lintAnalyzeDebugAndroidTest - Run lint analysis on the debugAndroidTest component
+androidapp:lintAnalyzeDebugUnitTest - Run lint analysis on the debugUnitTest component
+androidapp:lintAnalyzeRelease - Run lint analysis on the release component
+androidapp:lintFixDebug - Fix lint on the debug variant
+androidapp:lintFixRelease - Fix lint on the release variant
+androidapp:lintReportDebug - Run lint on the debug variant
+androidapp:lintReportRelease - Run lint on the release variant
+androidapp:lintVitalAnalyzeRelease - Run lint analysis with only the fatal issues enabled 
+androidapp:lintVitalReportRelease - Run lint with only the fatal issues enabled on the release variant
+latex-benchmark:mainClasses
+androidapp:makeApkFromBundleForDebug
+androidapp:makeApkFromBundleForRelease
+composeApp:mapAndroidDeviceTestSourceSetPaths
+latex-base:mapAndroidDeviceTestSourceSetPaths
+latex-parser:mapAndroidDeviceTestSourceSetPaths
+latex-preview:mapAndroidDeviceTestSourceSetPaths
+latex-renderer:mapAndroidDeviceTestSourceSetPaths
+composeApp:mapAndroidMainSourceSetPaths
+latex-preview:mapAndroidMainSourceSetPaths
+latex-renderer:mapAndroidMainSourceSetPaths
+androidapp:mapDebugAndroidTestSourceSetPaths
+androidapp:mapDebugSourceSetPaths
+androidapp:mapReleaseSourceSetPaths
+composeApp:mergeAndroidDeviceTestAssets
+latex-base:mergeAndroidDeviceTestAssets
+latex-parser:mergeAndroidDeviceTestAssets
+latex-preview:mergeAndroidDeviceTestAssets
+latex-renderer:mergeAndroidDeviceTestAssets
+composeApp:mergeAndroidDeviceTestGeneratedProguardFiles
+latex-base:mergeAndroidDeviceTestGeneratedProguardFiles
+latex-parser:mergeAndroidDeviceTestGeneratedProguardFiles
+latex-preview:mergeAndroidDeviceTestGeneratedProguardFiles
+latex-renderer:mergeAndroidDeviceTestGeneratedProguardFiles
+composeApp:mergeAndroidDeviceTestJavaResource
+latex-base:mergeAndroidDeviceTestJavaResource
+latex-parser:mergeAndroidDeviceTestJavaResource
+latex-preview:mergeAndroidDeviceTestJavaResource
+latex-renderer:mergeAndroidDeviceTestJavaResource
+composeApp:mergeAndroidDeviceTestJniLibFolders
+latex-base:mergeAndroidDeviceTestJniLibFolders
+latex-parser:mergeAndroidDeviceTestJniLibFolders
+latex-preview:mergeAndroidDeviceTestJniLibFolders
+latex-renderer:mergeAndroidDeviceTestJniLibFolders
+composeApp:mergeAndroidDeviceTestNativeLibs
+latex-base:mergeAndroidDeviceTestNativeLibs
+latex-parser:mergeAndroidDeviceTestNativeLibs
+latex-preview:mergeAndroidDeviceTestNativeLibs
+latex-renderer:mergeAndroidDeviceTestNativeLibs
+composeApp:mergeAndroidDeviceTestResources
+latex-base:mergeAndroidDeviceTestResources
+latex-parser:mergeAndroidDeviceTestResources
+latex-preview:mergeAndroidDeviceTestResources
+latex-renderer:mergeAndroidDeviceTestResources
+composeApp:mergeAndroidMainAssets
+latex-preview:mergeAndroidMainAssets
+latex-renderer:mergeAndroidMainAssets
+latex-base:mergeAndroidMainConsumerProguardFiles
+latex-parser:mergeAndroidMainConsumerProguardFiles
+latex-renderer:mergeAndroidMainConsumerProguardFiles
+latex-base:mergeAndroidMainGeneratedProguardFiles
+latex-parser:mergeAndroidMainGeneratedProguardFiles
+latex-renderer:mergeAndroidMainGeneratedProguardFiles
+composeApp:mergeAndroidMainJavaResource
+latex-base:mergeAndroidMainJavaResource
+latex-parser:mergeAndroidMainJavaResource
+latex-preview:mergeAndroidMainJavaResource
+latex-renderer:mergeAndroidMainJavaResource
+composeApp:mergeAndroidMainJniLibFolders
+latex-base:mergeAndroidMainJniLibFolders
+latex-parser:mergeAndroidMainJniLibFolders
+latex-preview:mergeAndroidMainJniLibFolders
+latex-renderer:mergeAndroidMainJniLibFolders
+composeApp:mergeAndroidMainNativeLibs
+latex-base:mergeAndroidMainNativeLibs
+latex-parser:mergeAndroidMainNativeLibs
+latex-preview:mergeAndroidMainNativeLibs
+latex-renderer:mergeAndroidMainNativeLibs
+androidapp:mergeDebugAndroidTestAssets
+androidapp:mergeDebugAndroidTestGeneratedProguardFiles
+androidapp:mergeDebugAndroidTestGlobalSynthetics
+androidapp:mergeDebugAndroidTestJavaResource
+androidapp:mergeDebugAndroidTestJniLibFolders
+androidapp:mergeDebugAndroidTestNativeLibs
+androidapp:mergeDebugAndroidTestResources
+androidapp:mergeDebugArtProfile
+androidapp:mergeDebugAssets
+androidapp:mergeDebugGeneratedProguardFiles
+androidapp:mergeDebugGlobalSynthetics
+androidapp:mergeDebugJavaResource
+androidapp:mergeDebugJniLibFolders
+androidapp:mergeDebugNativeDebugMetadata
+androidapp:mergeDebugNativeLibs
+androidapp:mergeDebugResources
+androidapp:mergeDebugStartupProfile
+composeApp:mergeExtDexAndroidDeviceTest
+latex-base:mergeExtDexAndroidDeviceTest
+latex-parser:mergeExtDexAndroidDeviceTest
+latex-preview:mergeExtDexAndroidDeviceTest
+latex-renderer:mergeExtDexAndroidDeviceTest
+androidapp:mergeExtDexDebug
+androidapp:mergeExtDexDebugAndroidTest
+composeApp:mergeLibDexAndroidDeviceTest
+latex-base:mergeLibDexAndroidDeviceTest
+latex-parser:mergeLibDexAndroidDeviceTest
+latex-preview:mergeLibDexAndroidDeviceTest
+latex-renderer:mergeLibDexAndroidDeviceTest
+androidapp:mergeLibDexDebug
+androidapp:mergeLibDexDebugAndroidTest
+composeApp:mergeProjectDexAndroidDeviceTest
+latex-base:mergeProjectDexAndroidDeviceTest
+latex-parser:mergeProjectDexAndroidDeviceTest
+latex-preview:mergeProjectDexAndroidDeviceTest
+latex-renderer:mergeProjectDexAndroidDeviceTest
+androidapp:mergeProjectDexDebug
+androidapp:mergeProjectDexDebugAndroidTest
+androidapp:mergeReleaseArtProfile
+androidapp:mergeReleaseAssets
+androidapp:mergeReleaseComposeMapping
+androidapp:mergeReleaseGeneratedProguardFiles
+androidapp:mergeReleaseJavaResource
+androidapp:mergeReleaseJniLibFolders
+androidapp:mergeReleaseNativeDebugMetadata
+androidapp:mergeReleaseNativeLibs
+androidapp:mergeReleaseResources
+androidapp:mergeReleaseStartupProfile
+composeApp:metadataAppleMainProcessResources - Processes file collection.
+latex-base:metadataAppleMainProcessResources - Processes file collection.
+latex-parser:metadataAppleMainProcessResources - Processes file collection.
+latex-preview:metadataAppleMainProcessResources - Processes file collection.
+latex-renderer:metadataAppleMainProcessResources - Processes file collection.
+composeApp:metadataCommonMainProcessResources - Processes file collection.
+latex-base:metadataCommonMainProcessResources - Processes file collection.
+latex-parser:metadataCommonMainProcessResources - Processes file collection.
+latex-preview:metadataCommonMainProcessResources - Processes file collection.
+latex-renderer:metadataCommonMainProcessResources - Processes file collection.
+composeApp:metadataIosMainProcessResources - Processes file collection.
+latex-base:metadataIosMainProcessResources - Processes file collection.
+latex-parser:metadataIosMainProcessResources - Processes file collection.
+latex-preview:metadataIosMainProcessResources - Processes file collection.
+latex-renderer:metadataIosMainProcessResources - Processes file collection.
+composeApp:metadataNativeMainProcessResources - Processes file collection.
+latex-base:metadataNativeMainProcessResources - Processes file collection.
+latex-parser:metadataNativeMainProcessResources - Processes file collection.
+latex-preview:metadataNativeMainProcessResources - Processes file collection.
+latex-renderer:metadataNativeMainProcessResources - Processes file collection.
+composeApp:metadataProcessResources - Processes file collection.
+latex-base:metadataProcessResources - Processes file collection.
+latex-parser:metadataProcessResources - Processes file collection.
+latex-preview:metadataProcessResources - Processes file collection.
+latex-renderer:metadataProcessResources - Processes file collection.
+composeApp:metadataWebMainProcessResources - Processes file collection.
+latex-base:metadataWebMainProcessResources - Processes file collection.
+latex-parser:metadataWebMainProcessResources - Processes file collection.
+latex-preview:metadataWebMainProcessResources - Processes file collection.
+latex-renderer:metadataWebMainProcessResources - Processes file collection.
+androidapp:minifyReleaseWithR8
+androidapp:optimizeReleaseResources
+composeApp:packageAndroidDeviceTest
+latex-base:packageAndroidDeviceTest
+latex-parser:packageAndroidDeviceTest
+latex-preview:packageAndroidDeviceTest
+latex-renderer:packageAndroidDeviceTest
+composeApp:packageAndroidDeviceTestResources
+latex-base:packageAndroidDeviceTestResources
+latex-parser:packageAndroidDeviceTestResources
+latex-preview:packageAndroidDeviceTestResources
+latex-renderer:packageAndroidDeviceTestResources
+composeApp:packageAndroidMainResources
+latex-preview:packageAndroidMainResources
+latex-renderer:packageAndroidMainResources
+androidapp:packageDebug
+androidapp:packageDebugAndroidTest
+androidapp:packageDebugAndroidTestResources
+androidapp:packageDebugBundle
+androidapp:packageDebugResources
+androidapp:packageDebugUniversalApk
+androidapp:packageRelease
+androidapp:packageReleaseBundle
+androidapp:packageReleaseResources
+androidapp:packageReleaseUniversalApk
+composeApp:parseAndroidDeviceTestLocalResources
+latex-base:parseAndroidDeviceTestLocalResources
+latex-parser:parseAndroidDeviceTestLocalResources
+latex-preview:parseAndroidDeviceTestLocalResources
+latex-renderer:parseAndroidDeviceTestLocalResources
+composeApp:parseAndroidMainLocalResources
+latex-preview:parseAndroidMainLocalResources
+latex-renderer:parseAndroidMainLocalResources
+androidapp:parseDebugAndroidTestLocalResources
+androidapp:parseDebugIntegrityConfig
+androidapp:parseDebugLocalResources
+androidapp:parseReleaseIntegrityConfig
+androidapp:parseReleaseLocalResources
+composeApp:preAndroidDeviceTestBuild
+latex-base:preAndroidDeviceTestBuild
+latex-parser:preAndroidDeviceTestBuild
+latex-preview:preAndroidDeviceTestBuild
+latex-renderer:preAndroidDeviceTestBuild
+composeApp:preAndroidHostTestBuild
+latex-base:preAndroidHostTestBuild
+latex-parser:preAndroidHostTestBuild
+latex-preview:preAndroidHostTestBuild
+latex-renderer:preAndroidHostTestBuild
+composeApp:preAndroidMainBuild
+latex-base:preAndroidMainBuild
+latex-parser:preAndroidMainBuild
+latex-preview:preAndroidMainBuild
+latex-renderer:preAndroidMainBuild
+androidapp:preBuild
+androidapp:preDebugAndroidTestBuild
+androidapp:preDebugBuild
+androidapp:preDebugUnitTestBuild
+composeApp:prepareAndroidMainArtProfile
+latex-base:prepareAndroidMainArtProfile
+latex-parser:prepareAndroidMainArtProfile
+latex-preview:prepareAndroidMainArtProfile
+latex-renderer:prepareAndroidMainArtProfile
+composeApp:prepareComposeResourcesTaskForAndroidDeviceTest
+latex-preview:prepareComposeResourcesTaskForAndroidDeviceTest
+latex-renderer:prepareComposeResourcesTaskForAndroidDeviceTest
+composeApp:prepareComposeResourcesTaskForAndroidHostTest
+latex-preview:prepareComposeResourcesTaskForAndroidHostTest
+latex-renderer:prepareComposeResourcesTaskForAndroidHostTest
+composeApp:prepareComposeResourcesTaskForAndroidMain
+latex-preview:prepareComposeResourcesTaskForAndroidMain
+latex-renderer:prepareComposeResourcesTaskForAndroidMain
+composeApp:prepareComposeResourcesTaskForAppleMain
+latex-preview:prepareComposeResourcesTaskForAppleMain
+latex-renderer:prepareComposeResourcesTaskForAppleMain
+composeApp:prepareComposeResourcesTaskForAppleTest
+latex-preview:prepareComposeResourcesTaskForAppleTest
+latex-renderer:prepareComposeResourcesTaskForAppleTest
+composeApp:prepareComposeResourcesTaskForCommonMain
+latex-preview:prepareComposeResourcesTaskForCommonMain
+latex-renderer:prepareComposeResourcesTaskForCommonMain
+composeApp:prepareComposeResourcesTaskForCommonTest
+latex-preview:prepareComposeResourcesTaskForCommonTest
+latex-renderer:prepareComposeResourcesTaskForCommonTest
+latex-benchmark:prepareComposeResourcesTaskForDev
+composeApp:prepareComposeResourcesTaskForIosArm64Main
+latex-preview:prepareComposeResourcesTaskForIosArm64Main
+latex-renderer:prepareComposeResourcesTaskForIosArm64Main
+composeApp:prepareComposeResourcesTaskForIosArm64Test
+latex-preview:prepareComposeResourcesTaskForIosArm64Test
+latex-renderer:prepareComposeResourcesTaskForIosArm64Test
+composeApp:prepareComposeResourcesTaskForIosMain
+latex-preview:prepareComposeResourcesTaskForIosMain
+latex-renderer:prepareComposeResourcesTaskForIosMain
+composeApp:prepareComposeResourcesTaskForIosSimulatorArm64Main
+latex-preview:prepareComposeResourcesTaskForIosSimulatorArm64Main
+latex-renderer:prepareComposeResourcesTaskForIosSimulatorArm64Main
+composeApp:prepareComposeResourcesTaskForIosSimulatorArm64Test
+latex-preview:prepareComposeResourcesTaskForIosSimulatorArm64Test
+latex-renderer:prepareComposeResourcesTaskForIosSimulatorArm64Test
+composeApp:prepareComposeResourcesTaskForIosTest
+latex-preview:prepareComposeResourcesTaskForIosTest
+latex-renderer:prepareComposeResourcesTaskForIosTest
+composeApp:prepareComposeResourcesTaskForJsMain
+latex-preview:prepareComposeResourcesTaskForJsMain
+latex-renderer:prepareComposeResourcesTaskForJsMain
+composeApp:prepareComposeResourcesTaskForJsTest
+latex-preview:prepareComposeResourcesTaskForJsTest
+latex-renderer:prepareComposeResourcesTaskForJsTest
+composeApp:prepareComposeResourcesTaskForJvmDev
+latex-preview:prepareComposeResourcesTaskForJvmDev
+latex-renderer:prepareComposeResourcesTaskForJvmDev
+composeApp:prepareComposeResourcesTaskForJvmMain
+latex-preview:prepareComposeResourcesTaskForJvmMain
+latex-renderer:prepareComposeResourcesTaskForJvmMain
+composeApp:prepareComposeResourcesTaskForJvmTest
+latex-preview:prepareComposeResourcesTaskForJvmTest
+latex-renderer:prepareComposeResourcesTaskForJvmTest
+latex-benchmark:prepareComposeResourcesTaskForMain
+composeApp:prepareComposeResourcesTaskForNativeMain
+latex-preview:prepareComposeResourcesTaskForNativeMain
+latex-renderer:prepareComposeResourcesTaskForNativeMain
+composeApp:prepareComposeResourcesTaskForNativeTest
+latex-preview:prepareComposeResourcesTaskForNativeTest
+latex-renderer:prepareComposeResourcesTaskForNativeTest
+latex-benchmark:prepareComposeResourcesTaskForTest
+composeApp:prepareComposeResourcesTaskForWasmJsMain
+latex-preview:prepareComposeResourcesTaskForWasmJsMain
+latex-renderer:prepareComposeResourcesTaskForWasmJsMain
+composeApp:prepareComposeResourcesTaskForWasmJsTest
+latex-preview:prepareComposeResourcesTaskForWasmJsTest
+latex-renderer:prepareComposeResourcesTaskForWasmJsTest
+composeApp:prepareComposeResourcesTaskForWebMain
+latex-preview:prepareComposeResourcesTaskForWebMain
+latex-renderer:prepareComposeResourcesTaskForWebMain
+composeApp:prepareComposeResourcesTaskForWebTest
+latex-preview:prepareComposeResourcesTaskForWebTest
+latex-renderer:prepareComposeResourcesTaskForWebTest
+prepareKotlinBuildScriptModel
+composeApp:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+latex-base:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+latex-parser:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+latex-preview:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+latex-renderer:prepareKotlinIdeaImport - Umbrella for all tasks required to run before IDEA/Gradle import
+androidapp:prepareLintJarForPublish
+composeApp:prepareLintJarForPublish
+latex-base:prepareLintJarForPublish
+latex-parser:prepareLintJarForPublish
+latex-preview:prepareLintJarForPublish
+latex-renderer:prepareLintJarForPublish
+latex-base:prepareMavenCentralPublishing - Prepare for publishing to Maven Central
+latex-parser:prepareMavenCentralPublishing - Prepare for publishing to Maven Central
+latex-renderer:prepareMavenCentralPublishing - Prepare for publishing to Maven Central
+androidapp:preReleaseBuild
+composeApp:processAndroidDeviceTestJavaRes
+latex-base:processAndroidDeviceTestJavaRes
+latex-parser:processAndroidDeviceTestJavaRes
+latex-preview:processAndroidDeviceTestJavaRes
+latex-renderer:processAndroidDeviceTestJavaRes
+composeApp:processAndroidDeviceTestManifest
+latex-base:processAndroidDeviceTestManifest
+latex-parser:processAndroidDeviceTestManifest
+latex-preview:processAndroidDeviceTestManifest
+latex-renderer:processAndroidDeviceTestManifest
+composeApp:processAndroidDeviceTestNavigationResources
+latex-base:processAndroidDeviceTestNavigationResources
+latex-parser:processAndroidDeviceTestNavigationResources
+latex-preview:processAndroidDeviceTestNavigationResources
+latex-renderer:processAndroidDeviceTestNavigationResources
+composeApp:processAndroidDeviceTestResources
+latex-base:processAndroidDeviceTestResources
+latex-parser:processAndroidDeviceTestResources
+latex-preview:processAndroidDeviceTestResources
+latex-renderer:processAndroidDeviceTestResources
+composeApp:processAndroidHostTestJavaRes
+latex-base:processAndroidHostTestJavaRes
+latex-parser:processAndroidHostTestJavaRes
+latex-preview:processAndroidHostTestJavaRes
+latex-renderer:processAndroidHostTestJavaRes
+composeApp:processAndroidMainJavaRes
+latex-base:processAndroidMainJavaRes
+latex-parser:processAndroidMainJavaRes
+latex-preview:processAndroidMainJavaRes
+latex-renderer:processAndroidMainJavaRes
+composeApp:processAndroidMainManifest
+latex-base:processAndroidMainManifest
+latex-parser:processAndroidMainManifest
+latex-preview:processAndroidMainManifest
+latex-renderer:processAndroidMainManifest
+androidapp:processApplicationManifestDebugForBundle
+androidapp:processApplicationManifestReleaseForBundle
+androidapp:processDebugAndroidTestJavaRes
+androidapp:processDebugAndroidTestManifest
+androidapp:processDebugAndroidTestNavigationResources
+androidapp:processDebugAndroidTestResources
+androidapp:processDebugJavaRes
+androidapp:processDebugMainManifest
+androidapp:processDebugManifest
+androidapp:processDebugManifestForPackage
+androidapp:processDebugNavigationResources
+androidapp:processDebugResources
+androidapp:processDebugUnitTestJavaRes
+latex-benchmark:processDevResources - Processes dev resources.
+composeApp:processJvmDevResources - Processes jvm dev resources.
+latex-preview:processJvmDevResources - Processes jvm dev resources.
+latex-renderer:processJvmDevResources - Processes jvm dev resources.
+composeApp:processJvmMainResources - Processes jvm main resources.
+latex-base:processJvmMainResources - Processes jvm main resources.
+latex-parser:processJvmMainResources - Processes jvm main resources.
+latex-preview:processJvmMainResources - Processes jvm main resources.
+latex-renderer:processJvmMainResources - Processes jvm main resources.
+composeApp:processJvmTestResources - Processes jvm test resources.
+latex-base:processJvmTestResources - Processes jvm test resources.
+latex-parser:processJvmTestResources - Processes jvm test resources.
+latex-preview:processJvmTestResources - Processes jvm test resources.
+latex-renderer:processJvmTestResources - Processes jvm test resources.
+androidapp:processManifestDebugForFeature
+androidapp:processManifestReleaseForFeature
+androidapp:processReleaseJavaRes
+androidapp:processReleaseMainManifest
+androidapp:processReleaseManifest
+androidapp:processReleaseManifestForPackage
+androidapp:processReleaseNavigationResources
+androidapp:processReleaseResources
+latex-benchmark:processResources - Processes main resources.
+composeApp:processSkikoRuntimeForKWasm
+latex-preview:processSkikoRuntimeForKWasm
+latex-renderer:processSkikoRuntimeForKWasm
+latex-benchmark:processTestResources - Processes test resources.
+androidapp:produceDebugBundleIdeListingFile
+androidapp:produceReleaseBundleIdeListingFile
+androidapp:produceReleaseComposeMapping
+androidapp:reportReleaseComposeMappingErrors
+androidapp:resolveConfigAttr
+composeApp:resolveConfigAttr
+latex-base:resolveConfigAttr
+latex-parser:resolveConfigAttr
+latex-preview:resolveConfigAttr
+latex-renderer:resolveConfigAttr
+androidapp:sdkReleaseDependencyData
+composeApp:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+latex-base:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+latex-parser:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+latex-preview:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+latex-renderer:setupLldbScript - Generate lldbinit file with imported konan_lldb.py script
+latex-base:signAndroidPublication - Signs all artifacts in the 'android' publication.
+latex-parser:signAndroidPublication - Signs all artifacts in the 'android' publication.
+latex-renderer:signAndroidPublication - Signs all artifacts in the 'android' publication.
+androidapp:signDebugBundle
+composeApp:signingConfigWriterAndroidDeviceTest
+latex-base:signingConfigWriterAndroidDeviceTest
+latex-parser:signingConfigWriterAndroidDeviceTest
+latex-preview:signingConfigWriterAndroidDeviceTest
+latex-renderer:signingConfigWriterAndroidDeviceTest
+androidapp:signingConfigWriterDebug
+androidapp:signingConfigWriterDebugAndroidTest
+androidapp:signingConfigWriterRelease
+latex-base:signIosArm64Publication - Signs all artifacts in the 'iosArm64' publication.
+latex-parser:signIosArm64Publication - Signs all artifacts in the 'iosArm64' publication.
+latex-renderer:signIosArm64Publication - Signs all artifacts in the 'iosArm64' publication.
+latex-base:signIosSimulatorArm64Publication - Signs all artifacts in the 'iosSimulatorArm64' publication.
+latex-parser:signIosSimulatorArm64Publication - Signs all artifacts in the 'iosSimulatorArm64' publication.
+latex-renderer:signIosSimulatorArm64Publication - Signs all artifacts in the 'iosSimulatorArm64' publication.
+latex-base:signJsPublication - Signs all artifacts in the 'js' publication.
+latex-parser:signJsPublication - Signs all artifacts in the 'js' publication.
+latex-renderer:signJsPublication - Signs all artifacts in the 'js' publication.
+latex-base:signJvmPublication - Signs all artifacts in the 'jvm' publication.
+latex-parser:signJvmPublication - Signs all artifacts in the 'jvm' publication.
+latex-renderer:signJvmPublication - Signs all artifacts in the 'jvm' publication.
+latex-base:signKotlinMultiplatformPublication - Signs all artifacts in the 'kotlinMultiplatform' publication.
+latex-parser:signKotlinMultiplatformPublication - Signs all artifacts in the 'kotlinMultiplatform' publication.
+latex-renderer:signKotlinMultiplatformPublication - Signs all artifacts in the 'kotlinMultiplatform' publication.
+androidapp:signReleaseBundle
+latex-base:signWasmJsPublication - Signs all artifacts in the 'wasmJs' publication.
+latex-parser:signWasmJsPublication - Signs all artifacts in the 'wasmJs' publication.
+latex-renderer:signWasmJsPublication - Signs all artifacts in the 'wasmJs' publication.
+composeApp:stripAndroidDeviceTestDebugSymbols
+latex-base:stripAndroidDeviceTestDebugSymbols
+latex-parser:stripAndroidDeviceTestDebugSymbols
+latex-preview:stripAndroidDeviceTestDebugSymbols
+latex-renderer:stripAndroidDeviceTestDebugSymbols
+androidapp:stripDebugAndroidTestDebugSymbols
+androidapp:stripDebugDebugSymbols
+androidapp:stripReleaseDebugSymbols
+composeApp:syncAndroidMainLibJars
+latex-base:syncAndroidMainLibJars
+latex-parser:syncAndroidMainLibJars
+latex-preview:syncAndroidMainLibJars
+latex-renderer:syncAndroidMainLibJars
+composeApp:syncComposeResourcesForIos
+latex-preview:syncComposeResourcesForIos
+latex-renderer:syncComposeResourcesForIos
+androidapp:testResultsCollectionDebug
+androidapp:testResultsCollectionRelease
+composeApp:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+latex-base:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+latex-parser:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+latex-preview:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+latex-renderer:transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+composeApp:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+latex-base:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+latex-parser:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+latex-preview:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+latex-renderer:transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+composeApp:transformDependenciesMetadata
+latex-base:transformDependenciesMetadata
+latex-parser:transformDependenciesMetadata
+latex-preview:transformDependenciesMetadata
+latex-renderer:transformDependenciesMetadata
+composeApp:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+latex-base:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+latex-parser:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+latex-preview:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+latex-renderer:transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+composeApp:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+latex-base:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+latex-parser:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+latex-preview:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+latex-renderer:transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+composeApp:transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+latex-base:transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+latex-parser:transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+latex-preview:transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+latex-renderer:transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+composeApp:unpackSkikoWasmRuntime
+latex-preview:unpackSkikoWasmRuntime
+latex-renderer:unpackSkikoWasmRuntime
+unzipWix
+androidapp:updateLintBaselineDebug - Update the lint baseline using the debug variant
+androidapp:updateLintBaselineRelease - Update the lint baseline using the release variant
+composeApp:validateSigningAndroidDeviceTest
+latex-base:validateSigningAndroidDeviceTest
+latex-parser:validateSigningAndroidDeviceTest
+latex-preview:validateSigningAndroidDeviceTest
+latex-renderer:validateSigningAndroidDeviceTest
+androidapp:validateSigningDebug
+androidapp:validateSigningDebugAndroidTest
+composeApp:wasmJsAggregateResources
+latex-preview:wasmJsAggregateResources
+latex-renderer:wasmJsAggregateResources
+composeApp:wasmJsCopyHierarchicalMultiplatformResources
+latex-preview:wasmJsCopyHierarchicalMultiplatformResources
+latex-renderer:wasmJsCopyHierarchicalMultiplatformResources
+composeApp:wasmJsDevelopmentExecutableCompileSync
+latex-base:wasmJsDevelopmentExecutableCompileSync
+latex-parser:wasmJsDevelopmentExecutableCompileSync
+latex-preview:wasmJsDevelopmentExecutableCompileSync
+latex-renderer:wasmJsDevelopmentExecutableCompileSync
+latex-base:wasmJsEmptyJavadocJar
+latex-parser:wasmJsEmptyJavadocJar
+latex-renderer:wasmJsEmptyJavadocJar
+composeApp:wasmJsProcessResources - Processes file collection.
+latex-base:wasmJsProcessResources - Processes file collection.
+latex-parser:wasmJsProcessResources - Processes file collection.
+latex-preview:wasmJsProcessResources - Processes file collection.
+latex-renderer:wasmJsProcessResources - Processes file collection.
+composeApp:wasmJsProductionExecutableCompileSync
+latex-base:wasmJsProductionExecutableCompileSync
+latex-parser:wasmJsProductionExecutableCompileSync
+latex-preview:wasmJsProductionExecutableCompileSync
+latex-renderer:wasmJsProductionExecutableCompileSync
+composeApp:wasmJsPublicPackageJson
+latex-base:wasmJsPublicPackageJson
+latex-parser:wasmJsPublicPackageJson
+latex-preview:wasmJsPublicPackageJson
+latex-renderer:wasmJsPublicPackageJson
+composeApp:wasmJsResolveResourcesFromDependencies
+latex-preview:wasmJsResolveResourcesFromDependencies
+latex-renderer:wasmJsResolveResourcesFromDependencies
+composeApp:wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-preview:wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+latex-renderer:wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+composeApp:wasmJsTestProcessResources - Processes file collection.
+latex-base:wasmJsTestProcessResources - Processes file collection.
+latex-parser:wasmJsTestProcessResources - Processes file collection.
+latex-preview:wasmJsTestProcessResources - Processes file collection.
+latex-renderer:wasmJsTestProcessResources - Processes file collection.
+composeApp:wasmJsTestPublicPackageJson
+latex-base:wasmJsTestPublicPackageJson
+latex-parser:wasmJsTestPublicPackageJson
+latex-preview:wasmJsTestPublicPackageJson
+latex-renderer:wasmJsTestPublicPackageJson
+composeApp:wasmJsTestTestDevelopmentExecutableCompileSync
+latex-base:wasmJsTestTestDevelopmentExecutableCompileSync
+latex-parser:wasmJsTestTestDevelopmentExecutableCompileSync
+latex-preview:wasmJsTestTestDevelopmentExecutableCompileSync
+latex-renderer:wasmJsTestTestDevelopmentExecutableCompileSync
+composeApp:wasmJsTestTestProductionExecutableCompileSync
+latex-base:wasmJsTestTestProductionExecutableCompileSync
+latex-parser:wasmJsTestTestProductionExecutableCompileSync
+latex-preview:wasmJsTestTestProductionExecutableCompileSync
+latex-renderer:wasmJsTestTestProductionExecutableCompileSync
+composeApp:wasmJsZipMultiplatformResourcesForPublication
+latex-preview:wasmJsZipMultiplatformResourcesForPublication
+latex-renderer:wasmJsZipMultiplatformResourcesForPublication
+wasmYarnKotlinClean - Clean unused local yarn version
+composeApp:writeAndroidDeviceTestSigningConfigVersions
+latex-base:writeAndroidDeviceTestSigningConfigVersions
+latex-parser:writeAndroidDeviceTestSigningConfigVersions
+latex-preview:writeAndroidDeviceTestSigningConfigVersions
+latex-renderer:writeAndroidDeviceTestSigningConfigVersions
+composeApp:writeAndroidMainAarMetadata
+latex-base:writeAndroidMainAarMetadata
+latex-parser:writeAndroidMainAarMetadata
+latex-preview:writeAndroidMainAarMetadata
+latex-renderer:writeAndroidMainAarMetadata
+androidapp:writeDebugAndroidTestSigningConfigVersions
+androidapp:writeDebugApplicationId
+androidapp:writeDebugAppMetadata
+androidapp:writeDebugModuleMetadata
+androidapp:writeDebugSigningConfigVersions
+androidapp:writeReleaseApplicationId
+androidapp:writeReleaseAppMetadata
+androidapp:writeReleaseModuleMetadata
+androidapp:writeReleaseSigningConfigVersions
+composeApp:xcodeVersion
+latex-base:xcodeVersion
+latex-parser:xcodeVersion
+latex-preview:xcodeVersion
+latex-renderer:xcodeVersion
+yarnKotlinClean - Clean unused local yarn version
+androidapp:zipApksForDebug
+androidapp:zipApksForRelease
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+[Incubating] Problems report is available at: file:///D:/dev-java-learn-2026-ai/huarangmeng-zusrsoft/latex/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 16s
+1 actionable task: 1 executed
+Configuration cache entry stored.

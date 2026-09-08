@@ -1,0 +1,33 @@
+# Central 上传 staging 目录证据（latex-base 1.5.4）
+# 来源：执行 publishAllPublicationsToMavenCentralRepository（使用假凭据，上传在 401 "Invalid token" 处失败，
+#       文件已先写入本地 staging 目录 ./mavenCentral/，随后被构建服务自动清理）。
+# 本文件为当时捕获的完整目录清单（前 100 行原文，路径为绝对路径形式）。
+# 结论：staging 目录中每个 primary 文件对应 10 个文件：
+#   <file>、<file>.asc、<file>.md5、<file>.sha1、<file>.sha256、<file>.sha512、
+#   <file>.asc.md5、<file>.asc.sha1、<file>.asc.sha256、<file>.asc.sha512
+# 且 Gradle 同时生成每个 artifactId 的 maven-metadata.xml + 4 个 checksum。
+# 证明：.asc 的 checksum 文件由 Gradle maven-publish 在 staging/上传阶段生成（并非 Central 生成）。
+#
+# 实际捕获清单（节选，latex-base 与 latex-base-android 两个 artifactId 目录）：
+mavenCentral/io/github/zusrsoft/latex-base/maven-metadata.xml
+mavenCentral/io/github/zusrsoft/latex-base/maven-metadata.xml.md5
+mavenCentral/io/github/zusrsoft/latex-base/maven-metadata.xml.sha1
+mavenCentral/io/github/zusrsoft/latex-base/maven-metadata.xml.sha256
+mavenCentral/io/github/zusrsoft/latex-base/maven-metadata.xml.sha512
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4-javadoc.jar                (+ .asc/.md5/.sha1/.sha256/.sha512 及 .asc.md5/.asc.sha1/.asc.sha256/.asc.sha512，共10个)
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4-kotlin-tooling-metadata.json (同上共10个)
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4-sources.jar                 (同上共10个)
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4.jar                         (同上共10个)
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4.module                      (同上共10个)
+mavenCentral/io/github/zusrsoft/latex-base/1.5.4/latex-base-1.5.4.pom                         (同上共10个)
+mavenCentral/io/github/zusrsoft/latex-base-android/maven-metadata.xml                        (+4 checksum)
+mavenCentral/io/github/zusrsoft/latex-base-android/1.5.4/latex-base-android-1.5.4-javadoc.jar (共10个)
+mavenCentral/io/github/zusrsoft/latex-base-android/1.5.4/latex-base-android-1.5.4-sources.jar (共10个)
+mavenCentral/io/github/zusrsoft/latex-base-android/1.5.4/latex-base-android-1.5.4.aar         (共10个)
+mavenCentral/io/github/zusrsoft/latex-base-android/1.5.4/latex-base-android-1.5.4.module      (共10个)
+mavenCentral/io/github/zusrsoft/latex-base-android/1.5.4/latex-base-android-1.5.4.pom         (共10个)
+#
+# 复现方法（安全，不会上传）：
+#   $env:ORG_GRADLE_PROJECT_mavenCentralUsername='fake-user'; $env:ORG_GRADLE_PROJECT_mavenCentralPassword='fake-pass'
+#   .\gradlew :latex-base:publishAllPublicationsToMavenCentralRepository --no-configuration-cache <signing参数>
+#   → 构建在上传步骤以 "Upload failed: Invalid token" 失败；检查项目根目录 ./mavenCentral/

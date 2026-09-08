@@ -1,0 +1,342 @@
+﻿[] allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+[] androidEmptyJavadocJar
+[] androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+[] assembleDevResources
+[] assembleIosArm64MainResources
+[] assembleIosArm64TestResources
+[] assembleIosSimulatorArm64MainResources
+[] assembleIosSimulatorArm64TestResources
+[] assembleJsMainResources
+[] assembleJsTestResources
+[] assembleJvmDevResources
+[] assembleJvmMainResources
+[] assembleJvmTestResources
+[] assembleMainResources
+[] assembleTestResources
+[] assembleWasmJsMainResources
+[] assembleWasmJsTestResources
+[] buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+[] bundleDebugResources
+[] bundleReleaseResources
+[] checkAndroidDeviceTestAarMetadata
+[] checkAndroidMainAarMetadata
+[] checkCanSyncComposeResourcesForIos
+[] checkDebugAarMetadata
+[] checkDebugAndroidTestAarMetadata
+[] checkPomFileForAndroidPublication
+[] checkPomFileForIosArm64Publication
+[] checkPomFileForIosSimulatorArm64Publication
+[] checkPomFileForJsPublication
+[] checkPomFileForJvmPublication
+[] checkPomFileForKotlinMultiplatformPublication
+[] checkPomFileForWasmJsPublication
+[] checkReleaseAarMetadata
+[] checkSigningConfiguration - Checks that a signing configuration is set up correctly.
+[] compileAndroidDeviceTestNavigationResources
+[] compileAndroidDeviceTestSources
+[] compileAndroidHostTestSources
+[] compileAndroidMainLibraryResources
+[] compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+[] compileCommonMainKotlinMetadata - Compiles the kotlin sources in compilation 'commonMain' in target 'metadata' to Metadata.
+[] compileDebugAndroidTestNavigationResources
+[] compileDebugAndroidTestSources
+[] compileDebugNavigationResources
+[] compileDebugSources
+[] compileDebugUnitTestSources
+[] compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+[] compileKotlinJs - Compiles the Kotlin sources in compilation 'main' in target 'js' to JavaScript.
+[] compileKotlinMetadata - Compiles the kotlin sources in compilation 'main' in target 'metadata' to Metadata.
+[] compileKotlinWasmJs - Compiles the Kotlin sources in compilation 'main' in target 'wasmJs' to JavaScript.
+[] compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+[] compileReleaseNavigationResources
+[] compileReleaseSources
+[] compileTestKotlinJs - Compiles the Kotlin sources in compilation 'test' in target 'js' to JavaScript.
+[] compileTestKotlinWasmJs - Compiles the Kotlin sources in compilation 'test' in target 'wasmJs' to JavaScript.
+[] compileWebMainKotlinMetadata - Compiles the kotlin sources in compilation 'webMain' in target 'metadata' to Metadata.
+[] convertLinkedResourcesToBinaryRelease
+[] convertShrunkResourcesToBinaryRelease
+[] convertXmlValueResourcesForAndroidDeviceTest
+[] convertXmlValueResourcesForAndroidHostTest
+[] convertXmlValueResourcesForAndroidMain
+[] convertXmlValueResourcesForAppleMain
+[] convertXmlValueResourcesForAppleTest
+[] convertXmlValueResourcesForCommonMain
+[] convertXmlValueResourcesForCommonTest
+[] convertXmlValueResourcesForDev
+[] convertXmlValueResourcesForIosArm64Main
+[] convertXmlValueResourcesForIosArm64Test
+[] convertXmlValueResourcesForIosMain
+[] convertXmlValueResourcesForIosSimulatorArm64Main
+[] convertXmlValueResourcesForIosSimulatorArm64Test
+[] convertXmlValueResourcesForIosTest
+[] convertXmlValueResourcesForJsMain
+[] convertXmlValueResourcesForJsTest
+[] convertXmlValueResourcesForJvmDev
+[] convertXmlValueResourcesForJvmMain
+[] convertXmlValueResourcesForJvmTest
+[] convertXmlValueResourcesForMain
+[] convertXmlValueResourcesForNativeMain
+[] convertXmlValueResourcesForNativeTest
+[] convertXmlValueResourcesForTest
+[] convertXmlValueResourcesForWasmJsMain
+[] convertXmlValueResourcesForWasmJsTest
+[] convertXmlValueResourcesForWebMain
+[] convertXmlValueResourcesForWebTest
+[] copyAndroidDeviceTestComposeResourcesToAndroidAssets
+[] copyAndroidMainComposeResourcesToAndroidAssets
+[] copyNonXmlValueResourcesForAndroidDeviceTest
+[] copyNonXmlValueResourcesForAndroidHostTest
+[] copyNonXmlValueResourcesForAndroidMain
+[] copyNonXmlValueResourcesForAppleMain
+[] copyNonXmlValueResourcesForAppleTest
+[] copyNonXmlValueResourcesForCommonMain
+[] copyNonXmlValueResourcesForCommonTest
+[] copyNonXmlValueResourcesForDev
+[] copyNonXmlValueResourcesForIosArm64Main
+[] copyNonXmlValueResourcesForIosArm64Test
+[] copyNonXmlValueResourcesForIosMain
+[] copyNonXmlValueResourcesForIosSimulatorArm64Main
+[] copyNonXmlValueResourcesForIosSimulatorArm64Test
+[] copyNonXmlValueResourcesForIosTest
+[] copyNonXmlValueResourcesForJsMain
+[] copyNonXmlValueResourcesForJsTest
+[] copyNonXmlValueResourcesForJvmDev
+[] copyNonXmlValueResourcesForJvmMain
+[] copyNonXmlValueResourcesForJvmTest
+[] copyNonXmlValueResourcesForMain
+[] copyNonXmlValueResourcesForNativeMain
+[] copyNonXmlValueResourcesForNativeTest
+[] copyNonXmlValueResourcesForTest
+[] copyNonXmlValueResourcesForWasmJsMain
+[] copyNonXmlValueResourcesForWasmJsTest
+[] copyNonXmlValueResourcesForWebMain
+[] copyNonXmlValueResourcesForWebTest
+[] copyTestComposeResourcesForIosArm64
+[] copyTestComposeResourcesForIosSimulatorArm64
+[] dropMavenCentralDeployment - Drops the deployment with the supplied id
+[] embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+[] enableAutomaticMavenCentralPublishing - Enables automatic publishing for Maven Central
+[] exportCommonSourceSetsMetadataLocationsForMetadataApiElements
+[] exportRootPublicationCoordinatesForMetadataApiElements
+[] exportTargetPublicationCoordinatesForAndroidApiElements
+[] exportTargetPublicationCoordinatesForAndroidRuntimeElements
+[] exportTargetPublicationCoordinatesForIosArm64ApiElements
+[] exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements
+[] exportTargetPublicationCoordinatesForJsApiElements
+[] exportTargetPublicationCoordinatesForJsRuntimeElements
+[] exportTargetPublicationCoordinatesForJvmApiElements
+[] exportTargetPublicationCoordinatesForJvmRuntimeElements
+[] exportTargetPublicationCoordinatesForWasmJsApiElements
+[] exportTargetPublicationCoordinatesForWasmJsRuntimeElements
+[] extractDebugNativeDebugMetadata
+[] extractReleaseNativeDebugMetadata
+[] generateAndroidDeviceTestResources
+[] generateAndroidDeviceTestSources
+[] generateAndroidHostTestResources
+[] generateAndroidHostTestSources
+[] generateDebugAndroidTestResources
+[] generateDebugAndroidTestSources
+[] generateDebugFeatureMetadata
+[] generateDebugResources
+[] generateDebugSources
+[] generateDebugUnitTestResources
+[] generateDebugUnitTestSources
+[] generateMetadataFileForAndroidPublication - Generates the Gradle metadata file for publication 'android'.
+[] generateMetadataFileForIosArm64Publication - Generates the Gradle metadata file for publication 'iosArm64'.
+[] generateMetadataFileForIosSimulatorArm64Publication - Generates the Gradle metadata file for publication 'iosSimulatorArm64'.
+[] generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
+[] generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
+[] generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
+[] generateMetadataFileForWasmJsPublication - Generates the Gradle metadata file for publication 'wasmJs'.
+[] generatePomFileForAndroidPublication - Generates the Maven POM file for publication 'android'.
+[] generatePomFileForIosArm64Publication - Generates the Maven POM file for publication 'iosArm64'.
+[] generatePomFileForIosSimulatorArm64Publication - Generates the Maven POM file for publication 'iosSimulatorArm64'.
+[] generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
+[] generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
+[] generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
+[] generatePomFileForWasmJsPublication - Generates the Maven POM file for publication 'wasmJs'.
+[] generateProjectStructureMetadata - Generates serialized project structure metadata of the current project (for tooling)
+[] generateReleaseFeatureMetadata
+[] generateReleaseResources
+[] generateReleaseSources
+[] iosArm64AggregateResources
+[] iosArm64CopyHierarchicalMultiplatformResources
+[] iosArm64EmptyJavadocJar
+[] iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+[] iosArm64ProcessResources - Processes file collection.
+[] iosArm64ResolveResourcesFromDependencies
+[] iosArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+[] iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+[] iosArm64TestProcessResources - Processes file collection.
+[] iosArm64ZipMultiplatformResourcesForPublication
+[] iosSimulatorArm64AggregateResources
+[] iosSimulatorArm64CopyHierarchicalMultiplatformResources
+[] iosSimulatorArm64EmptyJavadocJar
+[] iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+[] iosSimulatorArm64ProcessResources - Processes file collection.
+[] iosSimulatorArm64ResolveResourcesFromDependencies
+[] iosSimulatorArm64ResolveSelfResourcesCopyHierarchicalMultiplatformResources
+[] iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+[] iosSimulatorArm64TestProcessResources - Processes file collection.
+[] iosSimulatorArm64ZipMultiplatformResourcesForPublication
+[] javadoc - Generates Javadoc API documentation for the 'main' feature.
+[] jsAggregateResources
+[] jsCopyHierarchicalMultiplatformResources
+[] jsEmptyJavadocJar
+[] jsProcessResources - Processes file collection.
+[] jsResolveResourcesFromDependencies
+[] jsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+[] jsSourcesJar - Assembles a jar archive containing the sources of target 'js'.
+[] jsTestProcessResources - Processes file collection.
+[] jsZipMultiplatformResourcesForPublication
+[] jvmDevProcessResources - Processes file collection.
+[] jvmEmptyJavadocJar
+[] jvmProcessResources - Processes file collection.
+[] jvmSourcesJar - Assembles a jar archive containing the sources of target 'jvm'.
+[] jvmTestProcessResources - Processes file collection.
+[] kotlinMultiplatformEmptyJavadocJar
+[] kotlinSourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+[] mapAndroidDeviceTestSourceSetPaths
+[] mapAndroidMainSourceSetPaths
+[] mapDebugAndroidTestSourceSetPaths
+[] mapDebugSourceSetPaths
+[] mapReleaseSourceSetPaths
+[] mergeAndroidDeviceTestResources
+[] mergeDebugAndroidTestResources
+[] mergeDebugNativeDebugMetadata
+[] mergeDebugResources
+[] mergeReleaseNativeDebugMetadata
+[] mergeReleaseResources
+[] metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+[] metadataAppleMainProcessResources - Processes file collection.
+[] metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+[] metadataCommonMainProcessResources - Processes file collection.
+[] metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+[] metadataIosMainProcessResources - Processes file collection.
+[] metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+[] metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+[] metadataNativeMainProcessResources - Processes file collection.
+[] metadataProcessResources - Processes file collection.
+[] metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+[] metadataWebMainClasses - Assembles outputs for compilation 'webMain' of target 'metadata'
+[] metadataWebMainProcessResources - Processes file collection.
+[] optimizeReleaseResources
+[] packageAndroidDeviceTestResources
+[] packageAndroidMainResources
+[] packageDebugAndroidTestResources
+[] packageDebugResources
+[] packageReleaseResources
+[] parseAndroidDeviceTestLocalResources
+[] parseAndroidMainLocalResources
+[] parseDebugAndroidTestLocalResources
+[] parseDebugLocalResources
+[] parseReleaseLocalResources
+[] prepareAppResources
+[] prepareComposeResourcesTaskForAndroidDeviceTest
+[] prepareComposeResourcesTaskForAndroidHostTest
+[] prepareComposeResourcesTaskForAndroidMain
+[] prepareComposeResourcesTaskForAppleMain
+[] prepareComposeResourcesTaskForAppleTest
+[] prepareComposeResourcesTaskForCommonMain
+[] prepareComposeResourcesTaskForCommonTest
+[] prepareComposeResourcesTaskForDev
+[] prepareComposeResourcesTaskForIosArm64Main
+[] prepareComposeResourcesTaskForIosArm64Test
+[] prepareComposeResourcesTaskForIosMain
+[] prepareComposeResourcesTaskForIosSimulatorArm64Main
+[] prepareComposeResourcesTaskForIosSimulatorArm64Test
+[] prepareComposeResourcesTaskForIosTest
+[] prepareComposeResourcesTaskForJsMain
+[] prepareComposeResourcesTaskForJsTest
+[] prepareComposeResourcesTaskForJvmDev
+[] prepareComposeResourcesTaskForJvmMain
+[] prepareComposeResourcesTaskForJvmTest
+[] prepareComposeResourcesTaskForMain
+[] prepareComposeResourcesTaskForNativeMain
+[] prepareComposeResourcesTaskForNativeTest
+[] prepareComposeResourcesTaskForTest
+[] prepareComposeResourcesTaskForWasmJsMain
+[] prepareComposeResourcesTaskForWasmJsTest
+[] prepareComposeResourcesTaskForWebMain
+[] prepareComposeResourcesTaskForWebTest
+[] prepareLintJarForPublish
+[] prepareMavenCentralPublishing - Prepare for publishing to Maven Central
+[] processAndroidDeviceTestNavigationResources
+[] processAndroidDeviceTestResources
+[] processDebugAndroidTestNavigationResources
+[] processDebugAndroidTestResources
+[] processDebugNavigationResources
+[] processDebugResources
+[] processDevResources - Processes dev resources.
+[] processJvmDevResources - Processes jvm dev resources.
+[] processJvmMainResources - Processes jvm main resources.
+[] processJvmTestResources - Processes jvm test resources.
+[] processReleaseNavigationResources
+[] processReleaseResources
+[] processResources - Processes main resources.
+[] processTestResources - Processes test resources.
+[] publish - Publishes all publications produced by this project.
+[] publishAllPublicationsToMavenCentralRepository - Publishes all Maven publications produced by this project to the mavenCentral repository.
+[] publishAndReleaseToMavenCentral - Publishes to Maven Central and automatically triggers release
+[] publishAndroidPublicationToMavenCentralRepository - Publishes Maven publication 'android' to Maven repository 'mavenCentral'.
+[] publishAndroidPublicationToMavenLocal - Publishes Maven publication 'android' to the local Maven repository.
+[] Publishing tasks
+[] publishIosArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosArm64' to Maven repository 'mavenCentral'.
+[] publishIosArm64PublicationToMavenLocal - Publishes Maven publication 'iosArm64' to the local Maven repository.
+[] publishIosSimulatorArm64PublicationToMavenCentralRepository - Publishes Maven publication 'iosSimulatorArm64' to Maven repository 'mavenCentral'.
+[] publishIosSimulatorArm64PublicationToMavenLocal - Publishes Maven publication 'iosSimulatorArm64' to the local Maven repository.
+[] publishJsPublicationToMavenCentralRepository - Publishes Maven publication 'js' to Maven repository 'mavenCentral'.
+[] publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
+[] publishJvmPublicationToMavenCentralRepository - Publishes Maven publication 'jvm' to Maven repository 'mavenCentral'.
+[] publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
+[] publishKotlinMultiplatformPublicationToMavenCentralRepository - Publishes Maven publication 'kotlinMultiplatform' to Maven repository 'mavenCentral'.
+[] publishKotlinMultiplatformPublicationToMavenLocal - Publishes Maven publication 'kotlinMultiplatform' to the local Maven repository.
+[] publishToMavenCentral - Publishes to Maven Central
+[] publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+[] publishWasmJsPublicationToMavenCentralRepository - Publishes Maven publication 'wasmJs' to Maven repository 'mavenCentral'.
+[] publishWasmJsPublicationToMavenLocal - Publishes Maven publication 'wasmJs' to the local Maven repository.
+[] signAndroidPublication - Signs all artifacts in the 'android' publication.
+[] signDebugBundle
+[] Signing tasks
+[] signingConfigWriterAndroidDeviceTest
+[] signingConfigWriterDebug
+[] signingConfigWriterDebugAndroidTest
+[] signingConfigWriterRelease
+[] signingReport - Displays the signing info for the base and test modules
+[] signIosArm64Publication - Signs all artifacts in the 'iosArm64' publication.
+[] signIosSimulatorArm64Publication - Signs all artifacts in the 'iosSimulatorArm64' publication.
+[] signJsPublication - Signs all artifacts in the 'js' publication.
+[] signJvmPublication - Signs all artifacts in the 'jvm' publication.
+[] signKotlinMultiplatformPublication - Signs all artifacts in the 'kotlinMultiplatform' publication.
+[] signReleaseBundle
+[] signWasmJsPublication - Signs all artifacts in the 'wasmJs' publication.
+[] sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+[] syncComposeResourcesForIos
+[] transformAppleMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'appleMain' (for tooling)
+[] transformCommonMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'commonMain' (for tooling)
+[] transformDependenciesMetadata
+[] transformIosMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'iosMain' (for tooling)
+[] transformNativeMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'nativeMain' (for tooling)
+[] transformWebMainDependenciesMetadata - Generates serialized dependencies metadata for compilation 'webMain' (for tooling)
+[] unpackDefaultComposeDesktopJvmApplicationResources
+[] validateSigningAndroidDeviceTest
+[] validateSigningDebug
+[] validateSigningDebugAndroidTest
+[] wasmJsAggregateResources
+[] wasmJsCopyHierarchicalMultiplatformResources
+[] wasmJsEmptyJavadocJar
+[] wasmJsProcessResources - Processes file collection.
+[] wasmJsResolveResourcesFromDependencies
+[] wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources
+[] wasmJsSourcesJar - Assembles a jar archive containing the sources of target 'wasmJs'.
+[] wasmJsTestProcessResources - Processes file collection.
+[] wasmJsZipMultiplatformResourcesForPublication
+[] writeAndroidDeviceTestSigningConfigVersions
+[] writeAndroidMainAarMetadata
+[] writeDebugAndroidTestSigningConfigVersions
+[] writeDebugAppMetadata
+[] writeDebugModuleMetadata
+[] writeDebugSigningConfigVersions
+[] writeReleaseAppMetadata
+[] writeReleaseModuleMetadata
+[] writeReleaseSigningConfigVersions

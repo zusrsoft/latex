@@ -1,0 +1,487 @@
+﻿Type-safe project accessors is an incubating feature.
+Configuration 'jsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'wasmJsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'jsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'wasmJsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'jsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'wasmJsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+> Task :latex-base:androidEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:androidSourcesJar UP-TO-DATE
+> Task :latex-base:androidPreBuild UP-TO-DATE
+> Task :latex-base:preAndroidMainBuild UP-TO-DATE
+> Task :latex-base:checkAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-base:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :latex-base:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :latex-base:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :latex-base:extractAndroidMainAnnotations UP-TO-DATE
+> Task :latex-base:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :latex-base:kmpPartiallyResolvedDependenciesChecker
+> Task :latex-base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :latex-base:compileAndroidMain UP-TO-DATE
+> Task :latex-base:javaPreCompileAndroidMain UP-TO-DATE
+> Task :latex-base:compileAndroidMainJavaWithJavac NO-SOURCE
+> Task :latex-base:mergeAndroidMainGeneratedProguardFiles UP-TO-DATE
+> Task :latex-base:mergeAndroidMainConsumerProguardFiles UP-TO-DATE
+> Task :latex-base:prepareAndroidMainArtProfile UP-TO-DATE
+> Task :latex-base:prepareLintJarForPublish UP-TO-DATE
+> Task :latex-base:processAndroidMainManifest UP-TO-DATE
+> Task :latex-base:processAndroidMainJavaRes UP-TO-DATE
+> Task :latex-base:mergeAndroidMainJavaResource UP-TO-DATE
+> Task :latex-base:syncAndroidMainLibJars UP-TO-DATE
+> Task :latex-base:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-base:bundleAndroidMainAar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForAndroidPublication
+> Task :latex-base:generatePomFileForAndroidPublication
+> Task :latex-base:signAndroidPublication UP-TO-DATE
+> Task :latex-base:publishAndroidPublicationToMavenLocal
+> Task :latex-base:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :latex-base:compileKotlinIosArm64 UP-TO-DATE
+> Task :latex-base:iosArm64Klib UP-TO-DATE
+> Task :latex-base:commonizeNativeDistribution UP-TO-DATE
+> Task :latex-base:transformCommonMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileCommonMainKotlinMetadata UP-TO-DATE
+> Task :latex-base:metadataCommonMainProcessResources NO-SOURCE
+> Task :latex-base:metadataCommonMainClasses UP-TO-DATE
+> Task :latex-base:transformNativeMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileNativeMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataNativeMainProcessResources NO-SOURCE
+> Task :latex-base:metadataNativeMainClasses UP-TO-DATE
+> Task :latex-base:transformAppleMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileAppleMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataAppleMainProcessResources NO-SOURCE
+> Task :latex-base:metadataAppleMainClasses UP-TO-DATE
+> Task :latex-base:transformIosMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileIosMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataIosMainProcessResources NO-SOURCE
+> Task :latex-base:metadataIosMainClasses UP-TO-DATE
+> Task :latex-base:iosArm64MetadataElements UP-TO-DATE
+> Task :latex-base:iosArm64SourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForIosArm64Publication
+> Task :latex-base:generatePomFileForIosArm64Publication
+> Task :latex-base:iosArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signIosArm64Publication UP-TO-DATE
+> Task :latex-base:publishIosArm64PublicationToMavenLocal
+> Task :latex-base:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64Klib UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64MetadataElements UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64SourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForIosSimulatorArm64Publication
+> Task :latex-base:generatePomFileForIosSimulatorArm64Publication
+> Task :latex-base:iosSimulatorArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signIosSimulatorArm64Publication UP-TO-DATE
+> Task :latex-base:publishIosSimulatorArm64PublicationToMavenLocal
+> Task :latex-base:compileKotlinJs UP-TO-DATE
+> Task :latex-base:jsProcessResources NO-SOURCE
+> Task :latex-base:jsMainClasses UP-TO-DATE
+> Task :kotlinKotlinNpmCachesSetup
+> Task :latex-base:jsPackageJson UP-TO-DATE
+> Task :latex-base:jsPublicPackageJson UP-TO-DATE
+> Task :latex-base:jsJar UP-TO-DATE
+> Task :latex-base:jsSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForJsPublication
+> Task :latex-base:generatePomFileForJsPublication
+> Task :latex-base:jsEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signJsPublication UP-TO-DATE
+> Task :latex-base:publishJsPublicationToMavenLocal
+> Task :latex-base:compileKotlinJvm UP-TO-DATE
+> Task :latex-base:compileJvmMainJava NO-SOURCE
+> Task :latex-base:jvmProcessResources UP-TO-DATE
+> Task :latex-base:processJvmMainResources SKIPPED
+> Task :latex-base:jvmMainClasses UP-TO-DATE
+> Task :latex-base:jvmJar UP-TO-DATE
+> Task :latex-base:jvmSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForJvmPublication
+> Task :latex-base:generatePomFileForJvmPublication
+> Task :latex-base:jvmEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signJvmPublication UP-TO-DATE
+> Task :latex-base:publishJvmPublicationToMavenLocal
+> Task :latex-base:transformWebMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileWebMainKotlinMetadata NO-SOURCE
+> Task :latex-base:generateProjectStructureMetadata UP-TO-DATE
+> Task :latex-base:metadataWebMainProcessResources NO-SOURCE
+> Task :latex-base:metadataWebMainClasses UP-TO-DATE
+> Task :latex-base:allMetadataJar UP-TO-DATE
+> Task :latex-base:buildKotlinToolingMetadata UP-TO-DATE
+> Task :latex-base:sourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForKotlinMultiplatformPublication
+> Task :latex-base:generatePomFileForKotlinMultiplatformPublication
+> Task :latex-base:kotlinMultiplatformEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signKotlinMultiplatformPublication UP-TO-DATE
+> Task :latex-base:publishKotlinMultiplatformPublicationToMavenLocal
+> Task :latex-base:compileKotlinWasmJs UP-TO-DATE
+> Task :latex-base:wasmJsProcessResources NO-SOURCE
+> Task :latex-base:wasmJsMainClasses UP-TO-DATE
+> Task :kotlinWasmKotlinNpmCachesSetup
+> Task :latex-base:wasmJsPackageJson UP-TO-DATE
+> Task :latex-base:wasmJsPublicPackageJson UP-TO-DATE
+> Task :latex-base:wasmJsJar UP-TO-DATE
+> Task :latex-base:wasmJsSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForWasmJsPublication
+> Task :latex-base:generatePomFileForWasmJsPublication
+> Task :latex-base:wasmJsEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signWasmJsPublication UP-TO-DATE
+> Task :latex-base:publishWasmJsPublicationToMavenLocal
+> Task :latex-base:publishToMavenLocal
+> Task :latex-parser:androidEmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:androidSourcesJar UP-TO-DATE
+> Task :latex-parser:androidPreBuild UP-TO-DATE
+> Task :latex-parser:preAndroidMainBuild UP-TO-DATE
+> Task :latex-parser:checkAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-parser:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :latex-parser:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :latex-parser:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :latex-base:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :latex-parser:extractAndroidMainAnnotations UP-TO-DATE
+> Task :latex-parser:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :latex-parser:kmpPartiallyResolvedDependenciesChecker
+> Task :latex-parser:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :latex-parser:compileAndroidMain UP-TO-DATE
+> Task :latex-parser:javaPreCompileAndroidMain UP-TO-DATE
+> Task :latex-parser:compileAndroidMainJavaWithJavac NO-SOURCE
+> Task :latex-parser:mergeAndroidMainGeneratedProguardFiles UP-TO-DATE
+> Task :latex-parser:mergeAndroidMainConsumerProguardFiles UP-TO-DATE
+> Task :latex-parser:prepareAndroidMainArtProfile UP-TO-DATE
+> Task :latex-parser:prepareLintJarForPublish UP-TO-DATE
+> Task :latex-parser:processAndroidMainManifest UP-TO-DATE
+> Task :latex-parser:processAndroidMainJavaRes UP-TO-DATE
+> Task :latex-parser:mergeAndroidMainJavaResource UP-TO-DATE
+> Task :latex-parser:syncAndroidMainLibJars UP-TO-DATE
+> Task :latex-parser:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-parser:bundleAndroidMainAar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForAndroidPublication
+> Task :latex-base:exportTargetPublicationCoordinatesForAndroidApiElements UP-TO-DATE
+> Task :latex-base:exportTargetPublicationCoordinatesForAndroidRuntimeElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForAndroidPublication
+> Task :latex-parser:signAndroidPublication UP-TO-DATE
+> Task :latex-parser:publishAndroidPublicationToMavenLocal
+> Task :latex-parser:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :latex-parser:compileKotlinIosArm64 UP-TO-DATE
+> Task :latex-parser:iosArm64Klib UP-TO-DATE
+> Task :latex-parser:commonizeNativeDistribution UP-TO-DATE
+> Task :latex-base:exportCommonSourceSetsMetadataLocationsForMetadataApiElements UP-TO-DATE
+> Task :latex-parser:transformCommonMainDependenciesMetadata UP-TO-DATE
+> Task :latex-parser:compileCommonMainKotlinMetadata UP-TO-DATE
+> Task :latex-parser:metadataCommonMainProcessResources NO-SOURCE
+> Task :latex-parser:metadataCommonMainClasses UP-TO-DATE
+> Task :latex-parser:transformNativeMainDependenciesMetadata UP-TO-DATE
+> Task :latex-parser:compileNativeMainKotlinMetadata NO-SOURCE
+> Task :latex-parser:metadataNativeMainProcessResources NO-SOURCE
+> Task :latex-parser:metadataNativeMainClasses UP-TO-DATE
+> Task :latex-parser:transformAppleMainDependenciesMetadata UP-TO-DATE
+> Task :latex-parser:compileAppleMainKotlinMetadata NO-SOURCE
+> Task :latex-parser:metadataAppleMainProcessResources NO-SOURCE
+> Task :latex-parser:metadataAppleMainClasses UP-TO-DATE
+> Task :latex-parser:transformIosMainDependenciesMetadata UP-TO-DATE
+> Task :latex-parser:compileIosMainKotlinMetadata NO-SOURCE
+> Task :latex-parser:metadataIosMainProcessResources NO-SOURCE
+> Task :latex-parser:metadataIosMainClasses UP-TO-DATE
+> Task :latex-parser:iosArm64MetadataElements UP-TO-DATE
+> Task :latex-parser:iosArm64SourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForIosArm64Publication
+> Task :latex-base:exportTargetPublicationCoordinatesForIosArm64ApiElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForIosArm64Publication
+> Task :latex-parser:iosArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signIosArm64Publication UP-TO-DATE
+> Task :latex-parser:publishIosArm64PublicationToMavenLocal
+> Task :latex-parser:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :latex-parser:iosSimulatorArm64Klib UP-TO-DATE
+> Task :latex-parser:iosSimulatorArm64MetadataElements UP-TO-DATE
+> Task :latex-parser:iosSimulatorArm64SourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForIosSimulatorArm64Publication
+> Task :latex-base:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForIosSimulatorArm64Publication
+> Task :latex-parser:iosSimulatorArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signIosSimulatorArm64Publication UP-TO-DATE
+> Task :latex-parser:publishIosSimulatorArm64PublicationToMavenLocal
+> Task :latex-parser:compileKotlinJs UP-TO-DATE
+> Task :latex-parser:jsProcessResources NO-SOURCE
+> Task :latex-parser:jsMainClasses UP-TO-DATE
+> Task :latex-parser:jsPackageJson UP-TO-DATE
+> Task :latex-parser:jsPublicPackageJson UP-TO-DATE
+> Task :latex-parser:jsJar UP-TO-DATE
+> Task :latex-parser:jsSourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForJsPublication
+> Task :latex-base:exportTargetPublicationCoordinatesForJsApiElements UP-TO-DATE
+> Task :latex-base:exportTargetPublicationCoordinatesForJsRuntimeElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForJsPublication
+> Task :latex-parser:jsEmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signJsPublication UP-TO-DATE
+> Task :latex-parser:publishJsPublicationToMavenLocal
+> Task :latex-parser:compileKotlinJvm UP-TO-DATE
+> Task :latex-parser:compileJvmMainJava NO-SOURCE
+> Task :latex-parser:jvmProcessResources UP-TO-DATE
+> Task :latex-parser:processJvmMainResources SKIPPED
+> Task :latex-parser:jvmMainClasses UP-TO-DATE
+> Task :latex-parser:jvmJar UP-TO-DATE
+> Task :latex-parser:jvmSourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForJvmPublication
+> Task :latex-base:exportTargetPublicationCoordinatesForJvmApiElements UP-TO-DATE
+> Task :latex-base:exportTargetPublicationCoordinatesForJvmRuntimeElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForJvmPublication
+> Task :latex-parser:jvmEmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signJvmPublication UP-TO-DATE
+> Task :latex-parser:publishJvmPublicationToMavenLocal
+> Task :latex-parser:transformWebMainDependenciesMetadata UP-TO-DATE
+> Task :latex-parser:compileWebMainKotlinMetadata NO-SOURCE
+> Task :latex-base:exportRootPublicationCoordinatesForMetadataApiElements UP-TO-DATE
+> Task :latex-parser:generateProjectStructureMetadata UP-TO-DATE
+> Task :latex-parser:metadataWebMainProcessResources NO-SOURCE
+> Task :latex-parser:metadataWebMainClasses UP-TO-DATE
+> Task :latex-parser:allMetadataJar UP-TO-DATE
+> Task :latex-parser:buildKotlinToolingMetadata UP-TO-DATE
+> Task :latex-parser:sourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForKotlinMultiplatformPublication
+> Task :latex-parser:generatePomFileForKotlinMultiplatformPublication
+> Task :latex-parser:kotlinMultiplatformEmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signKotlinMultiplatformPublication UP-TO-DATE
+> Task :latex-parser:publishKotlinMultiplatformPublicationToMavenLocal
+> Task :latex-parser:compileKotlinWasmJs UP-TO-DATE
+> Task :latex-parser:wasmJsProcessResources NO-SOURCE
+> Task :latex-parser:wasmJsMainClasses UP-TO-DATE
+> Task :latex-parser:wasmJsPackageJson UP-TO-DATE
+> Task :latex-parser:wasmJsPublicPackageJson UP-TO-DATE
+> Task :latex-parser:wasmJsJar UP-TO-DATE
+> Task :latex-parser:wasmJsSourcesJar UP-TO-DATE
+> Task :latex-parser:generateMetadataFileForWasmJsPublication
+> Task :latex-base:exportTargetPublicationCoordinatesForWasmJsApiElements UP-TO-DATE
+> Task :latex-base:exportTargetPublicationCoordinatesForWasmJsRuntimeElements UP-TO-DATE
+> Task :latex-parser:generatePomFileForWasmJsPublication
+> Task :latex-parser:wasmJsEmptyJavadocJar UP-TO-DATE
+> Task :latex-parser:signWasmJsPublication UP-TO-DATE
+> Task :latex-parser:publishWasmJsPublicationToMavenLocal
+> Task :latex-parser:publishToMavenLocal
+> Task :latex-renderer:androidEmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :latex-renderer:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :latex-renderer:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :latex-renderer:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :latex-renderer:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :latex-renderer:generateComposeResClass UP-TO-DATE
+> Task :latex-renderer:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :latex-renderer:androidSourcesJar UP-TO-DATE
+> Task :latex-renderer:androidPreBuild UP-TO-DATE
+> Task :latex-renderer:preAndroidMainBuild UP-TO-DATE
+> Task :latex-renderer:checkAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-renderer:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :latex-renderer:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :latex-renderer:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :latex-parser:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :latex-renderer:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :latex-renderer:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :latex-renderer:packageAndroidMainResources UP-TO-DATE
+> Task :latex-renderer:parseAndroidMainLocalResources UP-TO-DATE
+> Task :latex-renderer:generateAndroidMainRFile UP-TO-DATE
+> Task :latex-renderer:extractAndroidMainAnnotations UP-TO-DATE
+> Task :latex-renderer:generateAndroidMainAssets UP-TO-DATE
+> Task :latex-renderer:mergeAndroidMainAssets UP-TO-DATE
+> Task :latex-renderer:kmpPartiallyResolvedDependenciesChecker
+> Task :latex-renderer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :latex-renderer:compileAndroidMain UP-TO-DATE
+> Task :latex-renderer:javaPreCompileAndroidMain UP-TO-DATE
+> Task :latex-renderer:compileAndroidMainJavaWithJavac NO-SOURCE
+> Task :latex-renderer:mergeAndroidMainGeneratedProguardFiles UP-TO-DATE
+> Task :latex-renderer:mergeAndroidMainConsumerProguardFiles UP-TO-DATE
+> Task :latex-renderer:prepareAndroidMainArtProfile UP-TO-DATE
+> Task :latex-renderer:prepareLintJarForPublish UP-TO-DATE
+> Task :latex-renderer:processAndroidMainManifest UP-TO-DATE
+> Task :latex-renderer:processAndroidMainJavaRes UP-TO-DATE
+> Task :latex-renderer:mergeAndroidMainJavaResource UP-TO-DATE
+> Task :latex-renderer:syncAndroidMainLibJars UP-TO-DATE
+> Task :latex-renderer:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-renderer:bundleAndroidMainAar UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForAndroidPublication
+> Task :latex-parser:exportTargetPublicationCoordinatesForAndroidApiElements UP-TO-DATE
+> Task :latex-parser:exportTargetPublicationCoordinatesForAndroidRuntimeElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForAndroidPublication
+> Task :latex-renderer:signAndroidPublication UP-TO-DATE
+> Task :latex-renderer:publishAndroidPublicationToMavenLocal
+> Task :latex-renderer:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :latex-renderer:convertXmlValueResourcesForAppleMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForAppleMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForAppleMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForAppleMain NO-SOURCE
+> Task :latex-renderer:convertXmlValueResourcesForIosArm64Main NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForIosArm64Main NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForIosArm64Main NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForIosArm64Main NO-SOURCE
+> Task :latex-renderer:convertXmlValueResourcesForIosMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForIosMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForIosMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForIosMain NO-SOURCE
+> Task :latex-renderer:convertXmlValueResourcesForNativeMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForNativeMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForNativeMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForNativeMain NO-SOURCE
+> Task :latex-renderer:generateActualResourceCollectorsForIosArm64Main UP-TO-DATE
+> Task :latex-renderer:compileKotlinIosArm64 UP-TO-DATE
+> Task :latex-renderer:iosArm64Klib UP-TO-DATE
+> Task :latex-renderer:commonizeNativeDistribution UP-TO-DATE
+> Task :latex-parser:exportCommonSourceSetsMetadataLocationsForMetadataApiElements UP-TO-DATE
+> Task :latex-renderer:transformCommonMainDependenciesMetadata UP-TO-DATE
+> Task :latex-renderer:compileCommonMainKotlinMetadata UP-TO-DATE
+> Task :latex-renderer:metadataCommonMainProcessResources NO-SOURCE
+> Task :latex-renderer:metadataCommonMainClasses UP-TO-DATE
+> Task :latex-renderer:transformNativeMainDependenciesMetadata UP-TO-DATE
+> Task :latex-renderer:compileNativeMainKotlinMetadata NO-SOURCE
+> Task :latex-renderer:metadataNativeMainProcessResources NO-SOURCE
+> Task :latex-renderer:metadataNativeMainClasses UP-TO-DATE
+> Task :latex-renderer:transformAppleMainDependenciesMetadata UP-TO-DATE
+> Task :latex-renderer:compileAppleMainKotlinMetadata NO-SOURCE
+> Task :latex-renderer:metadataAppleMainProcessResources NO-SOURCE
+> Task :latex-renderer:metadataAppleMainClasses UP-TO-DATE
+> Task :latex-renderer:transformIosMainDependenciesMetadata UP-TO-DATE
+> Task :latex-renderer:compileIosMainKotlinMetadata UP-TO-DATE
+> Task :latex-renderer:metadataIosMainProcessResources NO-SOURCE
+> Task :latex-renderer:metadataIosMainClasses UP-TO-DATE
+> Task :latex-renderer:iosArm64MetadataElements UP-TO-DATE
+> Task :latex-renderer:iosArm64SourcesJar UP-TO-DATE
+> Task :latex-renderer:assembleIosArm64MainResources UP-TO-DATE
+> Task :latex-renderer:iosArm64CopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:iosArm64ZipMultiplatformResourcesForPublication UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForIosArm64Publication
+> Task :latex-parser:exportTargetPublicationCoordinatesForIosArm64ApiElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForIosArm64Publication
+> Task :latex-renderer:iosArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signIosArm64Publication UP-TO-DATE
+> Task :latex-renderer:publishIosArm64PublicationToMavenLocal
+> Task :latex-renderer:convertXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForIosSimulatorArm64Main NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForIosSimulatorArm64Main NO-SOURCE
+> Task :latex-renderer:generateActualResourceCollectorsForIosSimulatorArm64Main UP-TO-DATE
+> Task :latex-renderer:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :latex-renderer:iosSimulatorArm64Klib UP-TO-DATE
+> Task :latex-renderer:iosSimulatorArm64MetadataElements UP-TO-DATE
+> Task :latex-renderer:iosSimulatorArm64SourcesJar UP-TO-DATE
+> Task :latex-renderer:assembleIosSimulatorArm64MainResources UP-TO-DATE
+> Task :latex-renderer:iosSimulatorArm64CopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:iosSimulatorArm64ZipMultiplatformResourcesForPublication UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForIosSimulatorArm64Publication
+> Task :latex-parser:exportTargetPublicationCoordinatesForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForIosSimulatorArm64Publication
+> Task :latex-renderer:iosSimulatorArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signIosSimulatorArm64Publication UP-TO-DATE
+> Task :latex-renderer:publishIosSimulatorArm64PublicationToMavenLocal
+> Task :latex-renderer:convertXmlValueResourcesForJsMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForJsMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForJsMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForJsMain NO-SOURCE
+> Task :latex-renderer:convertXmlValueResourcesForWebMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForWebMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForWebMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForWebMain NO-SOURCE
+> Task :latex-renderer:generateActualResourceCollectorsForJsMain UP-TO-DATE
+> Task :latex-renderer:compileKotlinJs UP-TO-DATE
+> Task :latex-renderer:jsResolveResourcesFromDependencies UP-TO-DATE
+> Task :latex-renderer:assembleJsMainResources UP-TO-DATE
+> Task :latex-renderer:jsResolveSelfResourcesCopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:jsAggregateResources UP-TO-DATE
+> Task :latex-renderer:unpackSkikoWasmRuntime UP-TO-DATE
+> Task :latex-renderer:jsProcessResources UP-TO-DATE
+> Task :latex-renderer:jsMainClasses UP-TO-DATE
+> Task :latex-renderer:jsPackageJson UP-TO-DATE
+> Task :latex-renderer:jsPublicPackageJson UP-TO-DATE
+> Task :latex-renderer:jsJar UP-TO-DATE
+> Task :latex-renderer:jsSourcesJar UP-TO-DATE
+> Task :latex-renderer:jsCopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:jsZipMultiplatformResourcesForPublication UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForJsPublication
+> Task :latex-parser:exportTargetPublicationCoordinatesForJsApiElements UP-TO-DATE
+> Task :latex-parser:exportTargetPublicationCoordinatesForJsRuntimeElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForJsPublication
+> Task :latex-renderer:jsEmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signJsPublication UP-TO-DATE
+> Task :latex-renderer:publishJsPublicationToMavenLocal
+> Task :latex-renderer:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :latex-renderer:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :latex-renderer:compileKotlinJvm UP-TO-DATE
+> Task :latex-renderer:compileJvmMainJava NO-SOURCE
+> Task :latex-renderer:assembleJvmMainResources UP-TO-DATE
+> Task :latex-renderer:jvmProcessResources UP-TO-DATE
+> Task :latex-renderer:processJvmMainResources SKIPPED
+> Task :latex-renderer:jvmMainClasses UP-TO-DATE
+> Task :latex-renderer:jvmJar UP-TO-DATE
+> Task :latex-renderer:jvmSourcesJar UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForJvmPublication
+> Task :latex-parser:exportTargetPublicationCoordinatesForJvmApiElements UP-TO-DATE
+> Task :latex-parser:exportTargetPublicationCoordinatesForJvmRuntimeElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForJvmPublication
+> Task :latex-renderer:jvmEmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signJvmPublication UP-TO-DATE
+> Task :latex-renderer:publishJvmPublicationToMavenLocal
+> Task :latex-renderer:transformWebMainDependenciesMetadata UP-TO-DATE
+> Task :latex-renderer:compileWebMainKotlinMetadata NO-SOURCE
+> Task :latex-parser:exportRootPublicationCoordinatesForMetadataApiElements UP-TO-DATE
+> Task :latex-renderer:generateProjectStructureMetadata UP-TO-DATE
+> Task :latex-renderer:metadataWebMainProcessResources NO-SOURCE
+> Task :latex-renderer:metadataWebMainClasses UP-TO-DATE
+> Task :latex-renderer:allMetadataJar UP-TO-DATE
+> Task :latex-renderer:buildKotlinToolingMetadata UP-TO-DATE
+> Task :latex-renderer:sourcesJar UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForKotlinMultiplatformPublication
+> Task :latex-renderer:generatePomFileForKotlinMultiplatformPublication
+> Task :latex-renderer:kotlinMultiplatformEmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signKotlinMultiplatformPublication UP-TO-DATE
+> Task :latex-renderer:publishKotlinMultiplatformPublicationToMavenLocal
+> Task :latex-renderer:convertXmlValueResourcesForWasmJsMain NO-SOURCE
+> Task :latex-renderer:copyNonXmlValueResourcesForWasmJsMain NO-SOURCE
+> Task :latex-renderer:prepareComposeResourcesTaskForWasmJsMain NO-SOURCE
+> Task :latex-renderer:generateResourceAccessorsForWasmJsMain NO-SOURCE
+> Task :latex-renderer:generateActualResourceCollectorsForWasmJsMain UP-TO-DATE
+> Task :latex-renderer:compileKotlinWasmJs UP-TO-DATE
+> Task :latex-renderer:wasmJsResolveResourcesFromDependencies UP-TO-DATE
+> Task :latex-renderer:assembleWasmJsMainResources UP-TO-DATE
+> Task :latex-renderer:wasmJsResolveSelfResourcesCopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:wasmJsAggregateResources UP-TO-DATE
+> Task :latex-renderer:wasmJsProcessResources UP-TO-DATE
+> Task :latex-renderer:wasmJsMainClasses UP-TO-DATE
+> Task :latex-renderer:wasmJsPackageJson UP-TO-DATE
+> Task :latex-renderer:wasmJsPublicPackageJson UP-TO-DATE
+> Task :latex-renderer:wasmJsJar UP-TO-DATE
+> Task :latex-renderer:wasmJsSourcesJar UP-TO-DATE
+> Task :latex-renderer:wasmJsCopyHierarchicalMultiplatformResources UP-TO-DATE
+> Task :latex-renderer:wasmJsZipMultiplatformResourcesForPublication UP-TO-DATE
+> Task :latex-renderer:generateMetadataFileForWasmJsPublication
+> Task :latex-parser:exportTargetPublicationCoordinatesForWasmJsApiElements UP-TO-DATE
+> Task :latex-parser:exportTargetPublicationCoordinatesForWasmJsRuntimeElements UP-TO-DATE
+> Task :latex-renderer:generatePomFileForWasmJsPublication
+> Task :latex-renderer:wasmJsEmptyJavadocJar UP-TO-DATE
+> Task :latex-renderer:signWasmJsPublication UP-TO-DATE
+> Task :latex-renderer:publishWasmJsPublicationToMavenLocal
+> Task :latex-renderer:publishToMavenLocal
+
+[Incubating] Problems report is available at: file:///D:/dev-java-learn-2026-ai/huarangmeng-zusrsoft/latex/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 13s
+331 actionable tasks: 68 executed, 263 up-to-date

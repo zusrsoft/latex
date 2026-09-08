@@ -1,0 +1,157 @@
+﻿Type-safe project accessors is an incubating feature.
+Configuration 'jsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'wasmJsNpmAggregated' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+> Task :latex-base:androidEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:androidSourcesJar UP-TO-DATE
+> Task :latex-base:androidPreBuild UP-TO-DATE
+> Task :latex-base:preAndroidMainBuild UP-TO-DATE
+> Task :latex-base:checkAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-base:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :latex-base:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :latex-base:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :latex-base:extractAndroidMainAnnotations UP-TO-DATE
+> Task :latex-base:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :latex-base:kmpPartiallyResolvedDependenciesChecker
+> Task :latex-base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :latex-base:compileAndroidMain UP-TO-DATE
+> Task :latex-base:javaPreCompileAndroidMain UP-TO-DATE
+> Task :latex-base:compileAndroidMainJavaWithJavac NO-SOURCE
+> Task :latex-base:mergeAndroidMainGeneratedProguardFiles UP-TO-DATE
+> Task :latex-base:mergeAndroidMainConsumerProguardFiles UP-TO-DATE
+> Task :latex-base:prepareAndroidMainArtProfile UP-TO-DATE
+> Task :latex-base:prepareLintJarForPublish UP-TO-DATE
+> Task :latex-base:processAndroidMainManifest UP-TO-DATE
+> Task :latex-base:processAndroidMainJavaRes UP-TO-DATE
+> Task :latex-base:mergeAndroidMainJavaResource UP-TO-DATE
+> Task :latex-base:syncAndroidMainLibJars UP-TO-DATE
+> Task :latex-base:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :latex-base:bundleAndroidMainAar UP-TO-DATE
+> Task :latex-base:enableAutomaticMavenCentralPublishing
+> Task :latex-base:generateMetadataFileForAndroidPublication
+> Task :latex-base:generatePomFileForAndroidPublication
+> Task :latex-base:prepareMavenCentralPublishing
+> Task :latex-base:signAndroidPublication UP-TO-DATE
+> Task :latex-base:publishAndroidPublicationToMavenCentralRepository
+> Task :latex-base:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :latex-base:compileKotlinIosArm64 UP-TO-DATE
+> Task :latex-base:iosArm64Klib UP-TO-DATE
+> Task :latex-base:commonizeNativeDistribution UP-TO-DATE
+> Task :latex-base:transformCommonMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileCommonMainKotlinMetadata UP-TO-DATE
+> Task :latex-base:metadataCommonMainProcessResources NO-SOURCE
+> Task :latex-base:metadataCommonMainClasses UP-TO-DATE
+> Task :latex-base:transformNativeMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileNativeMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataNativeMainProcessResources NO-SOURCE
+> Task :latex-base:metadataNativeMainClasses UP-TO-DATE
+> Task :latex-base:transformAppleMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileAppleMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataAppleMainProcessResources NO-SOURCE
+> Task :latex-base:metadataAppleMainClasses UP-TO-DATE
+> Task :latex-base:transformIosMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileIosMainKotlinMetadata NO-SOURCE
+> Task :latex-base:metadataIosMainProcessResources NO-SOURCE
+> Task :latex-base:metadataIosMainClasses UP-TO-DATE
+> Task :latex-base:iosArm64MetadataElements UP-TO-DATE
+> Task :latex-base:iosArm64SourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForIosArm64Publication
+> Task :latex-base:generatePomFileForIosArm64Publication
+> Task :latex-base:iosArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signIosArm64Publication UP-TO-DATE
+> Task :latex-base:publishIosArm64PublicationToMavenCentralRepository
+> Task :latex-base:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64Klib UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64MetadataElements UP-TO-DATE
+> Task :latex-base:iosSimulatorArm64SourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForIosSimulatorArm64Publication
+> Task :latex-base:generatePomFileForIosSimulatorArm64Publication
+> Task :latex-base:iosSimulatorArm64EmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signIosSimulatorArm64Publication UP-TO-DATE
+> Task :latex-base:publishIosSimulatorArm64PublicationToMavenCentralRepository
+> Task :latex-base:compileKotlinJs UP-TO-DATE
+> Task :latex-base:jsProcessResources NO-SOURCE
+> Task :latex-base:jsMainClasses UP-TO-DATE
+> Task :kotlinKotlinNpmCachesSetup
+> Task :latex-base:jsPackageJson UP-TO-DATE
+> Task :latex-base:jsPublicPackageJson UP-TO-DATE
+> Task :latex-base:jsJar UP-TO-DATE
+> Task :latex-base:jsSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForJsPublication
+> Task :latex-base:generatePomFileForJsPublication
+> Task :latex-base:jsEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signJsPublication UP-TO-DATE
+> Task :latex-base:publishJsPublicationToMavenCentralRepository
+> Task :latex-base:compileKotlinJvm UP-TO-DATE
+> Task :latex-base:compileJvmMainJava NO-SOURCE
+> Task :latex-base:jvmProcessResources UP-TO-DATE
+> Task :latex-base:processJvmMainResources SKIPPED
+> Task :latex-base:jvmMainClasses UP-TO-DATE
+> Task :latex-base:jvmJar UP-TO-DATE
+> Task :latex-base:jvmSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForJvmPublication
+> Task :latex-base:generatePomFileForJvmPublication
+> Task :latex-base:jvmEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signJvmPublication UP-TO-DATE
+> Task :latex-base:publishJvmPublicationToMavenCentralRepository
+> Task :latex-base:transformWebMainDependenciesMetadata UP-TO-DATE
+> Task :latex-base:compileWebMainKotlinMetadata NO-SOURCE
+> Task :latex-base:generateProjectStructureMetadata UP-TO-DATE
+> Task :latex-base:metadataWebMainProcessResources NO-SOURCE
+> Task :latex-base:metadataWebMainClasses UP-TO-DATE
+> Task :latex-base:allMetadataJar UP-TO-DATE
+> Task :latex-base:buildKotlinToolingMetadata UP-TO-DATE
+> Task :latex-base:sourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForKotlinMultiplatformPublication
+> Task :latex-base:generatePomFileForKotlinMultiplatformPublication
+> Task :latex-base:kotlinMultiplatformEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signKotlinMultiplatformPublication UP-TO-DATE
+> Task :latex-base:publishKotlinMultiplatformPublicationToMavenCentralRepository
+> Task :latex-base:compileKotlinWasmJs UP-TO-DATE
+> Task :latex-base:wasmJsProcessResources NO-SOURCE
+> Task :latex-base:wasmJsMainClasses UP-TO-DATE
+> Task :kotlinWasmKotlinNpmCachesSetup
+> Task :latex-base:wasmJsPackageJson UP-TO-DATE
+> Task :latex-base:wasmJsPublicPackageJson UP-TO-DATE
+> Task :latex-base:wasmJsJar UP-TO-DATE
+> Task :latex-base:wasmJsSourcesJar UP-TO-DATE
+> Task :latex-base:generateMetadataFileForWasmJsPublication
+> Task :latex-base:generatePomFileForWasmJsPublication
+> Task :latex-base:wasmJsEmptyJavadocJar UP-TO-DATE
+> Task :latex-base:signWasmJsPublication UP-TO-DATE
+> Task :latex-base:publishWasmJsPublicationToMavenCentralRepository
+> Task :latex-base:publishAllPublicationsToMavenCentralRepository
+
+[Incubating] Problems report is available at: file:///D:/dev-java-learn-2026-ai/huarangmeng-zusrsoft/latex/build/reports/problems/problems-report.html
+.\gradlew : 
+所在位置 行:1 字符: 198
++ ... fake-pass'; .\gradlew :latex-base:publishAllPublicationsToMavenCentra ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Failed to stop service 'maven-central-build-service'.
+> Upload failed: {"error":{"message":"Invalid token"}}
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 56s
+92 actionable tasks: 26 executed, 66 up-to-date
