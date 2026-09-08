@@ -23,6 +23,8 @@
 - 不修改 `docs/maven-central/` 下任何审计证据文档（它们是 1.5.4 已发布事实的历史记录）
 - 不改动 `.github/workflows/publish.yml` 发布流程（不含 developer 信息；实现时复核）
 - 不处理其他三个项目（diagram / Markdown / codehigh 已干净）
+- 不修改约 200 个 Kotlin 源文件头部的 `* Copyright (c) 2026 huarangmeng` 注释与 `com.hrm.latex.*` 包名（fork 保留文件级原始版权声明属 MIT 合规良好实践；改包名是破坏性 API 变更）
+- 不修改 `MAVEN_CENTRAL_PUBLISH.md` 6.5 节的 `io.github.huarangmeng` 历史事故记录（文档记录事实）
 - 不在本设计内执行实际发布（发布仍走 MAVEN_CENTRAL_PUBLISH.md 手册 / Release CI 流程）
 
 ## 4. 已确认的决策
@@ -117,7 +119,12 @@ AGENTS.md 无 POM 相关内容（已检索确认），不动。
    - `<developers>` 仅含 zusrsoft
    - `<url>` / `<scm>` 指向 zusrsoft/latex
    - `<description>` 含 `Maintained fork of huarangmeng/latex.`
-2. 全仓 grep `huarangmeng`：仅允许出现于 LICENSE 版权行、两份 README（致谢 + License 区块）、三个模块 `build.gradle.kts`（POM description 尾注）、`docs/maven-central/`、`p0-repo-out/` 历史记录
+2. 全仓 grep `huarangmeng` 白名单校验（排除 `docs/`、`p0-repo-out/` 后，仅允许出现于）：
+   - `LICENSE` 版权行
+   - 两份 README（致谢 + License 区块）
+   - 三个模块 `build.gradle.kts`（POM description 尾注 `Maintained fork of huarangmeng/latex.`）
+   - `MAVEN_CENTRAL_PUBLISH.md` 6.5 节历史事故记录
+   - Kotlin 源文件头部版权注释（且所有 `*.kt` 命中必须匹配 `^.*Copyright \(c\) 2026 huarangmeng$` 模式）
 3. Gradle 配置期全量通过（根脚本 subprojects 块影响所有子项目配置，需完整配置验证）
 
 ## 7. 风险与注意事项
