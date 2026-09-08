@@ -207,20 +207,30 @@ ORG_GRADLE_PROJECT_signingInMemoryKey=多行私钥原文即可（env 不受 prop
 - 根 `build.gradle.kts`：`alias(libs.plugins.mavenPublish) apply false`（vanniktech 0.35.0）
 - 三个发布模块各自 `alias(libs.plugins.mavenPublish)`
 
-### 4.2 mavenPublishing 配置（三个模块相同模式）
+### 4.2 mavenPublishing 配置（公共块在根 build.gradle.kts，模块仅保留差异项）
 
 ```kotlin
+// 根 build.gradle.kts —— 公共配置（自动发布、签名、POM 公共字段）
+subprojects {
+    plugins.withId("com.vanniktech.maven.publish") {
+        configure<MavenPublishBaseExtension> {
+            publishToMavenCentral(true)   // true = 校验通过后自动发布，无需手动点 Release
+            signAllPublications()         // 使用 signingInMemory* 属性签名
+            pom { /* MIT License / zusrsoft developer / zusrsoft latex scm 公共字段 */ }
+        }
+    }
+}
+
+// 模块（以 latex-base 为例）—— 仅保留坐标与模块级 name/description
 mavenPublishing {
-    publishToMavenCentral(true)   // true = 校验通过后自动发布，无需手动点 Release
-    signAllPublications()         // 使用 signingInMemory* 属性签名
     coordinates("io.github.zusrsoft", "latex-base", rootProject.property("VERSION").toString())
-    pom { /* name/description/url/license/developer/scm 齐全，满足 Central 校验 */ }
+    pom { /* name / description（description 尾注声明 fork 来源） */ }
 }
 ```
 
 ### 4.3 版本号
 
-- 版本唯一来源：`gradle.properties` 的 `VERSION`（当前 1.5.4）
+- 版本唯一来源：`gradle.properties` 的 `VERSION`（当前 1.5.5）
 - ⚠️ Central **不允许覆盖发布**：同命名空间下已发布的版本号永久占用（校验失败的部署不占用，可重试）
 - CI 发布时会自动追加发布 `-kt2.1.0` 别名版本（降级 Kotlin/Compose 依赖的兼容版）
 
@@ -340,9 +350,9 @@ Invoke-RestMethod -Uri "https://central.sonatype.com/api/v1/publisher/deployment
 ### 7.4 消费方依赖验证
 
 ```kotlin
-implementation("io.github.zusrsoft:latex-renderer:1.5.4")
+implementation("io.github.zusrsoft:latex-renderer:1.5.5")
 // Kotlin 2.1.0 项目用别名版本：
-implementation("io.github.zusrsoft:latex-renderer:1.5.4-kt2.1.0")
+implementation("io.github.zusrsoft:latex-renderer:1.5.5-kt2.1.0")
 ```
 
 ---
