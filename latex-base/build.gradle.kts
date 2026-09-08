@@ -22,7 +22,7 @@ kotlin {
 
         compilerOptions {}
 
-        // 鍙戝竷娑堣垂鏂?R8 / ProGuard 瑙勫垯锛岄殢 AAR 涓€璧峰垎鍙戠粰涓嬫父浣跨敤鏂?
+        // 发布消费方 R8 / ProGuard 规则，随 AAR 一起分发给下游使用方
         optimization {
             consumerKeepRules.publish = true
             consumerKeepRules.file(file("consumer-rules.pro"))
@@ -54,7 +54,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            // 鍩虹灞備繚鎸佹渶灏忎緷璧?
+            // 基础层保持最小依赖
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
