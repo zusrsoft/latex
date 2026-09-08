@@ -440,8 +440,8 @@ fun MyEditor() {
 
 | 变体 | Kotlin | Compose Multiplatform | 制品版本号 |
 |------|--------|-----------------------|-----------|
-| **标准版** | 2.3.10 | 1.10.3 | `1.5.4` |
-| **Kotlin 2.1.0 兼容版** | 2.1.0 | 1.9.3 | `1.5.4-kt2.1.0` |
+| **标准版** | 2.3.10 | 1.10.3 | `1.5.5` |
+| **Kotlin 2.1.0 兼容版** | 2.1.0 | 1.9.3 | `1.5.5-kt2.1.0` |
 
 > 请选择与你项目 Kotlin 版本匹配的变体。如果你的项目使用 **Kotlin 2.1.0**，请使用带 `-kt2.1.0` 后缀的版本。
 
@@ -451,7 +451,7 @@ fun MyEditor() {
 
 ```toml
 [versions]
-latex = "1.5.4"
+latex = "1.5.5"
 
 [libraries]
 latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
@@ -465,7 +465,7 @@ latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "
 
 ```toml
 [versions]
-latex = "1.5.4-kt2.1.0"
+latex = "1.5.5-kt2.1.0"
 
 [libraries]
 latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
@@ -528,7 +528,7 @@ dependencies {
 ```
 MIT License
 
-Copyright (c) 2026 huarangmeng
+Copyright (c) 2026 huarangmeng, maintained by zusrsoft
 
 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人不受限制地处理
 软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或

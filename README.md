@@ -442,8 +442,8 @@ This library publishes two variants for each release to support different Kotlin
 
 | Variant | Kotlin | Compose Multiplatform | Artifact Version |
 |---------|--------|-----------------------|------------------|
-| **Standard** | 2.3.10 | 1.10.3 | `1.5.4`          |
-| **Kotlin 2.1.0** | 2.1.0 | 1.9.3 | `1.5.4-kt2.1.0`  |
+| **Standard** | 2.3.10 | 1.10.3 | `1.5.5`          |
+| **Kotlin 2.1.0** | 2.1.0 | 1.9.3 | `1.5.5-kt2.1.0`  |
 
 > Choose the variant that matches your project's Kotlin version. If your project uses **Kotlin 2.1.0**, use the `-kt2.1.0` suffixed version.
 
@@ -453,7 +453,7 @@ Add dependencies in `gradle/libs.versions.toml`:
 
 ```toml
 [versions]
-latex = "1.5.4"
+latex = "1.5.5"
 
 [libraries]
 latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
@@ -467,7 +467,7 @@ If your project uses Kotlin 2.1.0, use the `-kt2.1.0` suffixed artifacts:
 
 ```toml
 [versions]
-latex = "1.5.4-kt2.1.0"
+latex = "1.5.5-kt2.1.0"
 
 [libraries]
 latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
@@ -530,7 +530,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 MIT License
 
-Copyright (c) 2026 huarangmeng
+Copyright (c) 2026 huarangmeng, maintained by zusrsoft
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
