@@ -19,3 +19,4 @@ captures
 node_modules/
 /kotlin-js-store
 gradle/gradle-daemon-jvm.properties
+p0-repo-out/
