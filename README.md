@@ -518,6 +518,7 @@ For supported features and chapter-specific follow-up items, see [PARSER_COVERAG
 ## 🙏 Acknowledgements
 
 - [KaTeX](https://github.com/KaTeX/KaTeX) — This project uses the KaTeX v0.16.11 font files for mathematical formula rendering. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for attribution and license details.
+- [huarangmeng/latex](https://github.com/huarangmeng/latex) — Original project, author: huarangmeng. This repository is its maintained fork, maintainer: [zusrsoft](https://github.com/zusrsoft).
 
 ## 💡 Recommended
 
@@ -530,7 +531,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 MIT License
 
-Copyright (c) 2026 huarangmeng, maintained by zusrsoft
+Copyright (c) 2026 huarangmeng
+Copyright (c) 2026 zusrsoft
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

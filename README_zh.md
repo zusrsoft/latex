@@ -516,6 +516,7 @@ dependencies {
 ## 🙏 致谢
 
 - [KaTeX](https://github.com/KaTeX/KaTeX) — 本项目使用 KaTeX v0.16.11 字体文件进行数学公式渲染；来源、署名和许可证详情见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
+- [huarangmeng/latex](https://github.com/huarangmeng/latex) —— 原始项目，作者：huarangmeng；本仓库为其维护版 fork，维护者：[zusrsoft](https://github.com/zusrsoft)。
 
 ## 💡 推荐项目
 
@@ -528,7 +529,8 @@ dependencies {
 ```
 MIT License
 
-Copyright (c) 2026 huarangmeng, maintained by zusrsoft
+Copyright (c) 2026 huarangmeng
+Copyright (c) 2026 zusrsoft
 
 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人不受限制地处理
 软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或
