@@ -34,6 +34,7 @@
 | POM developers | 仅 `zusrsoft`（id=zusrsoft, name=zusrsoft, url=https://github.com/zusrsoft/） |
 | 版本号 | `1.5.4 → 1.5.5`（patch；Central 不允许覆盖已发布版本） |
 | LICENSE 版权行 | 双行追加：保留 `Copyright (c) 2026 huarangmeng`，新增 `Copyright (c) 2026 zusrsoft`（MIT 合规要求保留原声明） |
+| 署名叙事 | 「维护者 zusrsoft、作者 huarangmeng」：README 致谢与 LICENSE 采用角色化表述；POM developers 仅 zusrsoft（不进双条目） |
 | POM 配置结构 | 方案 A：公共块上移根 `build.gradle.kts`（仿 codehigh 模式） |
 
 ## 5. 设计详情
@@ -96,9 +97,9 @@ Maintained fork of huarangmeng/latex.""")
 ### 5.3 Fork 归属声明
 
 1. `README.md` Acknowledgements 章节（约 518-520 行）新增：
-   `Original project: [huarangmeng/latex](https://github.com/huarangmeng/latex) — this repository is a maintained fork by [zusrsoft](https://github.com/zusrsoft).`
+   `- [huarangmeng/latex](https://github.com/huarangmeng/latex) — Original project, author: huarangmeng. This repository is its maintained fork, maintainer: [zusrsoft](https://github.com/zusrsoft).`
 2. `README_zh.md` 致谢章节（约 516 行起）新增：
-   `原始项目：[huarangmeng/latex](https://github.com/huarangmeng/latex) —— 本仓库是由 [zusrsoft](https://github.com/zusrsoft) 维护的 fork。`
+   `- [huarangmeng/latex](https://github.com/huarangmeng/latex) —— 原始项目，作者：huarangmeng；本仓库为其维护版 fork，维护者：[zusrsoft](https://github.com/zusrsoft)。`
 3. `LICENSE`：版权行双行（见第 4 节决策）
 4. 两份 README 的 License 区块（README.md 约 533 行 / README_zh.md 约 531 行）同步双版权行
 5. 三个模块 POM `description` 尾部统一追加 `Maintained fork of huarangmeng/latex.`（见 5.1）
