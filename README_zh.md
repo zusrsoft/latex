@@ -436,36 +436,19 @@ fun MyEditor() {
 
 ### 版本兼容性
 
-本库为每个版本发布两个变体，以支持不同的 Kotlin/Compose 版本：
-
-| 变体 | Kotlin | Compose Multiplatform | 制品版本号 |
+| Kotlin | Compose Multiplatform | 制品版本号 |
 |------|--------|-----------------------|-----------|
-| **标准版** | 2.3.10 | 1.10.3 | `1.5.5` |
-| **Kotlin 2.1.0 兼容版** | 2.1.0 | 1.9.3 | `1.5.5-kt2.1.0` |
+| 2.3.10 | 1.10.3 | `1.5.5` |
 
-> 请选择与你项目 Kotlin 版本匹配的变体。如果你的项目使用 **Kotlin 2.1.0**，请使用带 `-kt2.1.0` 后缀的版本。
+> 不再发布 `-kt2.1.0` 后缀变体（Kotlin 2.1.0 兼容构建）。
 
-### 标准版（Kotlin 2.3.10）
+### 添加依赖
 
 在 `gradle/libs.versions.toml` 中添加依赖：
 
 ```toml
 [versions]
 latex = "1.5.5"
-
-[libraries]
-latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }
-latex-parser = { module = "io.github.zusrsoft:latex-parser", version.ref = "latex" }
-latex-renderer = { module = "io.github.zusrsoft:latex-renderer", version.ref = "latex" }
-```
-
-### Kotlin 2.1.0 兼容版
-
-如果你的项目使用 Kotlin 2.1.0，请使用带 `-kt2.1.0` 后缀的制品：
-
-```toml
-[versions]
-latex = "1.5.5-kt2.1.0"
 
 [libraries]
 latex-base = { module = "io.github.zusrsoft:latex-base", version.ref = "latex" }

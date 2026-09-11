@@ -54,7 +54,7 @@ gradlew publishAllPublicationsToMavenCentralRepository
 | 方式 | 适用场景 |
 |---|---|
 | 本地命令行发布 | 首次发布、调试签名问题 |
-| GitHub Actions CI | 例行发版（Release 触发，自动发布正常版 + `-kt2.1.0` 别名版） |
+| GitHub Actions CI | 例行发版（Release 触发，自动发布到 Maven Central） |
 
 ---
 
@@ -232,7 +232,7 @@ mavenPublishing {
 
 - 版本唯一来源：`gradle.properties` 的 `VERSION`（当前 1.5.5）
 - ⚠️ Central **不允许覆盖发布**：同命名空间下已发布的版本号永久占用（校验失败的部署不占用，可重试）
-- CI 发布时会自动追加发布 `-kt2.1.0` 别名版本（降级 Kotlin/Compose 依赖的兼容版）
+- 已于 2026-09 移除 `-kt2.1.0` 别名版本发布（原为 CI 降级 Kotlin/Compose 后追加发布的兼容版，为控制 File Count 配额停用）
 
 ---
 
@@ -351,8 +351,6 @@ Invoke-RestMethod -Uri "https://central.sonatype.com/api/v1/publisher/deployment
 
 ```kotlin
 implementation("io.github.zusrsoft:latex-renderer:1.5.5")
-// Kotlin 2.1.0 项目用别名版本：
-implementation("io.github.zusrsoft:latex-renderer:1.5.5-kt2.1.0")
 ```
 
 ---
@@ -363,7 +361,7 @@ implementation("io.github.zusrsoft:latex-renderer:1.5.5-kt2.1.0")
 
 工作流：`.github/workflows/publish.yml`
 
-- **Release 触发**（released / prereleased）：先跑 parser/renderer 测试，再同时发布正常版本 + `-kt2.1.0` 别名版本（CI 内临时降级 Kotlin/Compose 版本）
+- **Release 触发**（released / prereleased）：先跑 parser/renderer 测试，再发布正常版本到 Maven Central
 - **workflow_dispatch**：Actions 页面手动触发
 
 ### 8.2 必需的 GitHub Secrets

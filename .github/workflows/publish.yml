@@ -1,49 +1,30 @@
 # .github/workflows/publish.yml
 #
-# 发布工作流 — 一次 Release 自动触发两次发布:
-#
-#   Job 1 (publish):       发布正常版本 (如 1.2.4)
-#   Job 2 (publish-alias): 发布别名版本 (如 1.2.4-kt2.1.0)
+# 发布工作流 — Release 触发，将正常版本 (如 1.5.5) 发布到 Maven Central。
 #
 # ┌──────────────────────────────────────────────────────────────────┐
-# │ 别名发布的关键修改（全部在 CI 运行时临时修改，不提交到仓库）：  │
+# │ 文件数配额优化（maven-publish 插件 >= 0.37.0，2026-09）：         │
 # │                                                                  │
-# │ 1. gradle.properties:                                            │
-# │    VERSION=1.2.4  →  VERSION=1.2.4-kt2.1.0                      │
+# │ Central Portal 对 File Count 有月度配额限制。插件 0.37.0 起在    │
+# │ 上传 Maven Central 时默认精简发布文件：                          │
+# │  - 不再为 .asc 签名文件生成 .md5/.sha1/.sha256/.sha512 校验和    │
+# │    (Sonatype 官方明确不需要，见 gradle/gradle#20232)             │
+# │  - 不再上传可选的 .sha256/.sha512，只保留必须的 .md5/.sha1       │
 # │                                                                  │
-# │ 2. gradle/libs.versions.toml (降级依赖版本):                     │
-# │    kotlin = "2.3.10"  →  kotlin = "2.1.0"                        │
-# │    composeMultiplatform = "1.10.3"  →  composeMultiplatform = "1.9.3" │
-# │    composePreview = "1.10.3"  →  composePreview = "1.9.3"        │
-# │    (composeMaterial3 保持 1.9.0：独立版本线，不随 CMP 主版本)     │
+# │ 效果: 每个工件 10 个文件 → 4 个；单模块 360 → 144 个文件。       │
+# │ 行为由 gradle.properties 中 mavenCentralChecksums /              │
+# │ mavenCentralExcludeSignatureChecksums 显式固定。                 │
 # │                                                                  │
-# │ 模块间依赖保持本地项目引用 api(projects.latexXxx) 不变，         │
-# │ Gradle 会自动将 POM 中的依赖版本解析为当前 VERSION（别名版本），  │
-# │ 使别名版本的三个模块形成自洽的版本集合。                         │
+# │ 历史说明: 曾有 publish-alias Job 在每次 Release 时追加发布        │
+# │ -kt2.1.0 别名版本（降级 Kotlin/Compose 的兼容版）。              │
+# │ 为控制 File Count 配额已于 2026-09 移除，今后只发布正常版本。    │
 # └──────────────────────────────────────────────────────────────────┘
-#
-# 如何验证？
-#   在 GitHub Actions 的 publish-alias Job 日志中，每个修改步骤
-#   都会打印 [修改前] 和 [修改后] 的 diff，可直接查看。
 
 name: Publish
 on:
   release:
     types: [released, prereleased]
   workflow_dispatch:
-
-# ═══════════════════════════════════════════════════════════
-# 别名版本的依赖版本配置（按需修改此处）
-# ═══════════════════════════════════════════════════════════
-env:
-  # ┌─────────────────────────────────────────────────────┐
-  # │ TODO: 请在此处填写别名版本对应的依赖版本号          │
-  # │ 这些版本会在别名发布时替换 libs.versions.toml 中的值 │
-  # └─────────────────────────────────────────────────────┘
-  ALIAS_KOTLIN_VERSION: "2.1.0"               # 当前正式版: 2.3.10
-  ALIAS_COMPOSE_MULTIPLATFORM_VERSION: "1.9.3" # 当前正式版: 1.10.3
-  # composePreview/ui-tooling 随 Compose Multiplatform 主版本发布，别名时用同号版本
-  ALIAS_COMPOSE_PREVIEW_VERSION: "1.9.3"
 
 jobs:
   # ==================== Job 0: 发布前测试 ====================
@@ -67,9 +48,9 @@ jobs:
       - name: Run latex-renderer tests
         run: ./gradlew :latex-renderer:jvmTest
 
-  # ==================== Job 1: 正常发布 ====================
+  # ==================== Job 1: 发布 ====================
   publish:
-    name: "📦 Publish normal version"
+    name: "📦 Publish to Maven Central"
     needs: test
     runs-on: macOS-latest
     steps:
@@ -88,7 +69,7 @@ jobs:
           VERSION=$(grep '^VERSION=' gradle.properties | cut -d'=' -f2)
           echo ""
           echo "╔══════════════════════════════════════╗"
-          echo "║  📦 正常发布                          ║"
+          echo "║  📦 发布到 Maven Central              ║"
           echo "╠══════════════════════════════════════╣"
           echo "║  VERSION = $VERSION"
           echo "║"
@@ -106,147 +87,3 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyId: ${{ secrets.SIGNING_KEY_ID }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_PASSWORD }}
           ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_KEY_CONTENTS }}
-
-  # ==================== Job 2: 别名发布 (kt2.1.0) ====================
-  publish-alias:
-    name: "📦 Publish alias version (kt2.1.0)"
-    needs: test
-    runs-on: macOS-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: 21
-          cache: 'gradle'
-
-      - name: Get VERSION from gradle.properties
-        run: |
-          VERSION=$(grep '^VERSION=' gradle.properties | cut -d'=' -f2)
-          echo "BASE_VERSION=$VERSION" >> "$GITHUB_ENV"
-          echo ""
-          echo "╔══════════════════════════════════════╗"
-          echo "║  📦 别名发布基础版本                  ║"
-          echo "╠══════════════════════════════════════╣"
-          echo "║  BASE_VERSION = $VERSION"
-          echo "╚══════════════════════════════════════╝"
-
-      # ---------- 修改 1: gradle.properties VERSION ----------
-      - name: "🔧 修改 VERSION: ${{ env.BASE_VERSION }} → ${{ env.BASE_VERSION }}-kt2.1.0"
-        run: |
-          ALIAS_VERSION="${BASE_VERSION}-kt2.1.0"
-
-          echo "┌─────────────────────────────────────────────┐"
-          echo "│ 修改 gradle.properties                       │"
-          echo "├─────────────────────────────────────────────┤"
-          echo "│ [修改前]"
-          grep '^VERSION=' gradle.properties
-          echo "│"
-
-          sed -i '' "s/^VERSION=.*/VERSION=${ALIAS_VERSION}/" gradle.properties
-
-          echo "│ [修改后]"
-          grep '^VERSION=' gradle.properties
-          echo "│"
-          echo "│ ✅ VERSION 已修改为 ${ALIAS_VERSION}"
-          echo "└─────────────────────────────────────────────┘"
-
-      # ---------- 修改 2: libs.versions.toml 降级依赖版本 ----------
-      - name: "🔧 修改 libs.versions.toml: 降级 Kotlin / Compose 版本"
-        run: |
-          FILE="gradle/libs.versions.toml"
-
-          echo "┌──────────────────────────────────────────────────────────┐"
-          echo "│ 修改 ${FILE}                                             │"
-          echo "├──────────────────────────────────────────────────────────┤"
-          echo "│ [修改前]"
-          grep -E '^(kotlin |composeMultiplatform |composePreview )' "$FILE" || \
-          grep -E '^(kotlin=|composeMultiplatform=|composePreview=)' "$FILE" || \
-          grep -E '^kotlin |^composeMultiplatform |^composePreview ' "$FILE"
-          echo "│"
-
-          # Kotlin 版本
-          sed -i '' "s/^kotlin = \".*\"/kotlin = \"${ALIAS_KOTLIN_VERSION}\"/" "$FILE"
-          # Compose Multiplatform 版本
-          sed -i '' "s/^composeMultiplatform = \".*\"/composeMultiplatform = \"${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}\"/" "$FILE"
-          # Compose Preview / ui-tooling 版本（同号发布，必须一并降级，否则依赖树会把 ui/foundation 顶回 1.10.x）
-          sed -i '' "s/^composePreview = \".*\"/composePreview = \"${ALIAS_COMPOSE_PREVIEW_VERSION}\"/" "$FILE"
-
-          echo "│ [修改后]"
-          grep -E '^(kotlin |composeMultiplatform |composePreview )' "$FILE" || \
-          grep -E '^(kotlin=|composeMultiplatform=|composePreview=)' "$FILE" || \
-          grep -E '^kotlin |^composeMultiplatform |^composePreview ' "$FILE"
-          echo "│"
-          echo "│ ✅ 依赖版本已降级:"
-          echo "│    kotlin:              → ${ALIAS_KOTLIN_VERSION}"
-          echo "│    composeMultiplatform: → ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
-          echo "│    composePreview:       → ${ALIAS_COMPOSE_PREVIEW_VERSION}"
-          echo "└──────────────────────────────────────────────────────────┘"
-
-      # ---------- 汇总验证 ----------
-      - name: "🔍 验证: 所有修改汇总"
-        run: |
-          ALIAS_VERSION="${BASE_VERSION}-kt2.1.0"
-          echo ""
-          echo "╔══════════════════════════════════════════════════════════════╗"
-          echo "║  📋 别名发布修改汇总                                         ║"
-          echo "╠══════════════════════════════════════════════════════════════╣"
-          echo "║"
-          echo "║  基础版本: ${BASE_VERSION}"
-          echo "║  别名版本: ${ALIAS_VERSION}"
-          echo "║"
-          echo "║  ① gradle.properties:"
-          echo "║     VERSION=${ALIAS_VERSION}"
-          echo "║"
-          echo "║  ② gradle/libs.versions.toml (降级后):"
-          echo "║     kotlin              = ${ALIAS_KOTLIN_VERSION}"
-          echo "║     composeMultiplatform = ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
-          echo "║     composePreview       = ${ALIAS_COMPOSE_PREVIEW_VERSION}"
-          echo "║"
-          echo "║  ③ 模块间依赖: 保持本地项目引用 (Gradle 自动解析为别名版本)"
-          echo "║"
-          echo "║  将发布到 Maven Central:"
-          echo "║    io.github.zusrsoft:latex-base:${ALIAS_VERSION}"
-          echo "║    io.github.zusrsoft:latex-parser:${ALIAS_VERSION}"
-          echo "║      └─ POM 依赖 → latex-base:${ALIAS_VERSION}"
-          echo "║    io.github.zusrsoft:latex-renderer:${ALIAS_VERSION}"
-          echo "║      └─ POM 依赖 → latex-parser:${ALIAS_VERSION}"
-          echo "║"
-          echo "╚══════════════════════════════════════════════════════════════╝"
-          echo ""
-
-      # ---------- 发布 ----------
-      - name: Publish alias version to MavenCentral
-        run: ./gradlew publishAllPublicationsToMavenCentralRepository --no-configuration-cache
-        env:
-          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
-          ORG_GRADLE_PROJECT_signingInMemoryKeyId: ${{ secrets.SIGNING_KEY_ID }}
-          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_PASSWORD }}
-          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_KEY_CONTENTS }}
-
-      # ---------- 发布完成 ----------
-      - name: "✅ 发布完成"
-        run: |
-          ALIAS_VERSION="${BASE_VERSION}-kt2.1.0"
-          echo ""
-          echo "🎉 别名版本发布完成！"
-          echo ""
-          echo "  正常版本: ${BASE_VERSION}"
-          echo "  别名版本: ${ALIAS_VERSION}"
-          echo ""
-          echo "  依赖版本:"
-          echo "    kotlin:              ${ALIAS_KOTLIN_VERSION}"
-          echo "    composeMultiplatform: ${ALIAS_COMPOSE_MULTIPLATFORM_VERSION}"
-          echo "    composePreview:       ${ALIAS_COMPOSE_PREVIEW_VERSION}"
-          echo ""
-          echo "  发布结果:"
-          echo "    io.github.zusrsoft:latex-base:${ALIAS_VERSION}"
-          echo "    io.github.zusrsoft:latex-parser:${ALIAS_VERSION}"
-          echo "      → 依赖 latex-base:${ALIAS_VERSION}"
-          echo "    io.github.zusrsoft:latex-renderer:${ALIAS_VERSION}"
-          echo "      → 依赖 latex-parser:${ALIAS_VERSION}"
-          echo "=========================================="
