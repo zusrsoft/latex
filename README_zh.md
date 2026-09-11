@@ -505,24 +505,6 @@ dependencies {
 
 - [Markdown](https://github.com/zusrsoft/Markdown) — 同作者开发的 Kotlin Multiplatform Markdown 解析与渲染库。如果你的项目同时需要 LaTeX 和 Markdown 渲染能力，推荐一起使用！
 
-## 📄 开源协议
+## License
 
-本项目采用 MIT License 开源协议 - 详见 [LICENSE](LICENSE) 文件。
-
-```
-MIT License
-
-Copyright (c) 2026 huarangmeng (original author)
-Copyright (c) 2026 zusrsoft (maintainer)
-
-特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人不受限制地处理
-软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或
-销售软件副本的权利，以及允许获得软件的人这样做，但须符合以下条件：
-
-上述版权声明和本许可声明应包含在软件的所有副本或主要部分中。
-
-本软件按"原样"提供，不提供任何形式的明示或暗示保证，包括但不限于对适销性、
-特定用途的适用性和非侵权性的保证。在任何情况下，作者或版权持有人均不对
-因软件或软件的使用或其他交易而产生的任何索赔、损害或其他责任承担责任，
-无论是在合同诉讼、侵权行为还是其他方面。
-```
+本项目基于 MIT License 授权发布 - 详见 [LICENSE](./LICENSE) 文件。
